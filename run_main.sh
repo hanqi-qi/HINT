@@ -1,0 +1,13 @@
+/mnt/Data1/hanqiyan/miniconda3/envs/scholar/bin/python ./sine_dec.py \
+--sentenceEncoder GAT \
+--context_att 1 \
+--topic_learning bayesian \
+--topic_weight tfidf \
+--regularization 1 \
+--cuda 0 \
+--pretrain_emb None \
+--num_word 5000 \
+--dataset imdb \
+--num_epoch 30 \
+--var_scale 0.01 \
+--batch_size 8 \
