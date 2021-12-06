@@ -132,3 +132,5 @@ dmypy.json
 .txt
 .csv
 .json
+.pickle
+.jsonlist
