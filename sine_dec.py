@@ -127,7 +127,7 @@ def vis_dec(id2word, indices_decoder,model,rank,indices_rank,epoch_i):
 
     return
 
-def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,test_batch_generator,vocab,cuda=None,d_t=0):
+def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,test_batch_generator,vocab,cuda=None,d_t=0,topic_learning="autoencoder"):
     logging.info("Start Tranining")
     if cuda != None:
         model.cuda(cuda)
@@ -165,8 +165,11 @@ def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,te
             loss_C_total += loss_C
             loss_A_total += loss_A
             loss_R_total += loss_R
-            loss = loss_C + 0.05 * loss_A +  0.01 * loss_R
+            loss = loss_C + 0.05 * loss_C +  0.01 * loss_R
+            if topic_learning == "bayesian":
+                loss = loss+kld_loss.mean()
             loss.backward()
+            del loss,loss_C,loss_A,loss_R
             nn.utils.clip_grad_norm_(model.parameters(), max_norm=5)
             optimizer.step()
         # if temp_batch_index%100 == 0: #every minibatch, check the intepretatbility
@@ -249,22 +252,22 @@ def main():
     parser.add_argument('--context_rnn_num_layer', type=int, default=1, help='use glove or googlenews word embedding')
     parser.add_argument('--dropout', type=float, default=0.3, help='use glove or googlenews word embedding')
     parser.add_argument('--word_attention_size', type=int, default=150, help='use glove or googlenews word embedding')
-    parser.add_argument('--num_word', type=int, default=1000, help='vocabulary size')
+    parser.add_argument('--num_word', type=int, default=15000, help='vocabulary size')
     parser.add_argument('--num_label', type=int, default=2, help='number of sentiment labels')
     parser.add_argument('--sentenceEncoder',type=str,default="GAT",help="using GAT or Transformer as sentence encoder")
     parser.add_argument("--context_att",type=int,default=1,help="using context attention $\alpha$ or not")
     parser.add_argument("--topic_weight",type=str,default="tfidf",help="bayesian or tfidf or None")
     parser.add_argument("--regularization",type=int,default=1,help="using regularization term or not")
-    parser.add_argument("--dataset",type=str,default="imdb",help="using imdb/yelp/guardian news")
-    parser.add_argument("--var_scale",type=float,default=0.01,help="using imdb/yelp/guardian news")
+    parser.add_argument("--dataset",type=str,default="yelp",help="using imdb/yelp/guardian news")
+    parser.add_argument("--vae_scale",type=float,default=0.01,help="using imdb/yelp/guardian news")
     parser.add_argument('-tsoftmax', type=str, default=1, help='the temperature of softmax in co_attention_weight')
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,format="%(asctime)s\t%(message)s")
     dataset = args.dataset
     if dataset=="yelp":
-        train_data_file = "./input_data/medical_train.txt"
-        test_data_file = "./input_data/medical_test.txt"
+        train_data_file = "./input_data/yelp/medical_train.txt"
+        test_data_file = "./input_data/yelp/medical_test.txt"
         args.num_label = 2
     elif dataset == 'imdb':
         train_data_file = "./input_data/imdb/train.jsonlist"
@@ -275,8 +278,8 @@ def main():
         test_data_file = './input_data/guadian_news/test_news_data.txt'
         args.num_label = 5
     vocab = get_vocabulary(train_data_file,vocabsize=args.num_word,dataset=dataset,use_stem=False)
-    train_tfidffile=json.loads(open("tfidf_weight/norm_imdb_tfidf_train.json").readlines()[0])
-    test_tfidffile=json.loads(open("tfidf_weight/norm_imdb_tfidf_test.json").readlines()[0])
+    train_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_train.json").readlines()[0])
+    test_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_test.json").readlines()[0])
     train_data,train_label,train_tfidf = load(train_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,doc_tfidf=train_tfidffile)
     test_data,test_label,test_tfidf = load(test_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,doc_tfidf=test_tfidffile)
     pretrain_emb = args.pretrain_emb
@@ -284,7 +287,7 @@ def main():
     if pretrain_emb == 'googlenews':
         pretrained_embedding,hit_rate = getVectors(embed_dim=300, wordvocab=vocab)
     elif pretrain_emb == 'glove':
-        pretrained_embedding = load_embedding(vocab,"/mnt/Data3/hanqiyan/latent_topic/lin_absa/yelp_code/data/glove.840B.300d.txt",embedding_size=300)
+        pretrained_embedding = load_embedding(vocab,"/mnt/sda/media/Data2/hanqi/sine/glove.840B.300d.txt",embedding_size=300)
     else:
         pretrained_embedding = None
 
@@ -295,7 +298,8 @@ def main():
         "topic_weight":[args.topic_weight],
         "regularization":[args.regularization],
         'num_word':[args.num_word], #time-consuming!
-        'pretrain_emb':[args.pretrain_emb]
+        'pretrain_emb':[args.pretrain_emb],
+        'topic_learning':[args.topic_learning]
         }
     params_search = list(ParameterGrid(params))
     acc_list =[]
@@ -310,7 +314,7 @@ def main():
         model = HierachicalClassifier(args,pretrained_embedding=pretrained_embedding)
         optimizer = torch.optim.Adam(model.parameters(),lr=args.lr)
         loss_function = nn.CrossEntropyLoss()
-        best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t)#ori_code
+        best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t,topic_learning=args.topic_learning)#ori_code
         grid_search[str(param)] = {"best_dev_acc": [round(best_dev_acc, 4)]}
     
     # print("hit rate: ", hit_rate)

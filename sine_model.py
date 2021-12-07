@@ -3,6 +3,7 @@ import numpy as np
 import torch
 from torch import nn
 import torch.nn.functional as F
+from sine_bayesian import Vae
 
 class HierachicalClassifier(nn.Module):
     def __init__(self, args, pretrained_embedding=None):
@@ -46,49 +47,7 @@ class HierachicalClassifier(nn.Module):
         else:
             self.embedding.weight.data.uniform_(-1.0, 1.0)
         
-        alpha = 1.0
-        if np.array(alpha).size == 1:
-            # if alpha is a scalar, create a symmetric prior vector
-            self.alpha = alpha * np.ones((1, self.emb_size)).astype(np.float32)
-        else:
-            # otherwise use the prior as given
-            self.alpha = np.array(alpha).astype(np.float32)
-            assert len(self.alpha) == self.emb_size
-
-        self.encoder_dropout_layer = nn.Dropout(p=0.2)
-        # create the mean and variance components of the VAE
-        self.mean_layer = nn.Linear(self.emb_size,self.emb_size )
-        self.logvar_layer = nn.Linear(self.emb_size, self.emb_size)
-
-        self.mean_bn_layer = nn.BatchNorm1d(self.emb_size, eps=0.001, momentum=0.001, affine=True)
-        self.mean_bn_layer.weight.data.copy_(torch.from_numpy(np.ones(self.emb_size))).to(self.device)
-        self.mean_bn_layer.weight.requires_grad = False
-        self.logvar_bn_layer = nn.BatchNorm1d(self.emb_size, eps=0.001, momentum=0.001, affine=True)
-        self.logvar_bn_layer.weight.data.copy_(torch.from_numpy(np.ones(self.emb_size))).to(self.device)
-        self.logvar_bn_layer.weight.requires_grad = False
-
-        self.z_dropout_layer = nn.Dropout(p=0.2)
-        # create the decoder
-        self.beta_layer = nn.Linear(self.d_t, self.emb_size)
-        # create a final batchnorm layer
-        self.eta_bn_layer = nn.BatchNorm1d(self.emb_size, eps=0.001, momentum=0.001, affine=True).to(self.device)
-        self.eta_bn_layer.weight.data.copy_(torch.from_numpy(np.ones(self.emb_size)).to(self.device))
-        self.eta_bn_layer.weight.requires_grad = False
-
-        # create the document prior terms
-        prior_mean = (np.log(self.alpha).T - np.mean(np.log(self.alpha), 1)).T #
-        prior_var = (((1.0 / self.alpha) * (1 - (2.0 / self.emb_size))).T + (1.0 / (self.d_t * self.emb_size)) * np.sum(1.0 / self.alpha, 1)).T
-
-        prior_mean = np.array(prior_mean).reshape((1, self.emb_size))
-        prior_logvar = np.array(np.log(prior_var)).reshape((1, self.emb_size))
-        self.prior_mean = torch.from_numpy(prior_mean).to(self.device)
-        self.prior_mean.requires_grad = False
-        self.prior_logvar = torch.from_numpy(prior_logvar).to(self.device)
-        self.prior_logvar.requires_grad = False
-
-        self.query_linear = nn.Linear(self.d_t,self.d_t)
-        self.key_linear = nn.Linear(self.d_t,self.d_t)
-        self.var_scale =1.0
+        self.Vae = Vae(self.emb_size,self.d_t,self.device)
 
     def init_rnn_hidden(self, batch_size, level):
         param_data = next(self.parameters()).data
@@ -138,13 +97,12 @@ class HierachicalClassifier(nn.Module):
         word_aspect_output_list = []
         aspect_loss = torch.zeros(batch_size).cuda(self.device)
         kld_loss = torch.zeros(batch_size).cuda(self.device)
+        recon_loss = torch.zeros(batch_size).cuda(self.device)
         for utterance_index in range(num_utterance):
+            """for the context-learning"""
             word_rnn_input = self.embedding(input_list[utterance_index])
             word_rnn_input = self.word_dropout(word_rnn_input)
             word_rnn_output, word_rnn_hidden = self.word_rnn(word_rnn_input, word_rnn_hidden)
-            sent_tfidf = input_tfidf[utterance_index]
-            tfidf_word_rnn_input = sent_tfidf.unsqueeze(2).repeat(1,1,word_rnn_input.shape[-1])*word_rnn_input
-            aver_word_rnn_input = torch.mean(word_rnn_input,dim=0)
             if self.args.context_att > 0:
                 word_attention_weight = self.word_conv_attention_layer(word_rnn_input.permute(1,2,0))
                 word_attention_weight = word_attention_weight[:,:,1:-1]
@@ -158,71 +116,35 @@ class HierachicalClassifier(nn.Module):
                 word_rnn_last_output = torch.mean(word_rnn_output,dim=0)
             word_rnn_output_list.append(word_rnn_last_output)
             word_rnn_hidden = word_rnn_hidden.detach()
-            
-            word_aspect_weight = self.word_aspect_attention_linear(word_rnn_output) 
-            word_aspect_weight = self.word_aspect_attention_linear2(word_aspect_weight)
-            word_aspect_weight = nn.functional.relu(word_aspect_weight)
-            word_aspect_weight = nn.functional.softmax(word_aspect_weight, dim=0)
-            word_aspect_output = torch.mul(word_rnn_input,word_aspect_weight).sum(dim=0)#z
-            word_aspect = self.topic_encoder(word_aspect_output)#h
-            recons_word = self.topic_decoder(word_aspect)#z'
-            r = nn.functional.normalize(recons_word)
-            z = nn.functional.normalize(word_aspect_output)
-            n = nn.functional.normalize(word_rnn_last_output)
-            #print(r.size(),z.size(),n.size())
-            if self.args.regularization > 0:
-                y = torch.ones(batch_size).cuda(self.device) - torch.sum(r*z, 1) + torch.sum(r*n, 1)
-                aspect_loss += nn.functional.relu(y)
-            # word_aspect_output_list.append(word_aspect)
-            # word_rnn_hidden = word_rnn_hidden.detach()
-
-            if self.args.topic_learning=="bayesian":
+            """for the topic-learning"""
+            if self.args.topic_learning == "autoencoder":
+                word_aspect_weight = self.word_aspect_attention_linear(word_rnn_output) 
+                word_aspect_weight = self.word_aspect_attention_linear2(word_aspect_weight)
+                word_aspect_weight = nn.functional.relu(word_aspect_weight)
+                word_aspect_weight = nn.functional.softmax(word_aspect_weight, dim=0)
+            elif self.args.topic_learning=="bayesian":
                 # aggregate the sentence represntation by sent_tfidf [bs,seq_len] [bs,seq_len,dim]
                 if self.args.topic_weight == "tfidf":
-                    encoder_output = F.softplus(tfidf_word_rnn_input) #word embeddings
+                    sent_tfidf = input_tfidf[utterance_index]
+                    vae_input = sent_tfidf.unsqueeze(2).repeat(1,1,word_rnn_input.shape[-1])*word_rnn_input
                 elif self.args.topic_weight == "average":
-                    encoder_output = F.softplus(aver_word_rnn_input)
-                encoder_output_do = self.encoder_dropout_layer(encoder_output)#[seq_len,bs,emb_size]
-                # compute the mean and variance of the document posteriors
-                posterior_mean = torch.transpose(self.mean_layer(encoder_output_do),1,0) #[seq_len,bs,emb_size]
-                posterior_logvar = torch.transpose(self.logvar_layer(encoder_output_do),1,0)#[seq_len,bs,emb_size]
+                    vae_input = torch.mean(word_rnn_input,dim=0)
 
-                posterior_mean_bn = self.mean_bn_layer(torch.transpose(posterior_mean,1,2)).permute(0,2,1)#the batchnorm1d, input should be [N,C,L]
-                posterior_logvar_bn = self.logvar_bn_layer(torch.transpose(posterior_logvar,1,2)).permute(0,2,1)
+                word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input)
+                kld_loss += vae_kld_loss
+                recon_loss += vae_recon_loss.mean(1)
 
-                posterior_var = posterior_logvar_bn.exp().to(self.device)
+            word_aspect_output = torch.mul(word_rnn_input,word_aspect_weight).sum(dim=0)#sum along seq_len axis
+            word_aspect = self.topic_encoder(word_aspect_output)#latent rep
+            recons_word = self.topic_decoder(word_aspect)#z'
+            r = nn.functional.normalize(recons_word)#recon topi rep
+            z = nn.functional.normalize(word_aspect_output)#original topic rep
+            n = nn.functional.normalize(word_rnn_last_output)#context rep
 
-                # sample noise from a standard normal
-                eps = encoder_output_do.data.new().resize_as_(posterior_mean_bn.data).normal_().to(self.device)
-                #[]
-                # compute the sampled latent representation
-                z = posterior_mean_bn + posterior_var.sqrt() * eps * self.args.var_scale
-                z_do = self.z_dropout_layer(z) #[N,C]#latentc
-
-                # pass the document representations through a softmax
-                theta = F.softmax(z_do, dim=1)#this is omega [bs,300]
-
-                # expand_theta = theta.unsqueeze(0).repeat(word_rnn_input.shape[0],1,1)
-                word_aspect_output = (theta.transpose(1,0)*word_rnn_input).sum(0) #[seq_len, bs,dim]
-                #use new_word_rnn_input as the previous word_rnn_input
-                word_aspect = self.topic_encoder(word_aspect_output)#h
-                recons_word = self.topic_decoder(word_aspect)#z'
-                r = nn.functional.normalize(recons_word)
-                z = nn.functional.normalize(word_aspect_output)
-                n = nn.functional.normalize(word_rnn_last_output)
-
+            if self.args.regularization > 0:
                 y = torch.ones(batch_size).cuda(self.device) - torch.sum(r*z, 1) + torch.sum(r*n, 1) #
                 word_aspect_output_list.append(word_aspect)
-                aspect_loss += nn.functional.relu(y) #why use a relu
-                word_rnn_hidden = word_rnn_hidden.detach() 
-
-                prior_mean   = self.prior_mean.expand_as(posterior_mean)
-                prior_logvar = self.prior_logvar.expand_as(posterior_logvar)
-
-                do_average = False
-                KLD = self._loss(prior_mean, prior_logvar, posterior_mean_bn, posterior_logvar_bn, do_average)
-                kld_loss+=nn.functional.relu(KLD)
-        
+                aspect_loss += nn.functional.relu(y) #why use a relu 
 
         context_rnn_hidden = self.init_rnn_hidden(batch_size, level="context")
         context_rnn_input = torch.stack(word_rnn_output_list, dim=0)
@@ -250,8 +172,8 @@ class HierachicalClassifier(nn.Module):
             norm_topic_weight = context_topic_weight/topic_norm
             topic_weight_matrix = norm_topic_weight
 
-        co_topic_weight = nn.functional.softmax(torch.bmm(self.key_linear(topic_weight_matrix),self.query_linear(topic_weight_matrix).transpose(2,1)/self.args.tsoftmax),2)
-
+        # co_topic_weight = nn.functional.softmax(torch.bmm(self.key_linear(topic_weight_matrix),self.query_linear(topic_weight_matrix).transpose(2,1)/self.args.tsoftmax),2)
+        co_topic_weight = nn.functional.softmax(torch.bmm(topic_weight_matrix,topic_weight_matrix.transpose(2,1)/self.args.tsoftmax),2)
         update_context_rep = torch.bmm(co_topic_weight,context_rnn_output)
         # update_context_rep = self.output_gate*torch.bmm(co_topic_weight,context_rnn_output)+(1-self.output_gate)*context_rnn_output #[bs,doc_len,dim]
         use_nolinear = False #apply non-linear to the current graph layer to update the next layer
@@ -265,6 +187,6 @@ class HierachicalClassifier(nn.Module):
         logit = self.classifier(classifier_input) 
         #attention_weight_array = np.array(csontext_attention_weight.data.cpu().squeeze(-1)).transpose(1,0)
         attention_weight_array = 0
-        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,kld_loss
+        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*(kld_loss+recon_loss)
 
         

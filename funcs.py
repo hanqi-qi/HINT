@@ -58,7 +58,7 @@ def getVectors(embed_dim,wordvocab):
         id2word[wordvocab[word]]=word
     # id2word = wordvocab
     if id2word != None:
-        word2vec = KeyedVectors.load_word2vec_format('/mnt/Data3/hanqiyan/latent_topic/lin_absa/yelp_code/GoogleNews-vectors-negative300.bin', binary=True)
+        word2vec = KeyedVectors.load_word2vec_format('/mnt/sda/media/Data2/hanqi/sine/GoogleNews-vectors-negative300.bin', binary=True)
         for i in range(len(id2word)):
             word = id2word[i]
             if word in word2vec.vocab:

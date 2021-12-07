@@ -134,3 +134,7 @@ dmypy.json
 .json
 .pickle
 .jsonlist
+
+#dir
+input_data/
+tfidf_weight/
