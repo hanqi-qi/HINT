@@ -135,6 +135,7 @@ dmypy.json
 .pickle
 .jsonlist
 .pkl
+.pt
 
 #dir
 input_data/
