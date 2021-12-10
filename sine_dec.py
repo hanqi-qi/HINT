@@ -15,11 +15,12 @@ from collections import Counter
 from itertools import chain
 from progressbar import ProgressBar
 from sklearn.manifold import TSNE
+import pickle
 from matplotlib import pyplot as plt
 from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import ParameterGrid
 
-from funcs import convert_words2ids,getVectors,get_vocabulary,load_embedding,load,batch_from_list
+from funcs import load_process,getVectors,get_vocabulary,load_embedding,load,batch_from_list
 from sine_model import HierachicalClassifier
 from dataloader import DataIter
 import json
@@ -49,7 +50,7 @@ def evaluate(model,loss_function,batch_generator,cuda=None):
                 target_var = torch.LongTensor(target).cuda(cuda)
                 length_var = torch.LongTensor(length)
                 tfidf_var_list = [torch.tensor(chunk).cuda(cuda) for chunk in tfidf]
-            predicted_target,attention_weight,classifier_input,_,senatt_arr,kld_loss= model(data_var_list,tfidf_var_list,length)
+            predicted_target,attention_weight,classifier_input,_,senatt_arr,kld_loss,recon_loss= model(data_var_list,tfidf_var_list,length)
 
             att_list.append(senatt_arr.cpu().detach().numpy())
             loss = loss_function(predicted_target, target_var)
@@ -127,7 +128,7 @@ def vis_dec(id2word, indices_decoder,model,rank,indices_rank,epoch_i):
 
     return
 
-def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,test_batch_generator,vocab,cuda=None,d_t=0,topic_learning="autoencoder"):
+def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,test_batch_generator,vocab,cuda=None,d_t=0,topic_learning="autoencoder",dataset=None):
     logging.info("Start Tranining")
     if cuda != None:
         model.cuda(cuda)
@@ -137,6 +138,7 @@ def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,te
     loss_C_total = 0
     loss_A_total = 0
     loss_R_total = 0
+    loss_KLD_total, loss_Recon_total = 0,0
     log_loss = open('loss.txt', 'a')
     best_dev_acc = 0
     for epoch_i in range(num_epoch):
@@ -157,40 +159,48 @@ def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,te
                 train_tfidf_var_list = [torch.tensor(chunk).cuda(cuda) for chunk in train_tfidf]
                 length_var = torch.LongTensor(length_data)
 
-            predicted_train_target,_,_,aspect_loss,senatt,kld_loss = model(train_data_var_list,train_tfidf_var_list,length_var)
+            predicted_train_target,_,_,aspect_loss,senatt,kld_loss,recon_loss = model(train_data_var_list,train_tfidf_var_list,length_var)
             optimizer.zero_grad()
             loss_C = loss_function(predicted_train_target,train_target_var)
             loss_A = aspect_loss.mean()
             loss_R = torch.norm(torch.eye(d_t).cuda(cuda) - torch.mm(model.topic_encoder.weight, model.topic_encoder.weight.t()))
-            loss_C_total += loss_C
-            loss_A_total += loss_A
-            loss_R_total += loss_R
+            loss_C_total += loss_C.item()
+            loss_A_total += loss_A.item()
+            loss_R_total += loss_R.item()
+            loss_KLD_total += kld_loss.item()
+            loss_Recon_total += recon_loss.item()
             loss = loss_C + 0.05 * loss_C +  0.01 * loss_R
             if topic_learning == "bayesian":
-                loss = loss+kld_loss.mean()
+                loss = loss+kld_loss.mean()+recon_loss.mean()
             loss.backward()
             del loss,loss_C,loss_A,loss_R
             nn.utils.clip_grad_norm_(model.parameters(), max_norm=5)
             optimizer.step()
         # if temp_batch_index%100 == 0: #every minibatch, check the intepretatbility
             # id2word = {vocab[key]:key for key in vocab.keys()}
-            if temp_batch_index%100==0: #change to minibatch
-                train_loss,train_acc = 0,0
-                C_loss = loss_C_total/(1000)
-                A_loss = loss_A_total/(1000)
-                R_loss = loss_R_total
+            if temp_batch_index%500==0: #change to minibatch
+                train_loss,train_acc = 0.0,0.0
+                C_loss = loss_C_total/100
+                A_loss = loss_A_total/100
+                R_loss = loss_R_total/100
+                KLD_loss = loss_KLD_total/100
+                Recon_loss = loss_Recon_total/100
                 log_loss.write("{0:6f},{1:6f},{2:6f}\n".format(C_loss,A_loss,R_loss))
-                loss_A_total, loss_C_total, loss_R_total = 0,0,0
+                loss_A_total, loss_C_total, loss_R_total,loss_KLD_total, loss_Recon_total= 0,0,0,0,0
 #total_loss/(batch_i+1),acc,true_label_array,predicted_label_array,returned_document_list,total_kld_loss/(batch_i+1)
                 test_loss,test_acc = evaluate(model,loss_function,test_batch_generator,cuda)#ori_code
                 # logging.info("The std of attention weight:{0:0.6f}".format(senatt_std))
-                _,predicted_label = torch.max(predicted_train_target,dim=1)
-                train_hits= torch.sum(predicted_label.data == train_target_var.data)
+                predicted_label = np.argmax(predicted_train_target.detach().cpu().numpy(),axis=1)
+                train_hits = np.count_nonzero(predicted_label == train_target_var.data.detach().cpu().numpy())
                 train_acc = train_hits/len(predicted_label)
-                logging.info("\nEpoch :{0:8d}\ntrain_loss:{1:0.6f}\ttrain_acc:{2:0.6f}\ntest_loss:{3:0.6f}\ttest_acc:{4:0.6f}".format(epoch_i, C_loss,train_acc.data,test_loss,test_acc))
+                logging.info("\nEpoch :{0:8d}\ntrain_labelloss:{1:0.6f}\ttrain_vaeloss:{2:0.6f}\ttrain_reconloss:{3:0.6f}\ttrain_acc:{4:0.6f}\ntest_loss:{5:0.6f}\ttest_acc:{6:0.6f}".format(epoch_i, C_loss,KLD_loss,Recon_loss,train_acc,test_loss,test_acc))
+                filename = "bestmodel_{}_{}.pt".format(dataset,topic_learning)
                 if test_acc>best_dev_acc:
                     best_dev_acc = test_acc
-                    print("higher dev acc: %.4f"%best_dev_acc)
+                    #save the best model with arguments
+                    with open(filename, 'wb') as f:
+                        torch.save(model, f)
+                    print("higher dev acc and best model saved: %.4f"%best_dev_acc)
                 ''''VISUALIZATION'''
                 # id2word = {vocab[key]:key for key in vocab.keys()}
                 # #vocabsize->topic(d_t) matrix: dis_decoder
@@ -235,10 +245,10 @@ def error_analysis(batch_generator, wrong_index, predicted_label_array, true_lab
 def main():
     parser = argparse.ArgumentParser(description='MASK_LSTM text classificer')
     parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate')
-    parser.add_argument('--num_epoch', type=int, default=30, help='epochs')
+    parser.add_argument('--num_epoch', type=int, default=1, help='epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size')
     parser.add_argument('--d_t', type=int, default=50, help='number of topics in code')
-    parser.add_argument('--cuda', type=int, default=2, help='gpu id')
+    parser.add_argument('--cuda', type=int, default=3, help='gpu id')
     parser.add_argument('--emb_size', type=int, default=300, help='word embedding size')
     parser.add_argument('--mlp_size', type=int, default=200, help='word embedding size')
     parser.add_argument('--word_rnn_size', type=int, default=150, help='word_rnn_size')
@@ -260,11 +270,13 @@ def main():
     parser.add_argument("--regularization",type=int,default=1,help="using regularization term or not")
     parser.add_argument("--dataset",type=str,default="yelp",help="using imdb/yelp/guardian news")
     parser.add_argument("--vae_scale",type=float,default=0.01,help="using imdb/yelp/guardian news")
-    parser.add_argument('-tsoftmax', type=str, default=1, help='the temperature of softmax in co_attention_weight')
+    parser.add_argument('--tsoftmax', type=str, default=1, help='the temperature of softmax in co_attention_weight')
+    parser.add_argument('--data_processed', type=int, default=1, help='the temperature of softmax in co_attention_weight')
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,format="%(asctime)s\t%(message)s")
     dataset = args.dataset
+    print("Dataset is %s"%(args.dataset))
     if dataset=="yelp":
         train_data_file = "./input_data/yelp/medical_train.txt"
         test_data_file = "./input_data/yelp/medical_test.txt"
@@ -273,15 +285,26 @@ def main():
         train_data_file = "./input_data/imdb/train.jsonlist"
         test_data_file = "./input_data/imdb/test.jsonlist"
         args.num_label = 2
-    elif dataset =="news":
-        train_data_file = './input_data/guadian_news/train_news_data.txt'
-        test_data_file = './input_data/guadian_news/test_news_data.txt'
+    elif dataset =="guardian_news":
+        train_data_file = './input_data/guardian_news/train_news_data.txt'
+        test_data_file = './input_data/guardian_news/test_news_data.txt'
         args.num_label = 5
     vocab = get_vocabulary(train_data_file,vocabsize=args.num_word,dataset=dataset,use_stem=False)
-    train_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_train.json").readlines()[0])
-    test_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_test.json").readlines()[0])
-    train_data,train_label,train_tfidf = load(train_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,doc_tfidf=train_tfidffile)
-    test_data,test_label,test_tfidf = load(test_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,doc_tfidf=test_tfidffile)
+    # train_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_train.json").readlines()[0])
+    # test_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_test.json").readlines()[0])
+    if args.data_processed > 0:
+        train_data = load_process(args.dataset,"train","data")
+        test_data = load_process(args.dataset,"test","data")
+        train_label = load_process(args.dataset,"train","label")
+        test_label = load_process(args.dataset,"test","label")
+        train_tfidf = load_process(args.dataset,"train","tfidf")
+        test_tfidf = load_process(args.dataset,"test","tfidf")
+        print("Data Loaded")
+    else:
+        train_data,train_label,train_tfidf = load(train_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,type="train")
+        test_data,test_label,test_tfidf = load(test_data_file,vocab,max_value=60,max_utterance=10,dataset=dataset,type="test")
+        print("Data Processed and Loaded")
+
     pretrain_emb = args.pretrain_emb
 
     if pretrain_emb == 'googlenews':
@@ -293,13 +316,14 @@ def main():
 
     grid_search = {}
     params = {
+        'dataset':["yelp"],
         'sentenceEncoder':[args.sentenceEncoder],
         "context_att":[1],
         "topic_weight":[args.topic_weight],
-        "regularization":[args.regularization],
+        "regularization":[1],
         'num_word':[args.num_word], #time-consuming!
         'pretrain_emb':[args.pretrain_emb],
-        'topic_learning':[args.topic_learning]
+        'topic_learning':["bayesian"]
         }
     params_search = list(ParameterGrid(params))
     acc_list =[]

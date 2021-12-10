@@ -128,11 +128,11 @@ class HierachicalClassifier(nn.Module):
                     sent_tfidf = input_tfidf[utterance_index]
                     vae_input = sent_tfidf.unsqueeze(2).repeat(1,1,word_rnn_input.shape[-1])*word_rnn_input
                 elif self.args.topic_weight == "average":
-                    vae_input = torch.mean(word_rnn_input,dim=0)
+                    vae_input = word_rnn_input
 
                 word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input)
                 kld_loss += vae_kld_loss
-                recon_loss += vae_recon_loss.mean(1)
+                recon_loss += vae_recon_loss
 
             word_aspect_output = torch.mul(word_rnn_input,word_aspect_weight).sum(dim=0)#sum along seq_len axis
             word_aspect = self.topic_encoder(word_aspect_output)#latent rep
@@ -143,9 +143,8 @@ class HierachicalClassifier(nn.Module):
 
             if self.args.regularization > 0:
                 y = torch.ones(batch_size).cuda(self.device) - torch.sum(r*z, 1) + torch.sum(r*n, 1) #
-                word_aspect_output_list.append(word_aspect)
                 aspect_loss += nn.functional.relu(y) #why use a relu 
-
+            word_aspect_output_list.append(word_aspect)
         context_rnn_hidden = self.init_rnn_hidden(batch_size, level="context")
         context_rnn_input = torch.stack(word_rnn_output_list, dim=0)
         context_rnn_input = self.context_dropout(context_rnn_input)
@@ -187,6 +186,6 @@ class HierachicalClassifier(nn.Module):
         logit = self.classifier(classifier_input) 
         #attention_weight_array = np.array(csontext_attention_weight.data.cpu().squeeze(-1)).transpose(1,0)
         attention_weight_array = 0
-        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*(kld_loss+recon_loss)
+        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*kld_loss.mean(), recon_loss.mean()
 
         

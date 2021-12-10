@@ -1,0 +1,3066 @@
+2021-12-08 16:44:23,924	loading projection weights from /mnt/Data3/hanqiyan/latent_topic/lin_absa/yelp_code/GoogleNews-vectors-negative300.bin
+2021-12-08 16:45:11,932	loaded (3000000, 300) matrix from /mnt/Data3/hanqiyan/latent_topic/lin_absa/yelp_code/GoogleNews-vectors-negative300.bin
+2021-12-08 16:45:14,163	Start Tranining
+2021-12-08 16:45:14,382	Epoch 0
+2021-12-08 16:45:32,509	
+Epoch :       0
+train_labelloss:0.656387	train_vaeloss:0.104781	train_reconloss:0.847900	train_acc:0.375000
+test_loss:0.615904	test_acc:0.700121
+2021-12-08 16:45:51,086	
+Epoch :       0
+train_labelloss:0.591369	train_vaeloss:0.084413	train_reconloss:0.782185	train_acc:0.593750
+test_loss:0.509830	test_acc:0.700878
+2021-12-08 16:46:09,310	
+Epoch :       0
+train_labelloss:0.323360	train_vaeloss:0.077022	train_reconloss:0.638277	train_acc:0.968750
+test_loss:0.254550	test_acc:0.926444
+2021-12-08 16:46:27,188	
+Epoch :       0
+train_labelloss:0.250325	train_vaeloss:0.086511	train_reconloss:0.530687	train_acc:0.812500
+test_loss:0.223958	test_acc:0.944517
+2021-12-08 16:46:46,008	
+Epoch :       0
+train_labelloss:0.210905	train_vaeloss:0.076296	train_reconloss:0.488271	train_acc:0.906250
+test_loss:0.215539	test_acc:0.949566
+2021-12-08 16:47:03,983	
+Epoch :       0
+train_labelloss:0.205556	train_vaeloss:0.069796	train_reconloss:0.395350	train_acc:0.937500
+test_loss:0.212901	test_acc:0.950727
+2021-12-08 16:47:20,642	
+Epoch :       0
+train_labelloss:0.209825	train_vaeloss:0.074657	train_reconloss:0.370143	train_acc:1.000000
+test_loss:0.203929	test_acc:0.956280
+2021-12-08 16:47:37,455	
+Epoch :       0
+train_labelloss:0.210973	train_vaeloss:0.078843	train_reconloss:0.364511	train_acc:0.937500
+test_loss:0.223785	test_acc:0.942599
+2021-12-08 16:47:55,074	
+Epoch :       0
+train_labelloss:0.210469	train_vaeloss:0.077277	train_reconloss:0.346380	train_acc:0.968750
+test_loss:0.200428	test_acc:0.958300
+2021-12-08 16:48:13,913	
+Epoch :       0
+train_labelloss:0.209480	train_vaeloss:0.079775	train_reconloss:0.332100	train_acc:0.937500
+test_loss:0.196156	test_acc:0.960723
+2021-12-08 16:48:32,505	
+Epoch :       0
+train_labelloss:0.195466	train_vaeloss:0.067376	train_reconloss:0.279179	train_acc:1.000000
+test_loss:0.194235	test_acc:0.961177
+2021-12-08 16:48:50,585	
+Epoch :       0
+train_labelloss:0.208048	train_vaeloss:0.092419	train_reconloss:0.272560	train_acc:0.843750
+test_loss:0.205862	test_acc:0.954917
+2021-12-08 16:49:08,334	
+Epoch :       0
+train_labelloss:0.192117	train_vaeloss:0.069041	train_reconloss:0.235525	train_acc:1.000000
+test_loss:0.191510	test_acc:0.962490
+2021-12-08 16:49:27,216	
+Epoch :       0
+train_labelloss:0.193602	train_vaeloss:0.086624	train_reconloss:0.243588	train_acc:0.968750
+test_loss:0.195292	test_acc:0.960975
+2021-12-08 16:49:45,510	
+Epoch :       0
+train_labelloss:0.185552	train_vaeloss:0.087063	train_reconloss:0.212550	train_acc:0.968750
+test_loss:0.188731	test_acc:0.964509
+2021-12-08 16:50:04,256	
+Epoch :       0
+train_labelloss:0.202564	train_vaeloss:0.073115	train_reconloss:0.185179	train_acc:1.000000
+test_loss:0.192252	test_acc:0.961278
+2021-12-08 16:50:22,783	
+Epoch :       0
+train_labelloss:0.195193	train_vaeloss:0.076619	train_reconloss:0.183841	train_acc:0.937500
+test_loss:0.188039	test_acc:0.963903
+2021-12-08 16:50:41,556	
+Epoch :       0
+train_labelloss:0.190475	train_vaeloss:0.084567	train_reconloss:0.158109	train_acc:1.000000
+test_loss:0.185759	test_acc:0.965620
+2021-12-08 16:50:59,271	
+Epoch :       0
+train_labelloss:0.183414	train_vaeloss:0.074087	train_reconloss:0.142279	train_acc:1.000000
+test_loss:0.186052	test_acc:0.965771
+2021-12-08 16:51:17,732	
+Epoch :       0
+train_labelloss:0.182629	train_vaeloss:0.072709	train_reconloss:0.129844	train_acc:0.875000
+test_loss:0.185152	test_acc:0.966630
+2021-12-08 16:51:36,311	
+Epoch :       0
+train_labelloss:0.187295	train_vaeloss:0.072236	train_reconloss:0.124316	train_acc:1.000000
+test_loss:0.182753	test_acc:0.968043
+2021-12-08 16:51:55,229	
+Epoch :       0
+train_labelloss:0.188583	train_vaeloss:0.071792	train_reconloss:0.112681	train_acc:0.937500
+test_loss:0.194918	test_acc:0.959966
+2021-12-08 16:52:12,107	
+Epoch :       0
+train_labelloss:0.175671	train_vaeloss:0.062356	train_reconloss:0.100694	train_acc:1.000000
+test_loss:0.180982	test_acc:0.969356
+2021-12-08 16:52:30,222	
+Epoch :       0
+train_labelloss:0.184899	train_vaeloss:0.055295	train_reconloss:0.091789	train_acc:1.000000
+test_loss:0.181658	test_acc:0.968901
+2021-12-08 16:52:47,608	
+Epoch :       0
+train_labelloss:0.176392	train_vaeloss:0.057376	train_reconloss:0.080741	train_acc:0.937500
+test_loss:0.179893	test_acc:0.970164
+2021-12-08 16:53:05,200	
+Epoch :       0
+train_labelloss:0.178830	train_vaeloss:0.053958	train_reconloss:0.076286	train_acc:0.968750
+test_loss:0.189303	test_acc:0.963702
+2021-12-08 16:53:24,079	
+Epoch :       0
+train_labelloss:0.178174	train_vaeloss:0.071186	train_reconloss:0.072734	train_acc:1.000000
+test_loss:0.182317	test_acc:0.968346
+2021-12-08 16:53:43,144	
+Epoch :       0
+train_labelloss:0.186121	train_vaeloss:0.076507	train_reconloss:0.071371	train_acc:0.937500
+test_loss:0.178637	test_acc:0.970517
+2021-12-08 16:54:01,632	
+Epoch :       0
+train_labelloss:0.179683	train_vaeloss:0.049312	train_reconloss:0.056806	train_acc:1.000000
+test_loss:0.182762	test_acc:0.966579
+2021-12-08 16:54:20,124	
+Epoch :       0
+train_labelloss:0.169964	train_vaeloss:0.042579	train_reconloss:0.050370	train_acc:0.968750
+test_loss:0.177736	test_acc:0.970567
+2021-12-08 16:54:39,363	
+Epoch :       0
+train_labelloss:0.177374	train_vaeloss:0.053879	train_reconloss:0.052418	train_acc:0.937500
+test_loss:0.177793	test_acc:0.970113
+2021-12-08 16:54:57,921	
+Epoch :       0
+train_labelloss:0.181046	train_vaeloss:0.059951	train_reconloss:0.043978	train_acc:0.937500
+test_loss:0.176917	test_acc:0.971224
+2021-12-08 16:55:16,198	
+Epoch :       0
+train_labelloss:0.188070	train_vaeloss:0.077767	train_reconloss:0.047779	train_acc:0.906250
+test_loss:0.179763	test_acc:0.969053
+2021-12-08 16:55:35,038	
+Epoch :       0
+train_labelloss:0.175924	train_vaeloss:0.066021	train_reconloss:0.037982	train_acc:0.906250
+test_loss:0.181229	test_acc:0.967690
+2021-12-08 16:55:53,913	
+Epoch :       0
+train_labelloss:0.187723	train_vaeloss:0.068991	train_reconloss:0.036772	train_acc:1.000000
+test_loss:0.175666	test_acc:0.972435
+2021-12-08 16:56:11,650	
+Epoch :       0
+train_labelloss:0.173736	train_vaeloss:0.035051	train_reconloss:0.030729	train_acc:1.000000
+test_loss:0.175131	test_acc:0.972233
+2021-12-08 16:56:28,777	
+Epoch :       0
+train_labelloss:0.176941	train_vaeloss:0.050687	train_reconloss:0.029273	train_acc:1.000000
+test_loss:0.179102	test_acc:0.969457
+2021-12-08 16:56:47,588	
+Epoch :       0
+train_labelloss:0.174098	train_vaeloss:0.072734	train_reconloss:0.028294	train_acc:0.968750
+test_loss:0.173910	test_acc:0.972688
+2021-12-08 16:57:06,198	
+Epoch :       0
+train_labelloss:0.178350	train_vaeloss:0.038816	train_reconloss:0.023079	train_acc:0.906250
+test_loss:0.173625	test_acc:0.972385
+2021-12-08 16:57:25,016	
+Epoch :       0
+train_labelloss:0.177403	train_vaeloss:0.038765	train_reconloss:0.022011	train_acc:0.968750
+test_loss:0.174071	test_acc:0.972940
+2021-12-08 16:57:42,460	
+Epoch :       0
+train_labelloss:0.179479	train_vaeloss:0.052685	train_reconloss:0.020090	train_acc:0.968750
+test_loss:0.173696	test_acc:0.973798
+2021-12-08 16:57:59,212	
+Epoch :       0
+train_labelloss:0.170672	train_vaeloss:0.033544	train_reconloss:0.018278	train_acc:0.968750
+test_loss:0.173475	test_acc:0.972587
+2021-12-08 16:58:17,071	
+Epoch :       0
+train_labelloss:0.173744	train_vaeloss:0.037363	train_reconloss:0.017271	train_acc:0.968750
+test_loss:0.173782	test_acc:0.972183
+2021-12-08 16:58:21,946	Epoch 1
+2021-12-08 16:58:36,037	
+Epoch :       1
+train_labelloss:0.185396	train_vaeloss:0.041688	train_reconloss:0.015353	train_acc:0.968750
+test_loss:0.173201	test_acc:0.973041
+2021-12-08 16:58:54,849	
+Epoch :       1
+train_labelloss:0.166864	train_vaeloss:0.025511	train_reconloss:0.012841	train_acc:0.937500
+test_loss:0.173397	test_acc:0.973294
+2021-12-08 16:59:13,494	
+Epoch :       1
+train_labelloss:0.167280	train_vaeloss:0.031101	train_reconloss:0.011674	train_acc:0.968750
+test_loss:0.172517	test_acc:0.973597
+2021-12-08 16:59:30,929	
+Epoch :       1
+train_labelloss:0.169803	train_vaeloss:0.017380	train_reconloss:0.011922	train_acc:1.000000
+test_loss:0.172448	test_acc:0.973950
+2021-12-08 16:59:48,061	
+Epoch :       1
+train_labelloss:0.174145	train_vaeloss:0.018889	train_reconloss:0.010668	train_acc:0.906250
+test_loss:0.172389	test_acc:0.973294
+2021-12-08 17:00:06,908	
+Epoch :       1
+train_labelloss:0.172237	train_vaeloss:0.031281	train_reconloss:0.009870	train_acc:1.000000
+test_loss:0.173645	test_acc:0.972940
+2021-12-08 17:00:25,477	
+Epoch :       1
+train_labelloss:0.169485	train_vaeloss:0.011785	train_reconloss:0.008554	train_acc:0.906250
+test_loss:0.173956	test_acc:0.972890
+2021-12-08 17:00:42,281	
+Epoch :       1
+train_labelloss:0.167224	train_vaeloss:0.008259	train_reconloss:0.007390	train_acc:1.000000
+test_loss:0.171183	test_acc:0.973849
+2021-12-08 17:01:00,810	
+Epoch :       1
+train_labelloss:0.165875	train_vaeloss:0.006649	train_reconloss:0.007214	train_acc:0.968750
+test_loss:0.170846	test_acc:0.974051
+2021-12-08 17:01:19,122	
+Epoch :       1
+train_labelloss:0.165391	train_vaeloss:0.013259	train_reconloss:0.006542	train_acc:0.937500
+test_loss:0.171178	test_acc:0.973849
+2021-12-08 17:01:36,893	
+Epoch :       1
+train_labelloss:0.162271	train_vaeloss:0.004277	train_reconloss:0.006490	train_acc:1.000000
+test_loss:0.170375	test_acc:0.974152
+2021-12-08 17:01:55,410	
+Epoch :       1
+train_labelloss:0.165743	train_vaeloss:0.001005	train_reconloss:0.005958	train_acc:0.937500
+test_loss:0.179461	test_acc:0.969507
+2021-12-08 17:02:14,151	
+Epoch :       1
+train_labelloss:0.175706	train_vaeloss:0.004420	train_reconloss:0.005252	train_acc:0.968750
+test_loss:0.170033	test_acc:0.974606
+2021-12-08 17:02:32,501	
+Epoch :       1
+train_labelloss:0.184899	train_vaeloss:0.004467	train_reconloss:0.004934	train_acc:1.000000
+test_loss:0.171304	test_acc:0.974556
+2021-12-08 17:02:50,921	
+Epoch :       1
+train_labelloss:0.165678	train_vaeloss:-0.000545	train_reconloss:0.004578	train_acc:1.000000
+test_loss:0.170473	test_acc:0.974707
+2021-12-08 17:03:09,641	
+Epoch :       1
+train_labelloss:0.170451	train_vaeloss:-0.009745	train_reconloss:0.004257	train_acc:1.000000
+test_loss:0.176413	test_acc:0.971274
+2021-12-08 17:03:28,131	
+Epoch :       1
+train_labelloss:0.165376	train_vaeloss:-0.009129	train_reconloss:0.004068	train_acc:1.000000
+test_loss:0.169218	test_acc:0.975414
+2021-12-08 17:03:46,633	
+Epoch :       1
+train_labelloss:0.173751	train_vaeloss:-0.012324	train_reconloss:0.003742	train_acc:0.937500
+test_loss:0.176603	test_acc:0.970618
+2021-12-08 17:04:05,231	
+Epoch :       1
+train_labelloss:0.166535	train_vaeloss:-0.011797	train_reconloss:0.003515	train_acc:0.906250
+test_loss:0.180071	test_acc:0.968599
+2021-12-08 17:04:24,977	
+Epoch :       1
+train_labelloss:0.168438	train_vaeloss:-0.009218	train_reconloss:0.003442	train_acc:1.000000
+test_loss:0.168042	test_acc:0.975464
+2021-12-08 17:04:43,564	
+Epoch :       1
+train_labelloss:0.172006	train_vaeloss:-0.003688	train_reconloss:0.003043	train_acc:1.000000
+test_loss:0.168009	test_acc:0.976272
+2021-12-08 17:05:02,053	
+Epoch :       1
+train_labelloss:0.163618	train_vaeloss:-0.008818	train_reconloss:0.002877	train_acc:1.000000
+test_loss:0.170015	test_acc:0.975263
+2021-12-08 17:05:19,967	
+Epoch :       1
+train_labelloss:0.166963	train_vaeloss:-0.024460	train_reconloss:0.003177	train_acc:0.937500
+test_loss:0.168517	test_acc:0.975919
+2021-12-08 17:05:38,698	
+Epoch :       1
+train_labelloss:0.162032	train_vaeloss:-0.024057	train_reconloss:0.002949	train_acc:1.000000
+test_loss:0.168102	test_acc:0.976828
+2021-12-08 17:05:58,069	
+Epoch :       1
+train_labelloss:0.169230	train_vaeloss:-0.013236	train_reconloss:0.002777	train_acc:0.937500
+test_loss:0.170219	test_acc:0.974909
+2021-12-08 17:06:17,001	
+Epoch :       1
+train_labelloss:0.166256	train_vaeloss:-0.020217	train_reconloss:0.002582	train_acc:1.000000
+test_loss:0.170762	test_acc:0.975313
+2021-12-08 17:06:35,692	
+Epoch :       1
+train_labelloss:0.167779	train_vaeloss:-0.018723	train_reconloss:0.002541	train_acc:0.906250
+test_loss:0.167986	test_acc:0.976272
+2021-12-08 17:06:52,766	
+Epoch :       1
+train_labelloss:0.159251	train_vaeloss:-0.027018	train_reconloss:0.002580	train_acc:1.000000
+test_loss:0.168677	test_acc:0.975818
+2021-12-08 17:07:10,053	
+Epoch :       1
+train_labelloss:0.165574	train_vaeloss:-0.020825	train_reconloss:0.002374	train_acc:1.000000
+test_loss:0.168702	test_acc:0.975969
+2021-12-08 17:07:27,559	
+Epoch :       1
+train_labelloss:0.163098	train_vaeloss:-0.029273	train_reconloss:0.002385	train_acc:1.000000
+test_loss:0.167861	test_acc:0.976323
+2021-12-08 17:07:45,551	
+Epoch :       1
+train_labelloss:0.166348	train_vaeloss:-0.028364	train_reconloss:0.002332	train_acc:0.968750
+test_loss:0.167625	test_acc:0.976474
+2021-12-08 17:08:02,715	
+Epoch :       1
+train_labelloss:0.172936	train_vaeloss:-0.033423	train_reconloss:0.002214	train_acc:0.968750
+test_loss:0.168069	test_acc:0.976626
+2021-12-08 17:08:21,721	
+Epoch :       1
+train_labelloss:0.170383	train_vaeloss:-0.033662	train_reconloss:0.002132	train_acc:0.968750
+test_loss:0.167578	test_acc:0.976272
+2021-12-08 17:08:40,371	
+Epoch :       1
+train_labelloss:0.170291	train_vaeloss:-0.032050	train_reconloss:0.002278	train_acc:1.000000
+test_loss:0.167227	test_acc:0.976828
+2021-12-08 17:08:58,862	
+Epoch :       1
+train_labelloss:0.163451	train_vaeloss:-0.041595	train_reconloss:0.002156	train_acc:1.000000
+test_loss:0.167495	test_acc:0.976323
+2021-12-08 17:09:17,299	
+Epoch :       1
+train_labelloss:0.164528	train_vaeloss:-0.033853	train_reconloss:0.002108	train_acc:1.000000
+test_loss:0.168416	test_acc:0.975565
+2021-12-08 17:09:35,551	
+Epoch :       1
+train_labelloss:0.169035	train_vaeloss:-0.035420	train_reconloss:0.002060	train_acc:1.000000
+test_loss:0.167950	test_acc:0.975919
+2021-12-08 17:09:54,097	
+Epoch :       1
+train_labelloss:0.164342	train_vaeloss:-0.028462	train_reconloss:0.002037	train_acc:1.000000
+test_loss:0.168199	test_acc:0.976020
+2021-12-08 17:10:12,949	
+Epoch :       1
+train_labelloss:0.169516	train_vaeloss:-0.043101	train_reconloss:0.002199	train_acc:1.000000
+test_loss:0.171695	test_acc:0.974253
+2021-12-08 17:10:31,832	
+Epoch :       1
+train_labelloss:0.165132	train_vaeloss:-0.037683	train_reconloss:0.002021	train_acc:1.000000
+test_loss:0.166834	test_acc:0.976929
+2021-12-08 17:10:49,644	
+Epoch :       1
+train_labelloss:0.169991	train_vaeloss:-0.040884	train_reconloss:0.002049	train_acc:1.000000
+test_loss:0.166666	test_acc:0.976929
+2021-12-08 17:11:06,774	
+Epoch :       1
+train_labelloss:0.162592	train_vaeloss:-0.045227	train_reconloss:0.002046	train_acc:0.937500
+test_loss:0.166827	test_acc:0.976626
+2021-12-08 17:11:24,818	
+Epoch :       1
+train_labelloss:0.171282	train_vaeloss:-0.047911	train_reconloss:0.002043	train_acc:0.968750
+test_loss:0.166409	test_acc:0.976727
+2021-12-08 17:11:42,896	
+Epoch :       1
+train_labelloss:0.165396	train_vaeloss:-0.041740	train_reconloss:0.002023	train_acc:0.968750
+test_loss:0.167678	test_acc:0.976070
+2021-12-08 17:11:45,016	Epoch 2
+2021-12-08 17:12:01,937	
+Epoch :       2
+train_labelloss:0.160175	train_vaeloss:-0.052226	train_reconloss:0.002162	train_acc:1.000000
+test_loss:0.166021	test_acc:0.977332
+2021-12-08 17:12:20,196	
+Epoch :       2
+train_labelloss:0.163924	train_vaeloss:-0.046090	train_reconloss:0.001947	train_acc:0.968750
+test_loss:0.166300	test_acc:0.976525
+2021-12-08 17:12:37,724	
+Epoch :       2
+train_labelloss:0.153225	train_vaeloss:-0.047532	train_reconloss:0.001913	train_acc:1.000000
+test_loss:0.167314	test_acc:0.976929
+2021-12-08 17:12:56,176	
+Epoch :       2
+train_labelloss:0.163225	train_vaeloss:-0.051569	train_reconloss:0.002024	train_acc:0.937500
+test_loss:0.166499	test_acc:0.977332
+2021-12-08 17:13:13,532	
+Epoch :       2
+train_labelloss:0.164471	train_vaeloss:-0.047587	train_reconloss:0.001955	train_acc:0.968750
+test_loss:0.166481	test_acc:0.976676
+2021-12-08 17:13:31,888	
+Epoch :       2
+train_labelloss:0.165924	train_vaeloss:-0.053975	train_reconloss:0.001948	train_acc:0.968750
+test_loss:0.166589	test_acc:0.976626
+2021-12-08 17:13:50,934	
+Epoch :       2
+train_labelloss:0.161971	train_vaeloss:-0.049062	train_reconloss:0.001929	train_acc:1.000000
+test_loss:0.167408	test_acc:0.976777
+2021-12-08 17:14:09,126	
+Epoch :       2
+train_labelloss:0.158310	train_vaeloss:-0.059520	train_reconloss:0.002074	train_acc:1.000000
+test_loss:0.170205	test_acc:0.974859
+2021-12-08 17:14:25,840	
+Epoch :       2
+train_labelloss:0.162232	train_vaeloss:-0.054416	train_reconloss:0.001992	train_acc:0.906250
+test_loss:0.166211	test_acc:0.977080
+2021-12-08 17:14:43,119	
+Epoch :       2
+train_labelloss:0.158672	train_vaeloss:-0.064838	train_reconloss:0.002032	train_acc:0.968750
+test_loss:0.166870	test_acc:0.977080
+2021-12-08 17:14:59,880	
+Epoch :       2
+train_labelloss:0.163604	train_vaeloss:-0.049384	train_reconloss:0.001966	train_acc:0.937500
+test_loss:0.168722	test_acc:0.976121
+2021-12-08 17:15:17,314	
+Epoch :       2
+train_labelloss:0.156608	train_vaeloss:-0.054176	train_reconloss:0.001987	train_acc:1.000000
+test_loss:0.173772	test_acc:0.972688
+2021-12-08 17:15:34,436	
+Epoch :       2
+train_labelloss:0.156291	train_vaeloss:-0.057632	train_reconloss:0.001918	train_acc:1.000000
+test_loss:0.168178	test_acc:0.976171
+2021-12-08 17:15:53,222	
+Epoch :       2
+train_labelloss:0.162697	train_vaeloss:-0.067012	train_reconloss:0.002024	train_acc:1.000000
+test_loss:0.168741	test_acc:0.975868
+2021-12-08 17:16:11,826	
+Epoch :       2
+train_labelloss:0.164071	train_vaeloss:-0.065033	train_reconloss:0.002025	train_acc:1.000000
+test_loss:0.166291	test_acc:0.976424
+2021-12-08 17:16:29,649	
+Epoch :       2
+train_labelloss:0.156932	train_vaeloss:-0.067728	train_reconloss:0.002135	train_acc:0.937500
+test_loss:0.166527	test_acc:0.977130
+2021-12-08 17:16:48,380	
+Epoch :       2
+train_labelloss:0.162625	train_vaeloss:-0.059389	train_reconloss:0.001859	train_acc:1.000000
+test_loss:0.166412	test_acc:0.976626
+2021-12-08 17:17:05,673	
+Epoch :       2
+train_labelloss:0.154884	train_vaeloss:-0.060110	train_reconloss:0.001929	train_acc:1.000000
+test_loss:0.167197	test_acc:0.976626
+2021-12-08 17:17:22,496	
+Epoch :       2
+train_labelloss:0.165930	train_vaeloss:-0.058377	train_reconloss:0.001919	train_acc:1.000000
+test_loss:0.167902	test_acc:0.975818
+2021-12-08 17:17:39,335	
+Epoch :       2
+train_labelloss:0.163347	train_vaeloss:-0.058614	train_reconloss:0.001867	train_acc:1.000000
+test_loss:0.171638	test_acc:0.973849
+2021-12-08 17:17:56,040	
+Epoch :       2
+train_labelloss:0.157395	train_vaeloss:-0.064361	train_reconloss:0.002051	train_acc:1.000000
+test_loss:0.166306	test_acc:0.977130
+2021-12-08 17:18:14,205	
+Epoch :       2
+train_labelloss:0.163107	train_vaeloss:-0.053867	train_reconloss:0.001904	train_acc:1.000000
+test_loss:0.166219	test_acc:0.977332
+2021-12-08 17:18:31,716	
+Epoch :       2
+train_labelloss:0.155825	train_vaeloss:-0.063155	train_reconloss:0.001900	train_acc:0.937500
+test_loss:0.165713	test_acc:0.977433
+2021-12-08 17:18:49,856	
+Epoch :       2
+train_labelloss:0.158422	train_vaeloss:-0.062574	train_reconloss:0.002026	train_acc:1.000000
+test_loss:0.168002	test_acc:0.975919
+2021-12-08 17:19:09,314	
+Epoch :       2
+train_labelloss:0.165678	train_vaeloss:-0.061867	train_reconloss:0.001923	train_acc:1.000000
+test_loss:0.165791	test_acc:0.977534
+2021-12-08 17:19:27,279	
+Epoch :       2
+train_labelloss:0.158353	train_vaeloss:-0.061388	train_reconloss:0.002011	train_acc:1.000000
+test_loss:0.165752	test_acc:0.977534
+2021-12-08 17:19:44,838	
+Epoch :       2
+train_labelloss:0.157605	train_vaeloss:-0.064622	train_reconloss:0.002017	train_acc:0.968750
+test_loss:0.164807	test_acc:0.978191
+2021-12-08 17:20:02,526	
+Epoch :       2
+train_labelloss:0.158350	train_vaeloss:-0.056742	train_reconloss:0.001893	train_acc:0.937500
+test_loss:0.164987	test_acc:0.978342
+2021-12-08 17:20:20,889	
+Epoch :       2
+train_labelloss:0.157628	train_vaeloss:-0.056485	train_reconloss:0.001811	train_acc:1.000000
+test_loss:0.165046	test_acc:0.978292
+2021-12-08 17:20:38,479	
+Epoch :       2
+train_labelloss:0.158572	train_vaeloss:-0.062481	train_reconloss:0.001940	train_acc:0.968750
+test_loss:0.173056	test_acc:0.973546
+2021-12-08 17:20:56,791	
+Epoch :       2
+train_labelloss:0.162057	train_vaeloss:-0.057480	train_reconloss:0.001981	train_acc:1.000000
+test_loss:0.165118	test_acc:0.978039
+2021-12-08 17:21:14,237	
+Epoch :       2
+train_labelloss:0.160165	train_vaeloss:-0.059498	train_reconloss:0.001953	train_acc:1.000000
+test_loss:0.165078	test_acc:0.977888
+2021-12-08 17:21:32,476	
+Epoch :       2
+train_labelloss:0.158522	train_vaeloss:-0.053968	train_reconloss:0.001937	train_acc:1.000000
+test_loss:0.168553	test_acc:0.976171
+2021-12-08 17:21:51,815	
+Epoch :       2
+train_labelloss:0.159217	train_vaeloss:-0.067984	train_reconloss:0.001991	train_acc:0.937500
+test_loss:0.169457	test_acc:0.975363
+2021-12-08 17:22:10,818	
+Epoch :       2
+train_labelloss:0.159927	train_vaeloss:-0.052374	train_reconloss:0.001770	train_acc:1.000000
+test_loss:0.164702	test_acc:0.977888
+2021-12-08 17:22:30,198	
+Epoch :       2
+train_labelloss:0.170441	train_vaeloss:-0.062479	train_reconloss:0.001863	train_acc:1.000000
+test_loss:0.166410	test_acc:0.976979
+2021-12-08 17:22:48,460	
+Epoch :       2
+train_labelloss:0.157703	train_vaeloss:-0.064757	train_reconloss:0.001997	train_acc:0.968750
+test_loss:0.167006	test_acc:0.976929
+2021-12-08 17:23:07,703	
+Epoch :       2
+train_labelloss:0.166019	train_vaeloss:-0.059290	train_reconloss:0.001864	train_acc:1.000000
+test_loss:0.164005	test_acc:0.978241
+2021-12-08 17:23:26,104	
+Epoch :       2
+train_labelloss:0.157826	train_vaeloss:-0.068027	train_reconloss:0.002023	train_acc:0.968750
+test_loss:0.164852	test_acc:0.978342
+2021-12-08 17:23:45,251	
+Epoch :       2
+train_labelloss:0.157399	train_vaeloss:-0.064298	train_reconloss:0.001958	train_acc:1.000000
+test_loss:0.165867	test_acc:0.977433
+2021-12-08 17:24:02,754	
+Epoch :       2
+train_labelloss:0.165512	train_vaeloss:-0.065722	train_reconloss:0.001914	train_acc:1.000000
+test_loss:0.165623	test_acc:0.977686
+2021-12-08 17:24:20,879	
+Epoch :       2
+train_labelloss:0.160655	train_vaeloss:-0.066243	train_reconloss:0.001866	train_acc:1.000000
+test_loss:0.164758	test_acc:0.977534
+2021-12-08 17:24:38,478	
+Epoch :       2
+train_labelloss:0.161451	train_vaeloss:-0.060873	train_reconloss:0.001943	train_acc:1.000000
+test_loss:0.164832	test_acc:0.978090
+2021-12-08 17:24:55,531	
+Epoch :       2
+train_labelloss:0.162012	train_vaeloss:-0.061818	train_reconloss:0.001844	train_acc:0.968750
+test_loss:0.165745	test_acc:0.977231
+2021-12-08 17:24:55,582	Epoch 3
+2021-12-08 17:25:14,134	
+Epoch :       3
+train_labelloss:0.151758	train_vaeloss:-0.064536	train_reconloss:0.001899	train_acc:0.968750
+test_loss:0.164374	test_acc:0.978090
+2021-12-08 17:25:33,011	
+Epoch :       3
+train_labelloss:0.152184	train_vaeloss:-0.057854	train_reconloss:0.001897	train_acc:1.000000
+test_loss:0.164535	test_acc:0.977888
+2021-12-08 17:25:50,514	
+Epoch :       3
+train_labelloss:0.167444	train_vaeloss:-0.057322	train_reconloss:0.001933	train_acc:1.000000
+test_loss:0.163607	test_acc:0.978897
+2021-12-08 17:26:09,284	
+Epoch :       3
+train_labelloss:0.153997	train_vaeloss:-0.064362	train_reconloss:0.001841	train_acc:1.000000
+test_loss:0.164236	test_acc:0.978140
+2021-12-08 17:26:27,187	
+Epoch :       3
+train_labelloss:0.153708	train_vaeloss:-0.072847	train_reconloss:0.002001	train_acc:1.000000
+test_loss:0.163880	test_acc:0.977888
+2021-12-08 17:26:46,194	
+Epoch :       3
+train_labelloss:0.155937	train_vaeloss:-0.067025	train_reconloss:0.001995	train_acc:0.968750
+test_loss:0.164649	test_acc:0.977787
+2021-12-08 17:27:03,285	
+Epoch :       3
+train_labelloss:0.157026	train_vaeloss:-0.053116	train_reconloss:0.001933	train_acc:1.000000
+test_loss:0.164180	test_acc:0.978039
+2021-12-08 17:27:20,835	
+Epoch :       3
+train_labelloss:0.152767	train_vaeloss:-0.070176	train_reconloss:0.001990	train_acc:1.000000
+test_loss:0.164241	test_acc:0.977736
+2021-12-08 17:27:39,295	
+Epoch :       3
+train_labelloss:0.154483	train_vaeloss:-0.063464	train_reconloss:0.001909	train_acc:1.000000
+test_loss:0.166532	test_acc:0.976424
+2021-12-08 17:27:57,451	
+Epoch :       3
+train_labelloss:0.148484	train_vaeloss:-0.060095	train_reconloss:0.001935	train_acc:0.968750
+test_loss:0.164126	test_acc:0.978393
+2021-12-08 17:28:14,858	
+Epoch :       3
+train_labelloss:0.157289	train_vaeloss:-0.066721	train_reconloss:0.002037	train_acc:0.968750
+test_loss:0.166713	test_acc:0.976575
+2021-12-08 17:28:33,211	
+Epoch :       3
+train_labelloss:0.156137	train_vaeloss:-0.059067	train_reconloss:0.001912	train_acc:0.968750
+test_loss:0.164209	test_acc:0.977989
+2021-12-08 17:28:51,676	
+Epoch :       3
+train_labelloss:0.153137	train_vaeloss:-0.058051	train_reconloss:0.001850	train_acc:0.968750
+test_loss:0.164575	test_acc:0.978090
+2021-12-08 17:29:08,835	
+Epoch :       3
+train_labelloss:0.159189	train_vaeloss:-0.057488	train_reconloss:0.001962	train_acc:0.937500
+test_loss:0.163732	test_acc:0.978039
+2021-12-08 17:29:27,333	
+Epoch :       3
+train_labelloss:0.160500	train_vaeloss:-0.058758	train_reconloss:0.001892	train_acc:0.968750
+test_loss:0.165708	test_acc:0.977383
+2021-12-08 17:29:45,878	
+Epoch :       3
+train_labelloss:0.156184	train_vaeloss:-0.053089	train_reconloss:0.001805	train_acc:1.000000
+test_loss:0.164383	test_acc:0.978140
+2021-12-08 17:30:02,626	
+Epoch :       3
+train_labelloss:0.159375	train_vaeloss:-0.058969	train_reconloss:0.001848	train_acc:0.937500
+test_loss:0.166573	test_acc:0.977383
+2021-12-08 17:30:19,285	
+Epoch :       3
+train_labelloss:0.162882	train_vaeloss:-0.061331	train_reconloss:0.001853	train_acc:0.968750
+test_loss:0.165503	test_acc:0.977332
+2021-12-08 17:30:36,201	
+Epoch :       3
+train_labelloss:0.152904	train_vaeloss:-0.060555	train_reconloss:0.001945	train_acc:1.000000
+test_loss:0.165354	test_acc:0.977029
+2021-12-08 17:30:54,582	
+Epoch :       3
+train_labelloss:0.154678	train_vaeloss:-0.063703	train_reconloss:0.002013	train_acc:1.000000
+test_loss:0.165526	test_acc:0.977888
+2021-12-08 17:31:13,523	
+Epoch :       3
+train_labelloss:0.165356	train_vaeloss:-0.064304	train_reconloss:0.001948	train_acc:0.875000
+test_loss:0.175481	test_acc:0.971880
+2021-12-08 17:31:31,915	
+Epoch :       3
+train_labelloss:0.155415	train_vaeloss:-0.058645	train_reconloss:0.001896	train_acc:1.000000
+test_loss:0.165733	test_acc:0.977484
+2021-12-08 17:31:50,575	
+Epoch :       3
+train_labelloss:0.153135	train_vaeloss:-0.063401	train_reconloss:0.001998	train_acc:1.000000
+test_loss:0.162894	test_acc:0.979200
+2021-12-08 17:32:08,825	
+Epoch :       3
+train_labelloss:0.153773	train_vaeloss:-0.059979	train_reconloss:0.001963	train_acc:1.000000
+test_loss:0.164800	test_acc:0.977837
+2021-12-08 17:32:27,054	
+Epoch :       3
+train_labelloss:0.160079	train_vaeloss:-0.059357	train_reconloss:0.001874	train_acc:1.000000
+test_loss:0.163488	test_acc:0.979099
+2021-12-08 17:32:45,298	
+Epoch :       3
+train_labelloss:0.158065	train_vaeloss:-0.057672	train_reconloss:0.001814	train_acc:0.968750
+test_loss:0.164457	test_acc:0.978241
+2021-12-08 17:33:03,089	
+Epoch :       3
+train_labelloss:0.157487	train_vaeloss:-0.056614	train_reconloss:0.001947	train_acc:1.000000
+test_loss:0.163919	test_acc:0.978342
+2021-12-08 17:33:21,575	
+Epoch :       3
+train_labelloss:0.151623	train_vaeloss:-0.058776	train_reconloss:0.001848	train_acc:1.000000
+test_loss:0.163746	test_acc:0.978695
+2021-12-08 17:33:40,473	
+Epoch :       3
+train_labelloss:0.160536	train_vaeloss:-0.063077	train_reconloss:0.001845	train_acc:1.000000
+test_loss:0.163461	test_acc:0.979200
+2021-12-08 17:33:58,689	
+Epoch :       3
+train_labelloss:0.147835	train_vaeloss:-0.061595	train_reconloss:0.001934	train_acc:1.000000
+test_loss:0.167190	test_acc:0.976979
+2021-12-08 17:34:16,589	
+Epoch :       3
+train_labelloss:0.155989	train_vaeloss:-0.058113	train_reconloss:0.001909	train_acc:0.937500
+test_loss:0.166059	test_acc:0.977130
+2021-12-08 17:34:35,721	
+Epoch :       3
+train_labelloss:0.158784	train_vaeloss:-0.062048	train_reconloss:0.001896	train_acc:0.968750
+test_loss:0.165488	test_acc:0.977585
+2021-12-08 17:34:53,983	
+Epoch :       3
+train_labelloss:0.154702	train_vaeloss:-0.060273	train_reconloss:0.001885	train_acc:0.968750
+test_loss:0.163686	test_acc:0.978746
+2021-12-08 17:35:13,244	
+Epoch :       3
+train_labelloss:0.155845	train_vaeloss:-0.060873	train_reconloss:0.001947	train_acc:1.000000
+test_loss:0.164058	test_acc:0.978443
+2021-12-08 17:35:31,556	
+Epoch :       3
+train_labelloss:0.162109	train_vaeloss:-0.055027	train_reconloss:0.001842	train_acc:1.000000
+test_loss:0.164915	test_acc:0.978342
+2021-12-08 17:35:49,373	
+Epoch :       3
+train_labelloss:0.153019	train_vaeloss:-0.068302	train_reconloss:0.001979	train_acc:0.968750
+test_loss:0.173943	test_acc:0.973798
+2021-12-08 17:36:08,152	
+Epoch :       3
+train_labelloss:0.159481	train_vaeloss:-0.066422	train_reconloss:0.001845	train_acc:0.937500
+test_loss:0.163930	test_acc:0.977938
+2021-12-08 17:36:25,771	
+Epoch :       3
+train_labelloss:0.150207	train_vaeloss:-0.065375	train_reconloss:0.001897	train_acc:0.968750
+test_loss:0.163902	test_acc:0.977787
+2021-12-08 17:36:43,668	
+Epoch :       3
+train_labelloss:0.152774	train_vaeloss:-0.066774	train_reconloss:0.001947	train_acc:1.000000
+test_loss:0.163601	test_acc:0.978292
+2021-12-08 17:37:02,394	
+Epoch :       3
+train_labelloss:0.147239	train_vaeloss:-0.059208	train_reconloss:0.001915	train_acc:0.968750
+test_loss:0.173477	test_acc:0.973041
+2021-12-08 17:37:19,599	
+Epoch :       3
+train_labelloss:0.162340	train_vaeloss:-0.064597	train_reconloss:0.001886	train_acc:1.000000
+test_loss:0.163258	test_acc:0.978241
+2021-12-08 17:37:38,609	
+Epoch :       3
+train_labelloss:0.165482	train_vaeloss:-0.057619	train_reconloss:0.001833	train_acc:0.968750
+test_loss:0.164272	test_acc:0.977686
+2021-12-08 17:37:56,562	
+Epoch :       3
+train_labelloss:0.155174	train_vaeloss:-0.061155	train_reconloss:0.002042	train_acc:1.000000
+test_loss:0.165799	test_acc:0.976626
+2021-12-08 17:38:01,361	Epoch 4
+2021-12-08 17:38:15,637	
+Epoch :       4
+train_labelloss:0.153484	train_vaeloss:-0.062102	train_reconloss:0.001771	train_acc:1.000000
+test_loss:0.163122	test_acc:0.979150
+2021-12-08 17:38:32,575	
+Epoch :       4
+train_labelloss:0.152901	train_vaeloss:-0.059059	train_reconloss:0.001906	train_acc:1.000000
+test_loss:0.163698	test_acc:0.978191
+2021-12-08 17:38:49,619	
+Epoch :       4
+train_labelloss:0.153410	train_vaeloss:-0.067431	train_reconloss:0.001977	train_acc:1.000000
+test_loss:0.163015	test_acc:0.979251
+2021-12-08 17:39:07,269	
+Epoch :       4
+train_labelloss:0.149384	train_vaeloss:-0.056330	train_reconloss:0.001847	train_acc:1.000000
+test_loss:0.163356	test_acc:0.978544
+2021-12-08 17:39:25,095	
+Epoch :       4
+train_labelloss:0.151392	train_vaeloss:-0.060595	train_reconloss:0.001851	train_acc:0.906250
+test_loss:0.162835	test_acc:0.979301
+2021-12-08 17:39:42,632	
+Epoch :       4
+train_labelloss:0.149355	train_vaeloss:-0.063869	train_reconloss:0.001896	train_acc:0.968750
+test_loss:0.165733	test_acc:0.977130
+2021-12-08 17:39:59,452	
+Epoch :       4
+train_labelloss:0.150256	train_vaeloss:-0.066106	train_reconloss:0.001914	train_acc:1.000000
+test_loss:0.163837	test_acc:0.978897
+2021-12-08 17:40:17,366	
+Epoch :       4
+train_labelloss:0.155165	train_vaeloss:-0.067437	train_reconloss:0.001955	train_acc:0.906250
+test_loss:0.162446	test_acc:0.978847
+2021-12-08 17:40:35,120	
+Epoch :       4
+train_labelloss:0.146099	train_vaeloss:-0.061319	train_reconloss:0.001840	train_acc:0.968750
+test_loss:0.165154	test_acc:0.978191
+2021-12-08 17:40:52,992	
+Epoch :       4
+train_labelloss:0.154378	train_vaeloss:-0.067527	train_reconloss:0.002000	train_acc:0.906250
+test_loss:0.164588	test_acc:0.979200
+2021-12-08 17:41:11,533	
+Epoch :       4
+train_labelloss:0.145638	train_vaeloss:-0.059869	train_reconloss:0.001884	train_acc:1.000000
+test_loss:0.165173	test_acc:0.977938
+2021-12-08 17:41:29,343	
+Epoch :       4
+train_labelloss:0.159304	train_vaeloss:-0.056667	train_reconloss:0.001807	train_acc:1.000000
+test_loss:0.162856	test_acc:0.979150
+2021-12-08 17:41:47,418	
+Epoch :       4
+train_labelloss:0.156355	train_vaeloss:-0.061537	train_reconloss:0.001907	train_acc:1.000000
+test_loss:0.167198	test_acc:0.976474
+2021-12-08 17:42:06,025	
+Epoch :       4
+train_labelloss:0.152029	train_vaeloss:-0.058394	train_reconloss:0.001945	train_acc:1.000000
+test_loss:0.163454	test_acc:0.978897
+2021-12-08 17:42:23,113	
+Epoch :       4
+train_labelloss:0.149233	train_vaeloss:-0.058320	train_reconloss:0.001934	train_acc:1.000000
+test_loss:0.163591	test_acc:0.978292
+2021-12-08 17:42:40,603	
+Epoch :       4
+train_labelloss:0.147046	train_vaeloss:-0.057958	train_reconloss:0.001933	train_acc:0.937500
+test_loss:0.162553	test_acc:0.979503
+2021-12-08 17:42:58,875	
+Epoch :       4
+train_labelloss:0.152681	train_vaeloss:-0.058009	train_reconloss:0.001900	train_acc:1.000000
+test_loss:0.165235	test_acc:0.976878
+2021-12-08 17:43:16,369	
+Epoch :       4
+train_labelloss:0.150576	train_vaeloss:-0.066743	train_reconloss:0.002033	train_acc:1.000000
+test_loss:0.162163	test_acc:0.979301
+2021-12-08 17:43:35,067	
+Epoch :       4
+train_labelloss:0.152384	train_vaeloss:-0.060272	train_reconloss:0.001881	train_acc:1.000000
+test_loss:0.163272	test_acc:0.978140
+2021-12-08 17:43:53,062	
+Epoch :       4
+train_labelloss:0.153695	train_vaeloss:-0.064320	train_reconloss:0.001893	train_acc:1.000000
+test_loss:0.162813	test_acc:0.979200
+2021-12-08 17:44:11,915	
+Epoch :       4
+train_labelloss:0.154232	train_vaeloss:-0.059873	train_reconloss:0.001922	train_acc:1.000000
+test_loss:0.163853	test_acc:0.978292
+2021-12-08 17:44:30,638	
+Epoch :       4
+train_labelloss:0.153728	train_vaeloss:-0.058037	train_reconloss:0.001890	train_acc:1.000000
+test_loss:0.166616	test_acc:0.977585
+2021-12-08 17:44:49,545	
+Epoch :       4
+train_labelloss:0.154483	train_vaeloss:-0.057549	train_reconloss:0.001897	train_acc:0.968750
+test_loss:0.163441	test_acc:0.978393
+2021-12-08 17:45:08,969	
+Epoch :       4
+train_labelloss:0.153690	train_vaeloss:-0.065109	train_reconloss:0.001837	train_acc:1.000000
+test_loss:0.163847	test_acc:0.978393
+2021-12-08 17:45:27,542	
+Epoch :       4
+train_labelloss:0.152884	train_vaeloss:-0.068251	train_reconloss:0.001921	train_acc:0.968750
+test_loss:0.161934	test_acc:0.979655
+2021-12-08 17:45:44,672	
+Epoch :       4
+train_labelloss:0.157982	train_vaeloss:-0.059803	train_reconloss:0.001828	train_acc:1.000000
+test_loss:0.162287	test_acc:0.978342
+2021-12-08 17:46:01,885	
+Epoch :       4
+train_labelloss:0.149608	train_vaeloss:-0.064643	train_reconloss:0.001975	train_acc:1.000000
+test_loss:0.162076	test_acc:0.979806
+2021-12-08 17:46:18,591	
+Epoch :       4
+train_labelloss:0.155984	train_vaeloss:-0.059141	train_reconloss:0.001898	train_acc:1.000000
+test_loss:0.162303	test_acc:0.978645
+2021-12-08 17:46:35,424	
+Epoch :       4
+train_labelloss:0.152863	train_vaeloss:-0.067434	train_reconloss:0.001937	train_acc:1.000000
+test_loss:0.162628	test_acc:0.979301
+2021-12-08 17:46:54,024	
+Epoch :       4
+train_labelloss:0.150545	train_vaeloss:-0.060117	train_reconloss:0.001865	train_acc:0.968750
+test_loss:0.162496	test_acc:0.979099
+2021-12-08 17:47:12,848	
+Epoch :       4
+train_labelloss:0.156208	train_vaeloss:-0.064545	train_reconloss:0.001867	train_acc:1.000000
+test_loss:0.164038	test_acc:0.978897
+2021-12-08 17:47:31,000	
+Epoch :       4
+train_labelloss:0.152595	train_vaeloss:-0.058025	train_reconloss:0.001834	train_acc:1.000000
+test_loss:0.163007	test_acc:0.979049
+2021-12-08 17:47:49,040	
+Epoch :       4
+train_labelloss:0.150548	train_vaeloss:-0.066820	train_reconloss:0.001823	train_acc:1.000000
+test_loss:0.162467	test_acc:0.978847
+2021-12-08 17:48:07,624	
+Epoch :       4
+train_labelloss:0.155309	train_vaeloss:-0.056082	train_reconloss:0.001756	train_acc:0.937500
+test_loss:0.165695	test_acc:0.977282
+2021-12-08 17:48:26,866	
+Epoch :       4
+train_labelloss:0.159357	train_vaeloss:-0.051411	train_reconloss:0.001769	train_acc:1.000000
+test_loss:0.163214	test_acc:0.978695
+2021-12-08 17:48:45,901	
+Epoch :       4
+train_labelloss:0.153347	train_vaeloss:-0.059761	train_reconloss:0.001803	train_acc:0.968750
+test_loss:0.164806	test_acc:0.978039
+2021-12-08 17:49:03,451	
+Epoch :       4
+train_labelloss:0.155819	train_vaeloss:-0.061639	train_reconloss:0.001975	train_acc:1.000000
+test_loss:0.162051	test_acc:0.979301
+2021-12-08 17:49:21,191	
+Epoch :       4
+train_labelloss:0.148955	train_vaeloss:-0.067168	train_reconloss:0.001974	train_acc:0.968750
+test_loss:0.167244	test_acc:0.976575
+2021-12-08 17:49:38,998	
+Epoch :       4
+train_labelloss:0.150467	train_vaeloss:-0.061174	train_reconloss:0.001900	train_acc:1.000000
+test_loss:0.166961	test_acc:0.977332
+2021-12-08 17:49:57,604	
+Epoch :       4
+train_labelloss:0.155261	train_vaeloss:-0.054683	train_reconloss:0.001836	train_acc:1.000000
+test_loss:0.161577	test_acc:0.979604
+2021-12-08 17:50:14,355	
+Epoch :       4
+train_labelloss:0.153461	train_vaeloss:-0.060359	train_reconloss:0.001867	train_acc:1.000000
+test_loss:0.161898	test_acc:0.979907
+2021-12-08 17:50:31,938	
+Epoch :       4
+train_labelloss:0.158462	train_vaeloss:-0.058451	train_reconloss:0.001824	train_acc:1.000000
+test_loss:0.165456	test_acc:0.977484
+2021-12-08 17:50:49,671	
+Epoch :       4
+train_labelloss:0.155139	train_vaeloss:-0.064933	train_reconloss:0.001899	train_acc:0.937500
+test_loss:0.162737	test_acc:0.978948
+2021-12-08 17:51:07,033	
+Epoch :       4
+train_labelloss:0.151901	train_vaeloss:-0.065847	train_reconloss:0.001942	train_acc:0.937500
+test_loss:0.162911	test_acc:0.978948
+2021-12-08 17:51:09,537	Epoch 5
+2021-12-08 17:51:25,429	
+Epoch :       5
+train_labelloss:0.148550	train_vaeloss:-0.061034	train_reconloss:0.001852	train_acc:1.000000
+test_loss:0.162663	test_acc:0.979756
+2021-12-08 17:51:44,207	
+Epoch :       5
+train_labelloss:0.146452	train_vaeloss:-0.063567	train_reconloss:0.001842	train_acc:1.000000
+test_loss:0.162831	test_acc:0.979402
+2021-12-08 17:52:02,327	
+Epoch :       5
+train_labelloss:0.158082	train_vaeloss:-0.060906	train_reconloss:0.001908	train_acc:1.000000
+test_loss:0.164266	test_acc:0.978191
+2021-12-08 17:52:19,963	
+Epoch :       5
+train_labelloss:0.144214	train_vaeloss:-0.065495	train_reconloss:0.001920	train_acc:1.000000
+test_loss:0.162230	test_acc:0.980160
+2021-12-08 17:52:36,643	
+Epoch :       5
+train_labelloss:0.149652	train_vaeloss:-0.063320	train_reconloss:0.001839	train_acc:0.968750
+test_loss:0.164347	test_acc:0.979150
+2021-12-08 17:52:53,186	
+Epoch :       5
+train_labelloss:0.156678	train_vaeloss:-0.056507	train_reconloss:0.001877	train_acc:0.968750
+test_loss:0.162134	test_acc:0.980109
+2021-12-08 17:53:11,996	
+Epoch :       5
+train_labelloss:0.152032	train_vaeloss:-0.064024	train_reconloss:0.001902	train_acc:0.906250
+test_loss:0.160998	test_acc:0.980462
+2021-12-08 17:53:30,899	
+Epoch :       5
+train_labelloss:0.145765	train_vaeloss:-0.059457	train_reconloss:0.001846	train_acc:1.000000
+test_loss:0.162523	test_acc:0.980008
+2021-12-08 17:53:50,093	
+Epoch :       5
+train_labelloss:0.150767	train_vaeloss:-0.054766	train_reconloss:0.001850	train_acc:1.000000
+test_loss:0.164865	test_acc:0.978039
+2021-12-08 17:54:08,328	
+Epoch :       5
+train_labelloss:0.144764	train_vaeloss:-0.052005	train_reconloss:0.001661	train_acc:0.968750
+test_loss:0.162346	test_acc:0.980311
+2021-12-08 17:54:26,044	
+Epoch :       5
+train_labelloss:0.148718	train_vaeloss:-0.068105	train_reconloss:0.001907	train_acc:0.968750
+test_loss:0.162972	test_acc:0.979857
+2021-12-08 17:54:44,497	
+Epoch :       5
+train_labelloss:0.146352	train_vaeloss:-0.063667	train_reconloss:0.001829	train_acc:0.906250
+test_loss:0.162515	test_acc:0.979150
+2021-12-08 17:55:03,057	
+Epoch :       5
+train_labelloss:0.153428	train_vaeloss:-0.063125	train_reconloss:0.001844	train_acc:1.000000
+test_loss:0.161620	test_acc:0.980715
+2021-12-08 17:55:20,480	
+Epoch :       5
+train_labelloss:0.144706	train_vaeloss:-0.063037	train_reconloss:0.001928	train_acc:1.000000
+test_loss:0.167371	test_acc:0.976373
+2021-12-08 17:55:38,991	
+Epoch :       5
+train_labelloss:0.151959	train_vaeloss:-0.063423	train_reconloss:0.001759	train_acc:1.000000
+test_loss:0.160636	test_acc:0.980513
+2021-12-08 17:55:56,746	
+Epoch :       5
+train_labelloss:0.147490	train_vaeloss:-0.059296	train_reconloss:0.001900	train_acc:1.000000
+test_loss:0.161897	test_acc:0.980008
+2021-12-08 17:56:15,355	
+Epoch :       5
+train_labelloss:0.152418	train_vaeloss:-0.058795	train_reconloss:0.001819	train_acc:1.000000
+test_loss:0.161613	test_acc:0.980462
+2021-12-08 17:56:32,413	
+Epoch :       5
+train_labelloss:0.149730	train_vaeloss:-0.065502	train_reconloss:0.001876	train_acc:1.000000
+test_loss:0.161113	test_acc:0.979352
+2021-12-08 17:56:50,646	
+Epoch :       5
+train_labelloss:0.153397	train_vaeloss:-0.057026	train_reconloss:0.002011	train_acc:1.000000
+test_loss:0.162034	test_acc:0.980412
+2021-12-08 17:57:09,243	
+Epoch :       5
+train_labelloss:0.152197	train_vaeloss:-0.061526	train_reconloss:0.001900	train_acc:0.968750
+test_loss:0.165530	test_acc:0.978443
+2021-12-08 17:57:28,476	
+Epoch :       5
+train_labelloss:0.153038	train_vaeloss:-0.058901	train_reconloss:0.001798	train_acc:0.968750
+test_loss:0.161785	test_acc:0.980210
+2021-12-08 17:57:46,907	
+Epoch :       5
+train_labelloss:0.142268	train_vaeloss:-0.063455	train_reconloss:0.001902	train_acc:1.000000
+test_loss:0.161194	test_acc:0.980361
+2021-12-08 17:58:05,275	
+Epoch :       5
+train_labelloss:0.147910	train_vaeloss:-0.060049	train_reconloss:0.001868	train_acc:0.968750
+test_loss:0.161803	test_acc:0.980412
+2021-12-08 17:58:22,998	
+Epoch :       5
+train_labelloss:0.146958	train_vaeloss:-0.064840	train_reconloss:0.001918	train_acc:0.968750
+test_loss:0.164797	test_acc:0.978897
+2021-12-08 17:58:41,752	
+Epoch :       5
+train_labelloss:0.144911	train_vaeloss:-0.066830	train_reconloss:0.001878	train_acc:1.000000
+test_loss:0.161768	test_acc:0.980513
+2021-12-08 17:59:00,319	
+Epoch :       5
+train_labelloss:0.145961	train_vaeloss:-0.063118	train_reconloss:0.001935	train_acc:1.000000
+test_loss:0.163063	test_acc:0.979604
+2021-12-08 17:59:19,233	
+Epoch :       5
+train_labelloss:0.153085	train_vaeloss:-0.061760	train_reconloss:0.001920	train_acc:1.000000
+test_loss:0.164176	test_acc:0.978292
+2021-12-08 17:59:37,335	
+Epoch :       5
+train_labelloss:0.154640	train_vaeloss:-0.059501	train_reconloss:0.001827	train_acc:1.000000
+test_loss:0.161862	test_acc:0.980563
+2021-12-08 17:59:56,207	
+Epoch :       5
+train_labelloss:0.149588	train_vaeloss:-0.062135	train_reconloss:0.001789	train_acc:0.968750
+test_loss:0.161900	test_acc:0.980412
+2021-12-08 18:00:15,685	
+Epoch :       5
+train_labelloss:0.151163	train_vaeloss:-0.063126	train_reconloss:0.001885	train_acc:1.000000
+test_loss:0.162238	test_acc:0.980059
+2021-12-08 18:00:34,444	
+Epoch :       5
+train_labelloss:0.149380	train_vaeloss:-0.061157	train_reconloss:0.001896	train_acc:1.000000
+test_loss:0.169073	test_acc:0.975263
+2021-12-08 18:00:53,563	
+Epoch :       5
+train_labelloss:0.153109	train_vaeloss:-0.063135	train_reconloss:0.001872	train_acc:1.000000
+test_loss:0.161641	test_acc:0.980109
+2021-12-08 18:01:11,183	
+Epoch :       5
+train_labelloss:0.147680	train_vaeloss:-0.066904	train_reconloss:0.001907	train_acc:1.000000
+test_loss:0.162662	test_acc:0.979756
+2021-12-08 18:01:28,091	
+Epoch :       5
+train_labelloss:0.154199	train_vaeloss:-0.056193	train_reconloss:0.001869	train_acc:1.000000
+test_loss:0.165486	test_acc:0.977736
+2021-12-08 18:01:46,773	
+Epoch :       5
+train_labelloss:0.153864	train_vaeloss:-0.062823	train_reconloss:0.001912	train_acc:0.968750
+test_loss:0.160449	test_acc:0.981018
+2021-12-08 18:02:05,053	
+Epoch :       5
+train_labelloss:0.147814	train_vaeloss:-0.063099	train_reconloss:0.001888	train_acc:1.000000
+test_loss:0.161262	test_acc:0.980160
+2021-12-08 18:02:23,057	
+Epoch :       5
+train_labelloss:0.151038	train_vaeloss:-0.064495	train_reconloss:0.002047	train_acc:0.968750
+test_loss:0.161576	test_acc:0.980462
+2021-12-08 18:02:40,959	
+Epoch :       5
+train_labelloss:0.154538	train_vaeloss:-0.063406	train_reconloss:0.001903	train_acc:1.000000
+test_loss:0.160702	test_acc:0.980715
+2021-12-08 18:03:00,492	
+Epoch :       5
+train_labelloss:0.149167	train_vaeloss:-0.067602	train_reconloss:0.001918	train_acc:0.968750
+test_loss:0.160842	test_acc:0.979806
+2021-12-08 18:03:18,080	
+Epoch :       5
+train_labelloss:0.153850	train_vaeloss:-0.061500	train_reconloss:0.001933	train_acc:1.000000
+test_loss:0.160537	test_acc:0.980261
+2021-12-08 18:03:36,850	
+Epoch :       5
+train_labelloss:0.150732	train_vaeloss:-0.056415	train_reconloss:0.001809	train_acc:1.000000
+test_loss:0.161196	test_acc:0.980614
+2021-12-08 18:03:54,861	
+Epoch :       5
+train_labelloss:0.148924	train_vaeloss:-0.066380	train_reconloss:0.001966	train_acc:1.000000
+test_loss:0.164509	test_acc:0.978191
+2021-12-08 18:04:13,680	
+Epoch :       5
+train_labelloss:0.148581	train_vaeloss:-0.057288	train_reconloss:0.001865	train_acc:1.000000
+test_loss:0.161430	test_acc:0.979907
+2021-12-08 18:04:31,980	
+Epoch :       5
+train_labelloss:0.147597	train_vaeloss:-0.066780	train_reconloss:0.001896	train_acc:1.000000
+test_loss:0.161688	test_acc:0.980059
+2021-12-08 18:04:32,176	Epoch 6
+2021-12-08 18:04:50,475	
+Epoch :       6
+train_labelloss:0.147886	train_vaeloss:-0.062194	train_reconloss:0.001937	train_acc:1.000000
+test_loss:0.161096	test_acc:0.980513
+2021-12-08 18:05:08,794	
+Epoch :       6
+train_labelloss:0.149964	train_vaeloss:-0.064893	train_reconloss:0.001832	train_acc:1.000000
+test_loss:0.161230	test_acc:0.980513
+2021-12-08 18:05:25,444	
+Epoch :       6
+train_labelloss:0.145279	train_vaeloss:-0.066558	train_reconloss:0.001958	train_acc:1.000000
+test_loss:0.163114	test_acc:0.979150
+2021-12-08 18:05:42,465	
+Epoch :       6
+train_labelloss:0.147312	train_vaeloss:-0.057260	train_reconloss:0.001823	train_acc:1.000000
+test_loss:0.162759	test_acc:0.978998
+2021-12-08 18:06:01,139	
+Epoch :       6
+train_labelloss:0.148529	train_vaeloss:-0.056326	train_reconloss:0.001784	train_acc:1.000000
+test_loss:0.161603	test_acc:0.980261
+2021-12-08 18:06:18,884	
+Epoch :       6
+train_labelloss:0.142231	train_vaeloss:-0.067186	train_reconloss:0.001921	train_acc:0.968750
+test_loss:0.162209	test_acc:0.979049
+2021-12-08 18:06:37,096	
+Epoch :       6
+train_labelloss:0.149349	train_vaeloss:-0.061932	train_reconloss:0.001863	train_acc:1.000000
+test_loss:0.161738	test_acc:0.979806
+2021-12-08 18:06:55,951	
+Epoch :       6
+train_labelloss:0.139784	train_vaeloss:-0.063155	train_reconloss:0.001885	train_acc:0.968750
+test_loss:0.162953	test_acc:0.980160
+2021-12-08 18:07:13,553	
+Epoch :       6
+train_labelloss:0.148256	train_vaeloss:-0.059289	train_reconloss:0.001801	train_acc:1.000000
+test_loss:0.163074	test_acc:0.979705
+2021-12-08 18:07:30,639	
+Epoch :       6
+train_labelloss:0.147847	train_vaeloss:-0.062323	train_reconloss:0.001816	train_acc:0.968750
+test_loss:0.166340	test_acc:0.976575
+2021-12-08 18:07:47,548	
+Epoch :       6
+train_labelloss:0.148010	train_vaeloss:-0.061244	train_reconloss:0.001943	train_acc:1.000000
+test_loss:0.162269	test_acc:0.979806
+2021-12-08 18:08:05,170	
+Epoch :       6
+train_labelloss:0.148222	train_vaeloss:-0.063872	train_reconloss:0.001805	train_acc:1.000000
+test_loss:0.163613	test_acc:0.979352
+2021-12-08 18:08:23,668	
+Epoch :       6
+train_labelloss:0.147933	train_vaeloss:-0.057916	train_reconloss:0.001878	train_acc:0.968750
+test_loss:0.162292	test_acc:0.980008
+2021-12-08 18:08:42,423	
+Epoch :       6
+train_labelloss:0.148650	train_vaeloss:-0.061247	train_reconloss:0.001844	train_acc:1.000000
+test_loss:0.162431	test_acc:0.980160
+2021-12-08 18:09:01,527	
+Epoch :       6
+train_labelloss:0.141563	train_vaeloss:-0.060489	train_reconloss:0.001858	train_acc:1.000000
+test_loss:0.164034	test_acc:0.979150
+2021-12-08 18:09:19,454	
+Epoch :       6
+train_labelloss:0.156236	train_vaeloss:-0.065522	train_reconloss:0.001991	train_acc:0.968750
+test_loss:0.162299	test_acc:0.979705
+2021-12-08 18:09:37,064	
+Epoch :       6
+train_labelloss:0.140326	train_vaeloss:-0.061601	train_reconloss:0.001929	train_acc:1.000000
+test_loss:0.162543	test_acc:0.980210
+2021-12-08 18:09:56,263	
+Epoch :       6
+train_labelloss:0.152579	train_vaeloss:-0.057213	train_reconloss:0.001828	train_acc:1.000000
+test_loss:0.164774	test_acc:0.977130
+2021-12-08 18:10:15,535	
+Epoch :       6
+train_labelloss:0.145363	train_vaeloss:-0.070315	train_reconloss:0.001950	train_acc:0.968750
+test_loss:0.162925	test_acc:0.978645
+2021-12-08 18:10:34,260	
+Epoch :       6
+train_labelloss:0.145470	train_vaeloss:-0.062648	train_reconloss:0.001879	train_acc:1.000000
+test_loss:0.163079	test_acc:0.979251
+2021-12-08 18:10:52,576	
+Epoch :       6
+train_labelloss:0.151196	train_vaeloss:-0.054670	train_reconloss:0.001843	train_acc:1.000000
+test_loss:0.163495	test_acc:0.978292
+2021-12-08 18:11:10,424	
+Epoch :       6
+train_labelloss:0.143088	train_vaeloss:-0.063435	train_reconloss:0.001822	train_acc:1.000000
+test_loss:0.165097	test_acc:0.978191
+2021-12-08 18:11:28,005	
+Epoch :       6
+train_labelloss:0.141555	train_vaeloss:-0.059384	train_reconloss:0.001833	train_acc:0.968750
+test_loss:0.168418	test_acc:0.975969
+2021-12-08 18:11:46,475	
+Epoch :       6
+train_labelloss:0.152049	train_vaeloss:-0.052144	train_reconloss:0.001838	train_acc:1.000000
+test_loss:0.162564	test_acc:0.979453
+2021-12-08 18:12:05,123	
+Epoch :       6
+train_labelloss:0.147567	train_vaeloss:-0.066903	train_reconloss:0.001837	train_acc:0.968750
+test_loss:0.162649	test_acc:0.980109
+2021-12-08 18:12:24,325	
+Epoch :       6
+train_labelloss:0.149992	train_vaeloss:-0.056742	train_reconloss:0.001913	train_acc:1.000000
+test_loss:0.163430	test_acc:0.979503
+2021-12-08 18:12:43,794	
+Epoch :       6
+train_labelloss:0.148018	train_vaeloss:-0.072077	train_reconloss:0.001918	train_acc:0.968750
+test_loss:0.163228	test_acc:0.979655
+2021-12-08 18:13:01,031	
+Epoch :       6
+train_labelloss:0.148745	train_vaeloss:-0.062665	train_reconloss:0.001828	train_acc:1.000000
+test_loss:0.162920	test_acc:0.979453
+2021-12-08 18:13:19,651	
+Epoch :       6
+train_labelloss:0.154676	train_vaeloss:-0.061026	train_reconloss:0.001774	train_acc:1.000000
+test_loss:0.163717	test_acc:0.978847
+2021-12-08 18:13:36,293	
+Epoch :       6
+train_labelloss:0.142909	train_vaeloss:-0.057610	train_reconloss:0.001857	train_acc:1.000000
+test_loss:0.164351	test_acc:0.978342
+2021-12-08 18:13:53,354	
+Epoch :       6
+train_labelloss:0.145045	train_vaeloss:-0.063511	train_reconloss:0.001893	train_acc:0.937500
+test_loss:0.163617	test_acc:0.979756
+2021-12-08 18:14:10,413	
+Epoch :       6
+train_labelloss:0.148213	train_vaeloss:-0.058103	train_reconloss:0.001897	train_acc:1.000000
+test_loss:0.161783	test_acc:0.980361
+2021-12-08 18:14:27,698	
+Epoch :       6
+train_labelloss:0.152326	train_vaeloss:-0.059364	train_reconloss:0.001796	train_acc:0.906250
+test_loss:0.162849	test_acc:0.979907
+2021-12-08 18:14:46,432	
+Epoch :       6
+train_labelloss:0.147535	train_vaeloss:-0.061823	train_reconloss:0.001889	train_acc:1.000000
+test_loss:0.163216	test_acc:0.979503
+2021-12-08 18:15:04,839	
+Epoch :       6
+train_labelloss:0.150349	train_vaeloss:-0.062373	train_reconloss:0.001842	train_acc:1.000000
+test_loss:0.161606	test_acc:0.979705
+2021-12-08 18:15:22,557	
+Epoch :       6
+train_labelloss:0.151338	train_vaeloss:-0.059827	train_reconloss:0.001691	train_acc:0.968750
+test_loss:0.163080	test_acc:0.979099
+2021-12-08 18:15:40,763	
+Epoch :       6
+train_labelloss:0.141968	train_vaeloss:-0.056292	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.162835	test_acc:0.979503
+2021-12-08 18:15:59,265	
+Epoch :       6
+train_labelloss:0.155475	train_vaeloss:-0.057387	train_reconloss:0.001742	train_acc:1.000000
+test_loss:0.164903	test_acc:0.978695
+2021-12-08 18:16:18,286	
+Epoch :       6
+train_labelloss:0.144672	train_vaeloss:-0.067875	train_reconloss:0.002014	train_acc:1.000000
+test_loss:0.161760	test_acc:0.980563
+2021-12-08 18:16:36,649	
+Epoch :       6
+train_labelloss:0.147236	train_vaeloss:-0.059096	train_reconloss:0.001866	train_acc:0.937500
+test_loss:0.161757	test_acc:0.979756
+2021-12-08 18:16:55,792	
+Epoch :       6
+train_labelloss:0.142564	train_vaeloss:-0.070354	train_reconloss:0.001996	train_acc:1.000000
+test_loss:0.161186	test_acc:0.980210
+2021-12-08 18:17:15,126	
+Epoch :       6
+train_labelloss:0.148812	train_vaeloss:-0.057212	train_reconloss:0.001816	train_acc:1.000000
+test_loss:0.161357	test_acc:0.979857
+2021-12-08 18:17:33,975	
+Epoch :       6
+train_labelloss:0.147042	train_vaeloss:-0.066766	train_reconloss:0.001906	train_acc:1.000000
+test_loss:0.162402	test_acc:0.979604
+2021-12-08 18:17:38,595	Epoch 7
+2021-12-08 18:17:52,181	
+Epoch :       7
+train_labelloss:0.145224	train_vaeloss:-0.058073	train_reconloss:0.001771	train_acc:1.000000
+test_loss:0.162918	test_acc:0.979705
+2021-12-08 18:18:09,551	
+Epoch :       7
+train_labelloss:0.144870	train_vaeloss:-0.063619	train_reconloss:0.001929	train_acc:0.968750
+test_loss:0.164473	test_acc:0.978292
+2021-12-08 18:18:28,222	
+Epoch :       7
+train_labelloss:0.146588	train_vaeloss:-0.068993	train_reconloss:0.001899	train_acc:0.968750
+test_loss:0.161325	test_acc:0.980109
+2021-12-08 18:18:47,335	
+Epoch :       7
+train_labelloss:0.143856	train_vaeloss:-0.063944	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.161456	test_acc:0.980109
+2021-12-08 18:19:05,851	
+Epoch :       7
+train_labelloss:0.144950	train_vaeloss:-0.060275	train_reconloss:0.001847	train_acc:1.000000
+test_loss:0.161455	test_acc:0.980462
+2021-12-08 18:19:23,975	
+Epoch :       7
+train_labelloss:0.148772	train_vaeloss:-0.062723	train_reconloss:0.001847	train_acc:1.000000
+test_loss:0.164013	test_acc:0.978796
+2021-12-08 18:19:42,925	
+Epoch :       7
+train_labelloss:0.142531	train_vaeloss:-0.057306	train_reconloss:0.001829	train_acc:0.968750
+test_loss:0.161828	test_acc:0.980109
+2021-12-08 18:20:01,998	
+Epoch :       7
+train_labelloss:0.148184	train_vaeloss:-0.063492	train_reconloss:0.001920	train_acc:0.937500
+test_loss:0.163424	test_acc:0.979604
+2021-12-08 18:20:21,107	
+Epoch :       7
+train_labelloss:0.142435	train_vaeloss:-0.063672	train_reconloss:0.001835	train_acc:1.000000
+test_loss:0.162088	test_acc:0.979655
+2021-12-08 18:20:40,100	
+Epoch :       7
+train_labelloss:0.144946	train_vaeloss:-0.065127	train_reconloss:0.001843	train_acc:0.968750
+test_loss:0.163095	test_acc:0.979806
+2021-12-08 18:20:58,546	
+Epoch :       7
+train_labelloss:0.148778	train_vaeloss:-0.063094	train_reconloss:0.001827	train_acc:1.000000
+test_loss:0.161736	test_acc:0.979554
+2021-12-08 18:21:16,842	
+Epoch :       7
+train_labelloss:0.142941	train_vaeloss:-0.065664	train_reconloss:0.001910	train_acc:0.968750
+test_loss:0.164142	test_acc:0.979150
+2021-12-08 18:21:35,590	
+Epoch :       7
+train_labelloss:0.142518	train_vaeloss:-0.069991	train_reconloss:0.001913	train_acc:1.000000
+test_loss:0.166544	test_acc:0.977534
+2021-12-08 18:21:54,541	
+Epoch :       7
+train_labelloss:0.144817	train_vaeloss:-0.065203	train_reconloss:0.001834	train_acc:1.000000
+test_loss:0.162506	test_acc:0.980059
+2021-12-08 18:22:13,503	
+Epoch :       7
+train_labelloss:0.150610	train_vaeloss:-0.062954	train_reconloss:0.001778	train_acc:1.000000
+test_loss:0.162801	test_acc:0.979503
+2021-12-08 18:22:32,168	
+Epoch :       7
+train_labelloss:0.142417	train_vaeloss:-0.053055	train_reconloss:0.001768	train_acc:1.000000
+test_loss:0.161810	test_acc:0.980261
+2021-12-08 18:22:50,324	
+Epoch :       7
+train_labelloss:0.151881	train_vaeloss:-0.061966	train_reconloss:0.001831	train_acc:0.937500
+test_loss:0.163787	test_acc:0.979251
+2021-12-08 18:23:07,557	
+Epoch :       7
+train_labelloss:0.148186	train_vaeloss:-0.062719	train_reconloss:0.001801	train_acc:0.937500
+test_loss:0.162013	test_acc:0.979958
+2021-12-08 18:23:25,779	
+Epoch :       7
+train_labelloss:0.143667	train_vaeloss:-0.057961	train_reconloss:0.001786	train_acc:0.968750
+test_loss:0.161706	test_acc:0.980008
+2021-12-08 18:23:42,601	
+Epoch :       7
+train_labelloss:0.140373	train_vaeloss:-0.064302	train_reconloss:0.001948	train_acc:1.000000
+test_loss:0.161637	test_acc:0.979705
+2021-12-08 18:23:59,564	
+Epoch :       7
+train_labelloss:0.141213	train_vaeloss:-0.068084	train_reconloss:0.001843	train_acc:1.000000
+test_loss:0.162287	test_acc:0.979958
+2021-12-08 18:24:18,520	
+Epoch :       7
+train_labelloss:0.142900	train_vaeloss:-0.060256	train_reconloss:0.001727	train_acc:1.000000
+test_loss:0.167012	test_acc:0.977383
+2021-12-08 18:24:37,228	
+Epoch :       7
+train_labelloss:0.145084	train_vaeloss:-0.062098	train_reconloss:0.001891	train_acc:1.000000
+test_loss:0.162698	test_acc:0.979655
+2021-12-08 18:24:55,623	
+Epoch :       7
+train_labelloss:0.147737	train_vaeloss:-0.059246	train_reconloss:0.001844	train_acc:1.000000
+test_loss:0.162294	test_acc:0.979806
+2021-12-08 18:25:14,800	
+Epoch :       7
+train_labelloss:0.146478	train_vaeloss:-0.057414	train_reconloss:0.001914	train_acc:1.000000
+test_loss:0.162194	test_acc:0.980361
+2021-12-08 18:25:33,799	
+Epoch :       7
+train_labelloss:0.150970	train_vaeloss:-0.056579	train_reconloss:0.001836	train_acc:1.000000
+test_loss:0.162432	test_acc:0.980462
+2021-12-08 18:25:52,881	
+Epoch :       7
+train_labelloss:0.142187	train_vaeloss:-0.056392	train_reconloss:0.001851	train_acc:1.000000
+test_loss:0.162708	test_acc:0.979958
+2021-12-08 18:26:11,521	
+Epoch :       7
+train_labelloss:0.149154	train_vaeloss:-0.059919	train_reconloss:0.001789	train_acc:1.000000
+test_loss:0.162592	test_acc:0.980059
+2021-12-08 18:26:31,438	
+Epoch :       7
+train_labelloss:0.152254	train_vaeloss:-0.062532	train_reconloss:0.001796	train_acc:0.968750
+test_loss:0.162649	test_acc:0.979453
+2021-12-08 18:26:49,974	
+Epoch :       7
+train_labelloss:0.146574	train_vaeloss:-0.062570	train_reconloss:0.001863	train_acc:1.000000
+test_loss:0.161956	test_acc:0.980160
+2021-12-08 18:27:07,755	
+Epoch :       7
+train_labelloss:0.144230	train_vaeloss:-0.055110	train_reconloss:0.001892	train_acc:1.000000
+test_loss:0.162683	test_acc:0.979604
+2021-12-08 18:27:25,234	
+Epoch :       7
+train_labelloss:0.148792	train_vaeloss:-0.053225	train_reconloss:0.001845	train_acc:1.000000
+test_loss:0.162912	test_acc:0.979604
+2021-12-08 18:27:43,934	
+Epoch :       7
+train_labelloss:0.146823	train_vaeloss:-0.062222	train_reconloss:0.001855	train_acc:1.000000
+test_loss:0.162273	test_acc:0.979705
+2021-12-08 18:28:02,450	
+Epoch :       7
+train_labelloss:0.148176	train_vaeloss:-0.066820	train_reconloss:0.001849	train_acc:1.000000
+test_loss:0.164059	test_acc:0.978746
+2021-12-08 18:28:20,458	
+Epoch :       7
+train_labelloss:0.144090	train_vaeloss:-0.064808	train_reconloss:0.001950	train_acc:0.968750
+test_loss:0.163037	test_acc:0.979301
+2021-12-08 18:28:38,087	
+Epoch :       7
+train_labelloss:0.142075	train_vaeloss:-0.067232	train_reconloss:0.002007	train_acc:1.000000
+test_loss:0.167820	test_acc:0.976777
+2021-12-08 18:28:57,303	
+Epoch :       7
+train_labelloss:0.147866	train_vaeloss:-0.065130	train_reconloss:0.001793	train_acc:0.968750
+test_loss:0.169773	test_acc:0.976424
+2021-12-08 18:29:14,841	
+Epoch :       7
+train_labelloss:0.148368	train_vaeloss:-0.059426	train_reconloss:0.001841	train_acc:0.968750
+test_loss:0.163916	test_acc:0.978695
+2021-12-08 18:29:34,538	
+Epoch :       7
+train_labelloss:0.144607	train_vaeloss:-0.061865	train_reconloss:0.001823	train_acc:0.937500
+test_loss:0.164691	test_acc:0.979150
+2021-12-08 18:29:52,161	
+Epoch :       7
+train_labelloss:0.143540	train_vaeloss:-0.060031	train_reconloss:0.001818	train_acc:0.968750
+test_loss:0.163662	test_acc:0.978796
+2021-12-08 18:30:10,374	
+Epoch :       7
+train_labelloss:0.143107	train_vaeloss:-0.053968	train_reconloss:0.001755	train_acc:1.000000
+test_loss:0.165496	test_acc:0.978796
+2021-12-08 18:30:28,440	
+Epoch :       7
+train_labelloss:0.146222	train_vaeloss:-0.059676	train_reconloss:0.001772	train_acc:1.000000
+test_loss:0.163070	test_acc:0.979806
+2021-12-08 18:30:46,964	
+Epoch :       7
+train_labelloss:0.145441	train_vaeloss:-0.064386	train_reconloss:0.001887	train_acc:1.000000
+test_loss:0.163048	test_acc:0.980160
+2021-12-08 18:31:06,027	
+Epoch :       7
+train_labelloss:0.147570	train_vaeloss:-0.052695	train_reconloss:0.001806	train_acc:1.000000
+test_loss:0.161671	test_acc:0.980513
+2021-12-08 18:31:08,135	Epoch 8
+2021-12-08 18:31:24,454	
+Epoch :       8
+train_labelloss:0.139669	train_vaeloss:-0.070313	train_reconloss:0.001948	train_acc:0.937500
+test_loss:0.161813	test_acc:0.980109
+2021-12-08 18:31:43,370	
+Epoch :       8
+train_labelloss:0.144139	train_vaeloss:-0.063514	train_reconloss:0.001867	train_acc:1.000000
+test_loss:0.162809	test_acc:0.978998
+2021-12-08 18:32:02,015	
+Epoch :       8
+train_labelloss:0.141946	train_vaeloss:-0.063331	train_reconloss:0.001835	train_acc:1.000000
+test_loss:0.162543	test_acc:0.979705
+2021-12-08 18:32:20,283	
+Epoch :       8
+train_labelloss:0.149296	train_vaeloss:-0.067621	train_reconloss:0.001874	train_acc:1.000000
+test_loss:0.165881	test_acc:0.977938
+2021-12-08 18:32:39,322	
+Epoch :       8
+train_labelloss:0.139701	train_vaeloss:-0.061328	train_reconloss:0.001751	train_acc:1.000000
+test_loss:0.161863	test_acc:0.981018
+2021-12-08 18:32:57,118	
+Epoch :       8
+train_labelloss:0.145095	train_vaeloss:-0.061052	train_reconloss:0.001827	train_acc:1.000000
+test_loss:0.164521	test_acc:0.978494
+2021-12-08 18:33:13,999	
+Epoch :       8
+train_labelloss:0.142578	train_vaeloss:-0.062679	train_reconloss:0.001823	train_acc:1.000000
+test_loss:0.161275	test_acc:0.981119
+2021-12-08 18:33:31,398	
+Epoch :       8
+train_labelloss:0.144826	train_vaeloss:-0.067539	train_reconloss:0.001869	train_acc:1.000000
+test_loss:0.161543	test_acc:0.980614
+2021-12-08 18:33:50,505	
+Epoch :       8
+train_labelloss:0.143749	train_vaeloss:-0.062355	train_reconloss:0.001805	train_acc:0.937500
+test_loss:0.161815	test_acc:0.980008
+2021-12-08 18:34:09,177	
+Epoch :       8
+train_labelloss:0.143625	train_vaeloss:-0.065194	train_reconloss:0.001824	train_acc:1.000000
+test_loss:0.161368	test_acc:0.980765
+2021-12-08 18:34:26,874	
+Epoch :       8
+train_labelloss:0.147255	train_vaeloss:-0.054442	train_reconloss:0.001818	train_acc:1.000000
+test_loss:0.163786	test_acc:0.979402
+2021-12-08 18:34:45,716	
+Epoch :       8
+train_labelloss:0.142795	train_vaeloss:-0.065785	train_reconloss:0.001846	train_acc:1.000000
+test_loss:0.161692	test_acc:0.980109
+2021-12-08 18:35:04,603	
+Epoch :       8
+train_labelloss:0.143948	train_vaeloss:-0.059703	train_reconloss:0.001895	train_acc:1.000000
+test_loss:0.163289	test_acc:0.979453
+2021-12-08 18:35:22,393	
+Epoch :       8
+train_labelloss:0.141816	train_vaeloss:-0.060531	train_reconloss:0.001889	train_acc:1.000000
+test_loss:0.162216	test_acc:0.980210
+2021-12-08 18:35:41,804	
+Epoch :       8
+train_labelloss:0.143801	train_vaeloss:-0.059794	train_reconloss:0.001793	train_acc:1.000000
+test_loss:0.162189	test_acc:0.980513
+2021-12-08 18:35:59,315	
+Epoch :       8
+train_labelloss:0.148814	train_vaeloss:-0.065349	train_reconloss:0.001850	train_acc:1.000000
+test_loss:0.163274	test_acc:0.979099
+2021-12-08 18:36:17,503	
+Epoch :       8
+train_labelloss:0.146784	train_vaeloss:-0.056338	train_reconloss:0.001732	train_acc:1.000000
+test_loss:0.161637	test_acc:0.979756
+2021-12-08 18:36:36,368	
+Epoch :       8
+train_labelloss:0.149491	train_vaeloss:-0.062846	train_reconloss:0.001885	train_acc:1.000000
+test_loss:0.163083	test_acc:0.979503
+2021-12-08 18:36:55,074	
+Epoch :       8
+train_labelloss:0.149431	train_vaeloss:-0.060711	train_reconloss:0.001895	train_acc:1.000000
+test_loss:0.161966	test_acc:0.980160
+2021-12-08 18:37:13,892	
+Epoch :       8
+train_labelloss:0.142956	train_vaeloss:-0.068833	train_reconloss:0.001872	train_acc:1.000000
+test_loss:0.162266	test_acc:0.979857
+2021-12-08 18:37:31,993	
+Epoch :       8
+train_labelloss:0.142886	train_vaeloss:-0.062818	train_reconloss:0.001865	train_acc:1.000000
+test_loss:0.161963	test_acc:0.980361
+2021-12-08 18:37:50,261	
+Epoch :       8
+train_labelloss:0.139619	train_vaeloss:-0.065753	train_reconloss:0.001959	train_acc:1.000000
+test_loss:0.162041	test_acc:0.980513
+2021-12-08 18:38:07,455	
+Epoch :       8
+train_labelloss:0.148539	train_vaeloss:-0.059210	train_reconloss:0.001769	train_acc:0.968750
+test_loss:0.162331	test_acc:0.980160
+2021-12-08 18:38:26,581	
+Epoch :       8
+train_labelloss:0.151403	train_vaeloss:-0.055390	train_reconloss:0.001770	train_acc:0.937500
+test_loss:0.162292	test_acc:0.980261
+2021-12-08 18:38:44,639	
+Epoch :       8
+train_labelloss:0.147488	train_vaeloss:-0.057241	train_reconloss:0.001761	train_acc:1.000000
+test_loss:0.163776	test_acc:0.979150
+2021-12-08 18:39:02,946	
+Epoch :       8
+train_labelloss:0.140938	train_vaeloss:-0.058375	train_reconloss:0.002006	train_acc:1.000000
+test_loss:0.162059	test_acc:0.980261
+2021-12-08 18:39:19,466	
+Epoch :       8
+train_labelloss:0.145192	train_vaeloss:-0.064812	train_reconloss:0.001890	train_acc:1.000000
+test_loss:0.162346	test_acc:0.980513
+2021-12-08 18:39:36,604	
+Epoch :       8
+train_labelloss:0.145571	train_vaeloss:-0.066247	train_reconloss:0.001838	train_acc:1.000000
+test_loss:0.164222	test_acc:0.979150
+2021-12-08 18:39:54,453	
+Epoch :       8
+train_labelloss:0.142358	train_vaeloss:-0.066810	train_reconloss:0.001913	train_acc:1.000000
+test_loss:0.165071	test_acc:0.978241
+2021-12-08 18:40:13,242	
+Epoch :       8
+train_labelloss:0.146595	train_vaeloss:-0.061914	train_reconloss:0.001838	train_acc:1.000000
+test_loss:0.163977	test_acc:0.978443
+2021-12-08 18:40:31,717	
+Epoch :       8
+train_labelloss:0.144588	train_vaeloss:-0.060572	train_reconloss:0.001860	train_acc:1.000000
+test_loss:0.163710	test_acc:0.978544
+2021-12-08 18:40:49,055	
+Epoch :       8
+train_labelloss:0.145547	train_vaeloss:-0.052079	train_reconloss:0.001775	train_acc:1.000000
+test_loss:0.162124	test_acc:0.980261
+2021-12-08 18:41:07,298	
+Epoch :       8
+train_labelloss:0.146445	train_vaeloss:-0.056649	train_reconloss:0.001698	train_acc:1.000000
+test_loss:0.162359	test_acc:0.979806
+2021-12-08 18:41:26,310	
+Epoch :       8
+train_labelloss:0.143019	train_vaeloss:-0.061061	train_reconloss:0.001802	train_acc:1.000000
+test_loss:0.161869	test_acc:0.979554
+2021-12-08 18:41:45,000	
+Epoch :       8
+train_labelloss:0.144228	train_vaeloss:-0.060463	train_reconloss:0.001763	train_acc:1.000000
+test_loss:0.167523	test_acc:0.977231
+2021-12-08 18:42:02,872	
+Epoch :       8
+train_labelloss:0.145402	train_vaeloss:-0.054274	train_reconloss:0.001841	train_acc:0.968750
+test_loss:0.162610	test_acc:0.979251
+2021-12-08 18:42:20,956	
+Epoch :       8
+train_labelloss:0.147431	train_vaeloss:-0.063675	train_reconloss:0.001896	train_acc:1.000000
+test_loss:0.161340	test_acc:0.980715
+2021-12-08 18:42:37,876	
+Epoch :       8
+train_labelloss:0.147730	train_vaeloss:-0.058975	train_reconloss:0.001852	train_acc:1.000000
+test_loss:0.163618	test_acc:0.979806
+2021-12-08 18:42:54,862	
+Epoch :       8
+train_labelloss:0.143905	train_vaeloss:-0.062539	train_reconloss:0.001849	train_acc:1.000000
+test_loss:0.162347	test_acc:0.979554
+2021-12-08 18:43:11,802	
+Epoch :       8
+train_labelloss:0.146370	train_vaeloss:-0.068527	train_reconloss:0.001879	train_acc:1.000000
+test_loss:0.161837	test_acc:0.980765
+2021-12-08 18:43:28,732	
+Epoch :       8
+train_labelloss:0.137876	train_vaeloss:-0.065036	train_reconloss:0.001846	train_acc:1.000000
+test_loss:0.162485	test_acc:0.980563
+2021-12-08 18:43:45,637	
+Epoch :       8
+train_labelloss:0.140306	train_vaeloss:-0.063760	train_reconloss:0.001843	train_acc:1.000000
+test_loss:0.162774	test_acc:0.980210
+2021-12-08 18:44:02,642	
+Epoch :       8
+train_labelloss:0.143217	train_vaeloss:-0.062161	train_reconloss:0.001840	train_acc:1.000000
+test_loss:0.163531	test_acc:0.979907
+2021-12-08 18:44:19,588	
+Epoch :       8
+train_labelloss:0.143771	train_vaeloss:-0.055804	train_reconloss:0.001719	train_acc:0.968750
+test_loss:0.163022	test_acc:0.980311
+2021-12-08 18:44:19,787	Epoch 9
+2021-12-08 18:44:36,041	
+Epoch :       9
+train_labelloss:0.141949	train_vaeloss:-0.060995	train_reconloss:0.001912	train_acc:1.000000
+test_loss:0.162705	test_acc:0.980109
+2021-12-08 18:44:53,819	
+Epoch :       9
+train_labelloss:0.140912	train_vaeloss:-0.057731	train_reconloss:0.001796	train_acc:1.000000
+test_loss:0.162198	test_acc:0.980563
+2021-12-08 18:45:12,626	
+Epoch :       9
+train_labelloss:0.143148	train_vaeloss:-0.059730	train_reconloss:0.001753	train_acc:1.000000
+test_loss:0.162531	test_acc:0.980462
+2021-12-08 18:45:31,590	
+Epoch :       9
+train_labelloss:0.143723	train_vaeloss:-0.060616	train_reconloss:0.001809	train_acc:1.000000
+test_loss:0.164357	test_acc:0.979150
+2021-12-08 18:45:49,650	
+Epoch :       9
+train_labelloss:0.138898	train_vaeloss:-0.061109	train_reconloss:0.001822	train_acc:1.000000
+test_loss:0.161433	test_acc:0.980513
+2021-12-08 18:46:08,882	
+Epoch :       9
+train_labelloss:0.145434	train_vaeloss:-0.065091	train_reconloss:0.001834	train_acc:1.000000
+test_loss:0.161115	test_acc:0.981119
+2021-12-08 18:46:26,484	
+Epoch :       9
+train_labelloss:0.143123	train_vaeloss:-0.063627	train_reconloss:0.001849	train_acc:0.968750
+test_loss:0.165156	test_acc:0.978847
+2021-12-08 18:46:45,364	
+Epoch :       9
+train_labelloss:0.139249	train_vaeloss:-0.068616	train_reconloss:0.001884	train_acc:1.000000
+test_loss:0.161900	test_acc:0.980361
+2021-12-08 18:47:03,566	
+Epoch :       9
+train_labelloss:0.144055	train_vaeloss:-0.067056	train_reconloss:0.001939	train_acc:1.000000
+test_loss:0.161945	test_acc:0.980311
+2021-12-08 18:47:22,655	
+Epoch :       9
+train_labelloss:0.139456	train_vaeloss:-0.056153	train_reconloss:0.001833	train_acc:1.000000
+test_loss:0.162280	test_acc:0.980109
+2021-12-08 18:47:41,487	
+Epoch :       9
+train_labelloss:0.142652	train_vaeloss:-0.060411	train_reconloss:0.001856	train_acc:1.000000
+test_loss:0.163355	test_acc:0.979705
+2021-12-08 18:48:00,324	
+Epoch :       9
+train_labelloss:0.139665	train_vaeloss:-0.059488	train_reconloss:0.001743	train_acc:1.000000
+test_loss:0.162860	test_acc:0.980765
+2021-12-08 18:48:17,509	
+Epoch :       9
+train_labelloss:0.147357	train_vaeloss:-0.055125	train_reconloss:0.001774	train_acc:1.000000
+test_loss:0.163424	test_acc:0.980311
+2021-12-08 18:48:35,389	
+Epoch :       9
+train_labelloss:0.143435	train_vaeloss:-0.063714	train_reconloss:0.001822	train_acc:1.000000
+test_loss:0.163099	test_acc:0.979453
+2021-12-08 18:48:53,720	
+Epoch :       9
+train_labelloss:0.143495	train_vaeloss:-0.066136	train_reconloss:0.001766	train_acc:1.000000
+test_loss:0.163687	test_acc:0.978897
+2021-12-08 18:49:13,014	
+Epoch :       9
+train_labelloss:0.143110	train_vaeloss:-0.061871	train_reconloss:0.001847	train_acc:1.000000
+test_loss:0.165784	test_acc:0.978544
+2021-12-08 18:49:31,671	
+Epoch :       9
+train_labelloss:0.143006	train_vaeloss:-0.056300	train_reconloss:0.001812	train_acc:1.000000
+test_loss:0.161528	test_acc:0.980715
+2021-12-08 18:49:50,253	
+Epoch :       9
+train_labelloss:0.146036	train_vaeloss:-0.070136	train_reconloss:0.001996	train_acc:1.000000
+test_loss:0.163096	test_acc:0.979655
+2021-12-08 18:50:07,868	
+Epoch :       9
+train_labelloss:0.144668	train_vaeloss:-0.062629	train_reconloss:0.001850	train_acc:1.000000
+test_loss:0.161102	test_acc:0.981018
+2021-12-08 18:50:26,109	
+Epoch :       9
+train_labelloss:0.140696	train_vaeloss:-0.062081	train_reconloss:0.001866	train_acc:1.000000
+test_loss:0.162277	test_acc:0.979705
+2021-12-08 18:50:44,692	
+Epoch :       9
+train_labelloss:0.138553	train_vaeloss:-0.062796	train_reconloss:0.001851	train_acc:1.000000
+test_loss:0.161072	test_acc:0.980664
+2021-12-08 18:51:03,806	
+Epoch :       9
+train_labelloss:0.143517	train_vaeloss:-0.068568	train_reconloss:0.001835	train_acc:1.000000
+test_loss:0.164384	test_acc:0.979150
+2021-12-08 18:51:22,428	
+Epoch :       9
+train_labelloss:0.146484	train_vaeloss:-0.064015	train_reconloss:0.001805	train_acc:1.000000
+test_loss:0.162887	test_acc:0.979604
+2021-12-08 18:51:40,973	
+Epoch :       9
+train_labelloss:0.140103	train_vaeloss:-0.057570	train_reconloss:0.001683	train_acc:1.000000
+test_loss:0.162257	test_acc:0.980765
+2021-12-08 18:51:59,503	
+Epoch :       9
+train_labelloss:0.142398	train_vaeloss:-0.062921	train_reconloss:0.001878	train_acc:1.000000
+test_loss:0.160842	test_acc:0.981119
+2021-12-08 18:52:18,868	
+Epoch :       9
+train_labelloss:0.143560	train_vaeloss:-0.058028	train_reconloss:0.001785	train_acc:1.000000
+test_loss:0.161060	test_acc:0.981068
+2021-12-08 18:52:37,864	
+Epoch :       9
+train_labelloss:0.142127	train_vaeloss:-0.053835	train_reconloss:0.001681	train_acc:1.000000
+test_loss:0.163029	test_acc:0.979554
+2021-12-08 18:52:56,431	
+Epoch :       9
+train_labelloss:0.143755	train_vaeloss:-0.066023	train_reconloss:0.001831	train_acc:1.000000
+test_loss:0.162946	test_acc:0.980109
+2021-12-08 18:53:15,458	
+Epoch :       9
+train_labelloss:0.142065	train_vaeloss:-0.064762	train_reconloss:0.001907	train_acc:1.000000
+test_loss:0.163064	test_acc:0.980210
+2021-12-08 18:53:34,099	
+Epoch :       9
+train_labelloss:0.148672	train_vaeloss:-0.071669	train_reconloss:0.001910	train_acc:0.937500
+test_loss:0.162906	test_acc:0.979857
+2021-12-08 18:53:50,852	
+Epoch :       9
+train_labelloss:0.142936	train_vaeloss:-0.066900	train_reconloss:0.001893	train_acc:1.000000
+test_loss:0.161873	test_acc:0.980412
+2021-12-08 18:54:09,456	
+Epoch :       9
+train_labelloss:0.144197	train_vaeloss:-0.064675	train_reconloss:0.001866	train_acc:1.000000
+test_loss:0.161581	test_acc:0.980462
+2021-12-08 18:54:27,484	
+Epoch :       9
+train_labelloss:0.146504	train_vaeloss:-0.063163	train_reconloss:0.001815	train_acc:1.000000
+test_loss:0.162724	test_acc:0.980160
+2021-12-08 18:54:45,766	
+Epoch :       9
+train_labelloss:0.138110	train_vaeloss:-0.054838	train_reconloss:0.001768	train_acc:1.000000
+test_loss:0.162364	test_acc:0.980109
+2021-12-08 18:55:03,969	
+Epoch :       9
+train_labelloss:0.138917	train_vaeloss:-0.059068	train_reconloss:0.001765	train_acc:1.000000
+test_loss:0.161697	test_acc:0.980109
+2021-12-08 18:55:21,246	
+Epoch :       9
+train_labelloss:0.143791	train_vaeloss:-0.057324	train_reconloss:0.001743	train_acc:1.000000
+test_loss:0.160737	test_acc:0.980765
+2021-12-08 18:55:39,362	
+Epoch :       9
+train_labelloss:0.140250	train_vaeloss:-0.056805	train_reconloss:0.001711	train_acc:0.968750
+test_loss:0.160693	test_acc:0.981674
+2021-12-08 18:55:56,304	
+Epoch :       9
+train_labelloss:0.142117	train_vaeloss:-0.055961	train_reconloss:0.001791	train_acc:0.937500
+test_loss:0.161202	test_acc:0.980210
+2021-12-08 18:56:13,233	
+Epoch :       9
+train_labelloss:0.140721	train_vaeloss:-0.067442	train_reconloss:0.001864	train_acc:1.000000
+test_loss:0.162316	test_acc:0.979857
+2021-12-08 18:56:31,646	
+Epoch :       9
+train_labelloss:0.145213	train_vaeloss:-0.067114	train_reconloss:0.001935	train_acc:1.000000
+test_loss:0.161985	test_acc:0.980412
+2021-12-08 18:56:48,583	
+Epoch :       9
+train_labelloss:0.141781	train_vaeloss:-0.066527	train_reconloss:0.001858	train_acc:1.000000
+test_loss:0.162290	test_acc:0.980664
+2021-12-08 18:57:06,063	
+Epoch :       9
+train_labelloss:0.148835	train_vaeloss:-0.059460	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.162934	test_acc:0.980160
+2021-12-08 18:57:22,589	
+Epoch :       9
+train_labelloss:0.143306	train_vaeloss:-0.060969	train_reconloss:0.001785	train_acc:0.906250
+test_loss:0.163045	test_acc:0.980160
+2021-12-08 18:57:26,242	Epoch 10
+2021-12-08 18:57:39,181	
+Epoch :      10
+train_labelloss:0.140072	train_vaeloss:-0.054730	train_reconloss:0.001757	train_acc:1.000000
+test_loss:0.166628	test_acc:0.978039
+2021-12-08 18:57:56,262	
+Epoch :      10
+train_labelloss:0.136150	train_vaeloss:-0.068447	train_reconloss:0.001962	train_acc:1.000000
+test_loss:0.164066	test_acc:0.979554
+2021-12-08 18:58:14,450	
+Epoch :      10
+train_labelloss:0.140030	train_vaeloss:-0.054302	train_reconloss:0.001844	train_acc:1.000000
+test_loss:0.163700	test_acc:0.979604
+2021-12-08 18:58:31,560	
+Epoch :      10
+train_labelloss:0.141727	train_vaeloss:-0.062533	train_reconloss:0.001813	train_acc:1.000000
+test_loss:0.164050	test_acc:0.978695
+2021-12-08 18:58:49,124	
+Epoch :      10
+train_labelloss:0.141009	train_vaeloss:-0.061171	train_reconloss:0.001744	train_acc:0.968750
+test_loss:0.162830	test_acc:0.980361
+2021-12-08 18:59:06,366	
+Epoch :      10
+train_labelloss:0.142861	train_vaeloss:-0.057349	train_reconloss:0.001737	train_acc:1.000000
+test_loss:0.163166	test_acc:0.980210
+2021-12-08 18:59:24,917	
+Epoch :      10
+train_labelloss:0.143863	train_vaeloss:-0.065656	train_reconloss:0.001815	train_acc:1.000000
+test_loss:0.163069	test_acc:0.980059
+2021-12-08 18:59:43,031	
+Epoch :      10
+train_labelloss:0.144019	train_vaeloss:-0.053199	train_reconloss:0.001778	train_acc:1.000000
+test_loss:0.162639	test_acc:0.979958
+2021-12-08 19:00:01,879	
+Epoch :      10
+train_labelloss:0.144240	train_vaeloss:-0.062189	train_reconloss:0.001842	train_acc:1.000000
+test_loss:0.161393	test_acc:0.980917
+2021-12-08 19:00:18,868	
+Epoch :      10
+train_labelloss:0.138290	train_vaeloss:-0.063326	train_reconloss:0.001746	train_acc:1.000000
+test_loss:0.163359	test_acc:0.979453
+2021-12-08 19:00:37,471	
+Epoch :      10
+train_labelloss:0.142415	train_vaeloss:-0.059852	train_reconloss:0.001734	train_acc:1.000000
+test_loss:0.162333	test_acc:0.980008
+2021-12-08 19:00:55,814	
+Epoch :      10
+train_labelloss:0.142277	train_vaeloss:-0.060913	train_reconloss:0.001838	train_acc:1.000000
+test_loss:0.162631	test_acc:0.980059
+2021-12-08 19:01:13,085	
+Epoch :      10
+train_labelloss:0.140618	train_vaeloss:-0.057815	train_reconloss:0.001760	train_acc:1.000000
+test_loss:0.163129	test_acc:0.979099
+2021-12-08 19:01:31,190	
+Epoch :      10
+train_labelloss:0.141533	train_vaeloss:-0.063781	train_reconloss:0.001851	train_acc:1.000000
+test_loss:0.163793	test_acc:0.978595
+2021-12-08 19:01:50,884	
+Epoch :      10
+train_labelloss:0.141731	train_vaeloss:-0.059191	train_reconloss:0.001703	train_acc:1.000000
+test_loss:0.162425	test_acc:0.980462
+2021-12-08 19:02:09,636	
+Epoch :      10
+train_labelloss:0.139540	train_vaeloss:-0.059289	train_reconloss:0.001793	train_acc:1.000000
+test_loss:0.163383	test_acc:0.980210
+2021-12-08 19:02:28,153	
+Epoch :      10
+train_labelloss:0.142914	train_vaeloss:-0.060586	train_reconloss:0.001782	train_acc:0.968750
+test_loss:0.163177	test_acc:0.979756
+2021-12-08 19:02:46,799	
+Epoch :      10
+train_labelloss:0.142433	train_vaeloss:-0.061603	train_reconloss:0.001721	train_acc:1.000000
+test_loss:0.164273	test_acc:0.979150
+2021-12-08 19:03:05,160	
+Epoch :      10
+train_labelloss:0.144669	train_vaeloss:-0.061001	train_reconloss:0.001706	train_acc:1.000000
+test_loss:0.162643	test_acc:0.980059
+2021-12-08 19:03:24,208	
+Epoch :      10
+train_labelloss:0.140031	train_vaeloss:-0.061404	train_reconloss:0.001845	train_acc:1.000000
+test_loss:0.161571	test_acc:0.980361
+2021-12-08 19:03:43,109	
+Epoch :      10
+train_labelloss:0.143064	train_vaeloss:-0.063209	train_reconloss:0.001817	train_acc:1.000000
+test_loss:0.164926	test_acc:0.979099
+2021-12-08 19:04:02,737	
+Epoch :      10
+train_labelloss:0.148079	train_vaeloss:-0.062087	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.163655	test_acc:0.979554
+2021-12-08 19:04:21,624	
+Epoch :      10
+train_labelloss:0.145563	train_vaeloss:-0.068088	train_reconloss:0.001834	train_acc:1.000000
+test_loss:0.162028	test_acc:0.980160
+2021-12-08 19:04:39,495	
+Epoch :      10
+train_labelloss:0.142164	train_vaeloss:-0.054445	train_reconloss:0.001731	train_acc:1.000000
+test_loss:0.162180	test_acc:0.979857
+2021-12-08 19:04:57,599	
+Epoch :      10
+train_labelloss:0.147684	train_vaeloss:-0.063174	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.161686	test_acc:0.980614
+2021-12-08 19:05:17,444	
+Epoch :      10
+train_labelloss:0.143970	train_vaeloss:-0.065501	train_reconloss:0.001778	train_acc:1.000000
+test_loss:0.162108	test_acc:0.980160
+2021-12-08 19:05:35,493	
+Epoch :      10
+train_labelloss:0.140381	train_vaeloss:-0.066271	train_reconloss:0.001887	train_acc:1.000000
+test_loss:0.162662	test_acc:0.979907
+2021-12-08 19:05:53,929	
+Epoch :      10
+train_labelloss:0.146230	train_vaeloss:-0.060710	train_reconloss:0.001832	train_acc:1.000000
+test_loss:0.164164	test_acc:0.978544
+2021-12-08 19:06:12,707	
+Epoch :      10
+train_labelloss:0.141424	train_vaeloss:-0.061978	train_reconloss:0.001886	train_acc:0.968750
+test_loss:0.163315	test_acc:0.979200
+2021-12-08 19:06:30,055	
+Epoch :      10
+train_labelloss:0.144635	train_vaeloss:-0.063027	train_reconloss:0.001815	train_acc:1.000000
+test_loss:0.162686	test_acc:0.979554
+2021-12-08 19:06:47,812	
+Epoch :      10
+train_labelloss:0.141188	train_vaeloss:-0.064695	train_reconloss:0.001840	train_acc:1.000000
+test_loss:0.160157	test_acc:0.981472
+2021-12-08 19:07:06,635	
+Epoch :      10
+train_labelloss:0.142570	train_vaeloss:-0.066243	train_reconloss:0.001839	train_acc:1.000000
+test_loss:0.162747	test_acc:0.980160
+2021-12-08 19:07:24,935	
+Epoch :      10
+train_labelloss:0.140979	train_vaeloss:-0.067367	train_reconloss:0.001849	train_acc:0.968750
+test_loss:0.160917	test_acc:0.980513
+2021-12-08 19:07:42,870	
+Epoch :      10
+train_labelloss:0.142225	train_vaeloss:-0.067254	train_reconloss:0.001904	train_acc:0.906250
+test_loss:0.160956	test_acc:0.980866
+2021-12-08 19:08:01,592	
+Epoch :      10
+train_labelloss:0.135783	train_vaeloss:-0.066219	train_reconloss:0.001836	train_acc:1.000000
+test_loss:0.162523	test_acc:0.980261
+2021-12-08 19:08:19,734	
+Epoch :      10
+train_labelloss:0.138233	train_vaeloss:-0.063884	train_reconloss:0.001863	train_acc:1.000000
+test_loss:0.161999	test_acc:0.980059
+2021-12-08 19:08:37,345	
+Epoch :      10
+train_labelloss:0.144076	train_vaeloss:-0.069262	train_reconloss:0.001853	train_acc:0.968750
+test_loss:0.160966	test_acc:0.980715
+2021-12-08 19:08:56,086	
+Epoch :      10
+train_labelloss:0.142387	train_vaeloss:-0.061600	train_reconloss:0.001936	train_acc:1.000000
+test_loss:0.160653	test_acc:0.980967
+2021-12-08 19:09:14,121	
+Epoch :      10
+train_labelloss:0.139018	train_vaeloss:-0.055882	train_reconloss:0.001740	train_acc:1.000000
+test_loss:0.162391	test_acc:0.979907
+2021-12-08 19:09:32,876	
+Epoch :      10
+train_labelloss:0.142472	train_vaeloss:-0.057611	train_reconloss:0.001778	train_acc:1.000000
+test_loss:0.161675	test_acc:0.980412
+2021-12-08 19:09:50,259	
+Epoch :      10
+train_labelloss:0.145253	train_vaeloss:-0.056241	train_reconloss:0.001717	train_acc:0.968750
+test_loss:0.162290	test_acc:0.980109
+2021-12-08 19:10:07,277	
+Epoch :      10
+train_labelloss:0.142333	train_vaeloss:-0.058438	train_reconloss:0.001827	train_acc:1.000000
+test_loss:0.180009	test_acc:0.969154
+2021-12-08 19:10:25,850	
+Epoch :      10
+train_labelloss:0.144355	train_vaeloss:-0.060125	train_reconloss:0.001762	train_acc:0.968750
+test_loss:0.161981	test_acc:0.980160
+2021-12-08 19:10:44,020	
+Epoch :      10
+train_labelloss:0.137935	train_vaeloss:-0.063048	train_reconloss:0.001783	train_acc:1.000000
+test_loss:0.161417	test_acc:0.980462
+2021-12-08 19:10:46,595	Epoch 11
+2021-12-08 19:11:01,681	
+Epoch :      11
+train_labelloss:0.138169	train_vaeloss:-0.061466	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.162306	test_acc:0.980311
+2021-12-08 19:11:19,313	
+Epoch :      11
+train_labelloss:0.139694	train_vaeloss:-0.061955	train_reconloss:0.001829	train_acc:0.968750
+test_loss:0.162375	test_acc:0.980261
+2021-12-08 19:11:38,028	
+Epoch :      11
+train_labelloss:0.141498	train_vaeloss:-0.061953	train_reconloss:0.001793	train_acc:0.968750
+test_loss:0.162403	test_acc:0.980513
+2021-12-08 19:11:57,513	
+Epoch :      11
+train_labelloss:0.135712	train_vaeloss:-0.066585	train_reconloss:0.001850	train_acc:1.000000
+test_loss:0.162533	test_acc:0.980513
+2021-12-08 19:12:16,476	
+Epoch :      11
+train_labelloss:0.147092	train_vaeloss:-0.057708	train_reconloss:0.001830	train_acc:0.968750
+test_loss:0.163860	test_acc:0.979352
+2021-12-08 19:12:35,179	
+Epoch :      11
+train_labelloss:0.144435	train_vaeloss:-0.055109	train_reconloss:0.001747	train_acc:1.000000
+test_loss:0.161613	test_acc:0.980866
+2021-12-08 19:12:54,425	
+Epoch :      11
+train_labelloss:0.141930	train_vaeloss:-0.059581	train_reconloss:0.001687	train_acc:1.000000
+test_loss:0.160954	test_acc:0.980715
+2021-12-08 19:13:12,111	
+Epoch :      11
+train_labelloss:0.137631	train_vaeloss:-0.068075	train_reconloss:0.001774	train_acc:1.000000
+test_loss:0.161827	test_acc:0.980412
+2021-12-08 19:13:28,847	
+Epoch :      11
+train_labelloss:0.144010	train_vaeloss:-0.059270	train_reconloss:0.001779	train_acc:0.968750
+test_loss:0.161757	test_acc:0.980412
+2021-12-08 19:13:47,543	
+Epoch :      11
+train_labelloss:0.140650	train_vaeloss:-0.056307	train_reconloss:0.001714	train_acc:1.000000
+test_loss:0.161122	test_acc:0.980412
+2021-12-08 19:14:05,856	
+Epoch :      11
+train_labelloss:0.140325	train_vaeloss:-0.062325	train_reconloss:0.001829	train_acc:1.000000
+test_loss:0.161724	test_acc:0.980412
+2021-12-08 19:14:23,388	
+Epoch :      11
+train_labelloss:0.139044	train_vaeloss:-0.063347	train_reconloss:0.001815	train_acc:1.000000
+test_loss:0.161289	test_acc:0.980563
+2021-12-08 19:14:41,860	
+Epoch :      11
+train_labelloss:0.139471	train_vaeloss:-0.065663	train_reconloss:0.001802	train_acc:1.000000
+test_loss:0.162476	test_acc:0.980261
+2021-12-08 19:15:00,877	
+Epoch :      11
+train_labelloss:0.139979	train_vaeloss:-0.063887	train_reconloss:0.001792	train_acc:1.000000
+test_loss:0.161492	test_acc:0.980866
+2021-12-08 19:15:19,368	
+Epoch :      11
+train_labelloss:0.139578	train_vaeloss:-0.064148	train_reconloss:0.001948	train_acc:1.000000
+test_loss:0.161849	test_acc:0.980513
+2021-12-08 19:15:37,225	
+Epoch :      11
+train_labelloss:0.138533	train_vaeloss:-0.071646	train_reconloss:0.001911	train_acc:1.000000
+test_loss:0.163489	test_acc:0.979857
+2021-12-08 19:15:55,820	
+Epoch :      11
+train_labelloss:0.141186	train_vaeloss:-0.059510	train_reconloss:0.001832	train_acc:0.968750
+test_loss:0.164937	test_acc:0.979049
+2021-12-08 19:16:14,706	
+Epoch :      11
+train_labelloss:0.137846	train_vaeloss:-0.059509	train_reconloss:0.001762	train_acc:1.000000
+test_loss:0.163749	test_acc:0.979655
+2021-12-08 19:16:31,426	
+Epoch :      11
+train_labelloss:0.138807	train_vaeloss:-0.063175	train_reconloss:0.001780	train_acc:1.000000
+test_loss:0.163938	test_acc:0.979705
+2021-12-08 19:16:50,144	
+Epoch :      11
+train_labelloss:0.138706	train_vaeloss:-0.060933	train_reconloss:0.001725	train_acc:1.000000
+test_loss:0.167908	test_acc:0.977130
+2021-12-08 19:17:08,169	
+Epoch :      11
+train_labelloss:0.140714	train_vaeloss:-0.060101	train_reconloss:0.001793	train_acc:1.000000
+test_loss:0.166335	test_acc:0.978140
+2021-12-08 19:17:27,324	
+Epoch :      11
+train_labelloss:0.143165	train_vaeloss:-0.064722	train_reconloss:0.001772	train_acc:0.968750
+test_loss:0.165171	test_acc:0.978796
+2021-12-08 19:17:45,561	
+Epoch :      11
+train_labelloss:0.142260	train_vaeloss:-0.063482	train_reconloss:0.001872	train_acc:0.937500
+test_loss:0.167263	test_acc:0.977837
+2021-12-08 19:18:04,171	
+Epoch :      11
+train_labelloss:0.140903	train_vaeloss:-0.063558	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.163246	test_acc:0.979806
+2021-12-08 19:18:22,562	
+Epoch :      11
+train_labelloss:0.141605	train_vaeloss:-0.060539	train_reconloss:0.001845	train_acc:0.937500
+test_loss:0.164358	test_acc:0.979604
+2021-12-08 19:18:41,338	
+Epoch :      11
+train_labelloss:0.144569	train_vaeloss:-0.067302	train_reconloss:0.001744	train_acc:1.000000
+test_loss:0.163358	test_acc:0.980109
+2021-12-08 19:18:58,846	
+Epoch :      11
+train_labelloss:0.144776	train_vaeloss:-0.060614	train_reconloss:0.001816	train_acc:1.000000
+test_loss:0.163675	test_acc:0.979907
+2021-12-08 19:19:16,391	
+Epoch :      11
+train_labelloss:0.137778	train_vaeloss:-0.068222	train_reconloss:0.001865	train_acc:1.000000
+test_loss:0.162408	test_acc:0.980412
+2021-12-08 19:19:34,892	
+Epoch :      11
+train_labelloss:0.143126	train_vaeloss:-0.057538	train_reconloss:0.001767	train_acc:1.000000
+test_loss:0.167089	test_acc:0.978544
+2021-12-08 19:19:52,991	
+Epoch :      11
+train_labelloss:0.142328	train_vaeloss:-0.063066	train_reconloss:0.001783	train_acc:1.000000
+test_loss:0.167444	test_acc:0.977787
+2021-12-08 19:20:11,287	
+Epoch :      11
+train_labelloss:0.145819	train_vaeloss:-0.054209	train_reconloss:0.001749	train_acc:1.000000
+test_loss:0.165186	test_acc:0.979251
+2021-12-08 19:20:28,968	
+Epoch :      11
+train_labelloss:0.141678	train_vaeloss:-0.063971	train_reconloss:0.001869	train_acc:1.000000
+test_loss:0.163568	test_acc:0.980361
+2021-12-08 19:20:47,541	
+Epoch :      11
+train_labelloss:0.146607	train_vaeloss:-0.065719	train_reconloss:0.001908	train_acc:1.000000
+test_loss:0.162422	test_acc:0.980563
+2021-12-08 19:21:07,436	
+Epoch :      11
+train_labelloss:0.144549	train_vaeloss:-0.063011	train_reconloss:0.001732	train_acc:0.968750
+test_loss:0.164338	test_acc:0.979554
+2021-12-08 19:21:26,650	
+Epoch :      11
+train_labelloss:0.133824	train_vaeloss:-0.059445	train_reconloss:0.001778	train_acc:1.000000
+test_loss:0.162340	test_acc:0.980160
+2021-12-08 19:21:44,945	
+Epoch :      11
+train_labelloss:0.139101	train_vaeloss:-0.067275	train_reconloss:0.001864	train_acc:0.937500
+test_loss:0.162302	test_acc:0.981220
+2021-12-08 19:22:04,307	
+Epoch :      11
+train_labelloss:0.144089	train_vaeloss:-0.061208	train_reconloss:0.001686	train_acc:1.000000
+test_loss:0.162529	test_acc:0.980513
+2021-12-08 19:22:23,277	
+Epoch :      11
+train_labelloss:0.146815	train_vaeloss:-0.065186	train_reconloss:0.001820	train_acc:1.000000
+test_loss:0.162311	test_acc:0.980059
+2021-12-08 19:22:42,277	
+Epoch :      11
+train_labelloss:0.138502	train_vaeloss:-0.062075	train_reconloss:0.001774	train_acc:1.000000
+test_loss:0.162794	test_acc:0.980210
+2021-12-08 19:23:01,587	
+Epoch :      11
+train_labelloss:0.139744	train_vaeloss:-0.063645	train_reconloss:0.001817	train_acc:1.000000
+test_loss:0.161555	test_acc:0.980765
+2021-12-08 19:23:19,949	
+Epoch :      11
+train_labelloss:0.141220	train_vaeloss:-0.057359	train_reconloss:0.001765	train_acc:0.968750
+test_loss:0.161832	test_acc:0.980816
+2021-12-08 19:23:37,621	
+Epoch :      11
+train_labelloss:0.139849	train_vaeloss:-0.058386	train_reconloss:0.001806	train_acc:1.000000
+test_loss:0.161875	test_acc:0.980816
+2021-12-08 19:23:55,908	
+Epoch :      11
+train_labelloss:0.148051	train_vaeloss:-0.056196	train_reconloss:0.001772	train_acc:1.000000
+test_loss:0.161856	test_acc:0.980967
+2021-12-08 19:24:14,675	
+Epoch :      11
+train_labelloss:0.144898	train_vaeloss:-0.053654	train_reconloss:0.001634	train_acc:1.000000
+test_loss:0.160923	test_acc:0.980563
+2021-12-08 19:24:15,001	Epoch 12
+2021-12-08 19:24:32,569	
+Epoch :      12
+train_labelloss:0.145792	train_vaeloss:-0.063342	train_reconloss:0.001892	train_acc:1.000000
+test_loss:0.162429	test_acc:0.980462
+2021-12-08 19:24:51,762	
+Epoch :      12
+train_labelloss:0.139675	train_vaeloss:-0.063723	train_reconloss:0.001767	train_acc:0.937500
+test_loss:0.161122	test_acc:0.980967
+2021-12-08 19:25:09,096	
+Epoch :      12
+train_labelloss:0.140882	train_vaeloss:-0.059719	train_reconloss:0.001806	train_acc:0.968750
+test_loss:0.161130	test_acc:0.981119
+2021-12-08 19:25:27,441	
+Epoch :      12
+train_labelloss:0.138366	train_vaeloss:-0.060410	train_reconloss:0.001795	train_acc:1.000000
+test_loss:0.160923	test_acc:0.981220
+2021-12-08 19:25:46,523	
+Epoch :      12
+train_labelloss:0.141359	train_vaeloss:-0.058402	train_reconloss:0.001819	train_acc:0.937500
+test_loss:0.160347	test_acc:0.981624
+2021-12-08 19:26:05,235	
+Epoch :      12
+train_labelloss:0.137527	train_vaeloss:-0.064973	train_reconloss:0.001823	train_acc:0.968750
+test_loss:0.162059	test_acc:0.980765
+2021-12-08 19:26:24,296	
+Epoch :      12
+train_labelloss:0.141779	train_vaeloss:-0.063556	train_reconloss:0.001755	train_acc:1.000000
+test_loss:0.161446	test_acc:0.980715
+2021-12-08 19:26:43,479	
+Epoch :      12
+train_labelloss:0.140608	train_vaeloss:-0.061425	train_reconloss:0.001800	train_acc:0.968750
+test_loss:0.160643	test_acc:0.981472
+2021-12-08 19:27:00,947	
+Epoch :      12
+train_labelloss:0.136306	train_vaeloss:-0.063596	train_reconloss:0.001739	train_acc:1.000000
+test_loss:0.162495	test_acc:0.979958
+2021-12-08 19:27:18,257	
+Epoch :      12
+train_labelloss:0.138740	train_vaeloss:-0.056511	train_reconloss:0.001749	train_acc:0.968750
+test_loss:0.160731	test_acc:0.981270
+2021-12-08 19:27:37,036	
+Epoch :      12
+train_labelloss:0.140761	train_vaeloss:-0.060090	train_reconloss:0.001704	train_acc:1.000000
+test_loss:0.161310	test_acc:0.981119
+2021-12-08 19:27:56,030	
+Epoch :      12
+train_labelloss:0.137013	train_vaeloss:-0.056252	train_reconloss:0.001669	train_acc:1.000000
+test_loss:0.165103	test_acc:0.978746
+2021-12-08 19:28:13,547	
+Epoch :      12
+train_labelloss:0.134843	train_vaeloss:-0.056391	train_reconloss:0.001775	train_acc:0.968750
+test_loss:0.163121	test_acc:0.980361
+2021-12-08 19:28:32,110	
+Epoch :      12
+train_labelloss:0.136533	train_vaeloss:-0.051107	train_reconloss:0.001698	train_acc:1.000000
+test_loss:0.162607	test_acc:0.980816
+2021-12-08 19:28:50,515	
+Epoch :      12
+train_labelloss:0.137018	train_vaeloss:-0.058562	train_reconloss:0.001780	train_acc:1.000000
+test_loss:0.162263	test_acc:0.980967
+2021-12-08 19:29:08,290	
+Epoch :      12
+train_labelloss:0.141298	train_vaeloss:-0.066270	train_reconloss:0.001874	train_acc:1.000000
+test_loss:0.163187	test_acc:0.980210
+2021-12-08 19:29:25,745	
+Epoch :      12
+train_labelloss:0.139804	train_vaeloss:-0.070914	train_reconloss:0.001930	train_acc:1.000000
+test_loss:0.162371	test_acc:0.979958
+2021-12-08 19:29:44,694	
+Epoch :      12
+train_labelloss:0.141321	train_vaeloss:-0.056034	train_reconloss:0.001723	train_acc:1.000000
+test_loss:0.162406	test_acc:0.979857
+2021-12-08 19:30:03,824	
+Epoch :      12
+train_labelloss:0.142108	train_vaeloss:-0.062774	train_reconloss:0.001747	train_acc:1.000000
+test_loss:0.164029	test_acc:0.978897
+2021-12-08 19:30:22,498	
+Epoch :      12
+train_labelloss:0.137411	train_vaeloss:-0.062510	train_reconloss:0.001727	train_acc:1.000000
+test_loss:0.162475	test_acc:0.980261
+2021-12-08 19:30:41,644	
+Epoch :      12
+train_labelloss:0.135630	train_vaeloss:-0.067003	train_reconloss:0.001832	train_acc:1.000000
+test_loss:0.163676	test_acc:0.979705
+2021-12-08 19:31:00,680	
+Epoch :      12
+train_labelloss:0.137742	train_vaeloss:-0.066640	train_reconloss:0.001842	train_acc:1.000000
+test_loss:0.162704	test_acc:0.980210
+2021-12-08 19:31:19,869	
+Epoch :      12
+train_labelloss:0.141364	train_vaeloss:-0.063758	train_reconloss:0.001798	train_acc:1.000000
+test_loss:0.163460	test_acc:0.980462
+2021-12-08 19:31:36,949	
+Epoch :      12
+train_labelloss:0.142736	train_vaeloss:-0.058995	train_reconloss:0.001709	train_acc:1.000000
+test_loss:0.161802	test_acc:0.980311
+2021-12-08 19:31:54,051	
+Epoch :      12
+train_labelloss:0.138393	train_vaeloss:-0.061824	train_reconloss:0.001694	train_acc:1.000000
+test_loss:0.163042	test_acc:0.980059
+2021-12-08 19:32:12,578	
+Epoch :      12
+train_labelloss:0.137260	train_vaeloss:-0.056237	train_reconloss:0.001708	train_acc:1.000000
+test_loss:0.162145	test_acc:0.980765
+2021-12-08 19:32:31,881	
+Epoch :      12
+train_labelloss:0.136628	train_vaeloss:-0.055307	train_reconloss:0.001679	train_acc:0.968750
+test_loss:0.162548	test_acc:0.980412
+2021-12-08 19:32:50,223	
+Epoch :      12
+train_labelloss:0.143638	train_vaeloss:-0.058418	train_reconloss:0.001694	train_acc:1.000000
+test_loss:0.162467	test_acc:0.980059
+2021-12-08 19:33:07,555	
+Epoch :      12
+train_labelloss:0.141385	train_vaeloss:-0.057622	train_reconloss:0.001664	train_acc:1.000000
+test_loss:0.162201	test_acc:0.980361
+2021-12-08 19:33:25,499	
+Epoch :      12
+train_labelloss:0.142008	train_vaeloss:-0.061923	train_reconloss:0.001727	train_acc:1.000000
+test_loss:0.163355	test_acc:0.980008
+2021-12-08 19:33:44,351	
+Epoch :      12
+train_labelloss:0.140948	train_vaeloss:-0.069063	train_reconloss:0.001812	train_acc:1.000000
+test_loss:0.161156	test_acc:0.980765
+2021-12-08 19:34:01,719	
+Epoch :      12
+train_labelloss:0.148906	train_vaeloss:-0.062456	train_reconloss:0.001764	train_acc:1.000000
+test_loss:0.164483	test_acc:0.978393
+2021-12-08 19:34:20,625	
+Epoch :      12
+train_labelloss:0.138565	train_vaeloss:-0.069513	train_reconloss:0.001864	train_acc:1.000000
+test_loss:0.161304	test_acc:0.980967
+2021-12-08 19:34:38,367	
+Epoch :      12
+train_labelloss:0.142763	train_vaeloss:-0.064474	train_reconloss:0.001861	train_acc:1.000000
+test_loss:0.161452	test_acc:0.980361
+2021-12-08 19:34:56,323	
+Epoch :      12
+train_labelloss:0.137234	train_vaeloss:-0.065330	train_reconloss:0.001801	train_acc:1.000000
+test_loss:0.163173	test_acc:0.980008
+2021-12-08 19:35:15,415	
+Epoch :      12
+train_labelloss:0.137114	train_vaeloss:-0.069397	train_reconloss:0.001841	train_acc:1.000000
+test_loss:0.161180	test_acc:0.981220
+2021-12-08 19:35:33,380	
+Epoch :      12
+train_labelloss:0.142280	train_vaeloss:-0.062644	train_reconloss:0.001764	train_acc:1.000000
+test_loss:0.163986	test_acc:0.979150
+2021-12-08 19:35:52,328	
+Epoch :      12
+train_labelloss:0.138976	train_vaeloss:-0.061197	train_reconloss:0.001719	train_acc:0.968750
+test_loss:0.161750	test_acc:0.980513
+2021-12-08 19:36:10,648	
+Epoch :      12
+train_labelloss:0.140057	train_vaeloss:-0.064733	train_reconloss:0.001830	train_acc:0.968750
+test_loss:0.163185	test_acc:0.979958
+2021-12-08 19:36:29,338	
+Epoch :      12
+train_labelloss:0.140991	train_vaeloss:-0.065596	train_reconloss:0.001859	train_acc:1.000000
+test_loss:0.161157	test_acc:0.980614
+2021-12-08 19:36:46,566	
+Epoch :      12
+train_labelloss:0.140006	train_vaeloss:-0.056060	train_reconloss:0.001751	train_acc:1.000000
+test_loss:0.161502	test_acc:0.980261
+2021-12-08 19:37:04,823	
+Epoch :      12
+train_labelloss:0.139897	train_vaeloss:-0.063350	train_reconloss:0.001810	train_acc:1.000000
+test_loss:0.162341	test_acc:0.979958
+2021-12-08 19:37:23,917	
+Epoch :      12
+train_labelloss:0.139231	train_vaeloss:-0.059571	train_reconloss:0.001722	train_acc:1.000000
+test_loss:0.162315	test_acc:0.980361
+2021-12-08 19:37:27,608	Epoch 13
+2021-12-08 19:37:41,335	
+Epoch :      13
+train_labelloss:0.142258	train_vaeloss:-0.061693	train_reconloss:0.001893	train_acc:0.968750
+test_loss:0.162297	test_acc:0.980059
+2021-12-08 19:37:59,674	
+Epoch :      13
+train_labelloss:0.133995	train_vaeloss:-0.064445	train_reconloss:0.001789	train_acc:1.000000
+test_loss:0.161666	test_acc:0.980816
+2021-12-08 19:38:18,522	
+Epoch :      13
+train_labelloss:0.138503	train_vaeloss:-0.066697	train_reconloss:0.001757	train_acc:0.968750
+test_loss:0.161177	test_acc:0.981119
+2021-12-08 19:38:36,498	
+Epoch :      13
+train_labelloss:0.139253	train_vaeloss:-0.054302	train_reconloss:0.001786	train_acc:1.000000
+test_loss:0.161781	test_acc:0.980412
+2021-12-08 19:38:54,622	
+Epoch :      13
+train_labelloss:0.134933	train_vaeloss:-0.065028	train_reconloss:0.001786	train_acc:1.000000
+test_loss:0.162772	test_acc:0.980311
+2021-12-08 19:39:13,495	
+Epoch :      13
+train_labelloss:0.136785	train_vaeloss:-0.062646	train_reconloss:0.001814	train_acc:0.968750
+test_loss:0.165026	test_acc:0.978897
+2021-12-08 19:39:32,080	
+Epoch :      13
+train_labelloss:0.134345	train_vaeloss:-0.060569	train_reconloss:0.001811	train_acc:1.000000
+test_loss:0.162231	test_acc:0.980210
+2021-12-08 19:39:51,068	
+Epoch :      13
+train_labelloss:0.139577	train_vaeloss:-0.067058	train_reconloss:0.001865	train_acc:1.000000
+test_loss:0.161356	test_acc:0.980462
+2021-12-08 19:40:09,851	
+Epoch :      13
+train_labelloss:0.138020	train_vaeloss:-0.067055	train_reconloss:0.001747	train_acc:0.968750
+test_loss:0.162395	test_acc:0.979907
+2021-12-08 19:40:26,643	
+Epoch :      13
+train_labelloss:0.133916	train_vaeloss:-0.063117	train_reconloss:0.001761	train_acc:0.968750
+test_loss:0.161974	test_acc:0.980361
+2021-12-08 19:40:45,021	
+Epoch :      13
+train_labelloss:0.139794	train_vaeloss:-0.061803	train_reconloss:0.001864	train_acc:1.000000
+test_loss:0.161472	test_acc:0.980715
+2021-12-08 19:41:02,676	
+Epoch :      13
+train_labelloss:0.139077	train_vaeloss:-0.066855	train_reconloss:0.001800	train_acc:1.000000
+test_loss:0.161266	test_acc:0.980614
+2021-12-08 19:41:21,443	
+Epoch :      13
+train_labelloss:0.140984	train_vaeloss:-0.055111	train_reconloss:0.001658	train_acc:1.000000
+test_loss:0.161755	test_acc:0.980513
+2021-12-08 19:41:39,066	
+Epoch :      13
+train_labelloss:0.138638	train_vaeloss:-0.056802	train_reconloss:0.001675	train_acc:1.000000
+test_loss:0.163184	test_acc:0.979655
+2021-12-08 19:41:56,350	
+Epoch :      13
+train_labelloss:0.135174	train_vaeloss:-0.058930	train_reconloss:0.001692	train_acc:1.000000
+test_loss:0.162777	test_acc:0.980361
+2021-12-08 19:42:15,437	
+Epoch :      13
+train_labelloss:0.141739	train_vaeloss:-0.065682	train_reconloss:0.001810	train_acc:1.000000
+test_loss:0.165499	test_acc:0.979049
+2021-12-08 19:42:34,586	
+Epoch :      13
+train_labelloss:0.138543	train_vaeloss:-0.069143	train_reconloss:0.001819	train_acc:1.000000
+test_loss:0.162902	test_acc:0.980160
+2021-12-08 19:42:53,143	
+Epoch :      13
+train_labelloss:0.134270	train_vaeloss:-0.060467	train_reconloss:0.001790	train_acc:1.000000
+test_loss:0.162979	test_acc:0.980361
+2021-12-08 19:43:12,008	
+Epoch :      13
+train_labelloss:0.136338	train_vaeloss:-0.055962	train_reconloss:0.001671	train_acc:1.000000
+test_loss:0.162748	test_acc:0.980513
+2021-12-08 19:43:31,370	
+Epoch :      13
+train_labelloss:0.139563	train_vaeloss:-0.059301	train_reconloss:0.001688	train_acc:1.000000
+test_loss:0.161955	test_acc:0.980311
+2021-12-08 19:43:49,899	
+Epoch :      13
+train_labelloss:0.147355	train_vaeloss:-0.055782	train_reconloss:0.001808	train_acc:1.000000
+test_loss:0.162484	test_acc:0.980210
+2021-12-08 19:44:09,403	
+Epoch :      13
+train_labelloss:0.137422	train_vaeloss:-0.069579	train_reconloss:0.001775	train_acc:1.000000
+test_loss:0.161763	test_acc:0.980765
+2021-12-08 19:44:28,725	
+Epoch :      13
+train_labelloss:0.140089	train_vaeloss:-0.060797	train_reconloss:0.001698	train_acc:0.906250
+test_loss:0.165055	test_acc:0.978695
+2021-12-08 19:44:46,702	
+Epoch :      13
+train_labelloss:0.142061	train_vaeloss:-0.064695	train_reconloss:0.001775	train_acc:0.968750
+test_loss:0.167382	test_acc:0.977938
+2021-12-08 19:45:04,564	
+Epoch :      13
+train_labelloss:0.141232	train_vaeloss:-0.064868	train_reconloss:0.001785	train_acc:0.968750
+test_loss:0.162398	test_acc:0.980664
+2021-12-08 19:45:23,528	
+Epoch :      13
+train_labelloss:0.140118	train_vaeloss:-0.068640	train_reconloss:0.001735	train_acc:1.000000
+test_loss:0.161966	test_acc:0.980765
+2021-12-08 19:45:42,287	
+Epoch :      13
+train_labelloss:0.137384	train_vaeloss:-0.066337	train_reconloss:0.001809	train_acc:1.000000
+test_loss:0.161739	test_acc:0.980967
+2021-12-08 19:46:00,975	
+Epoch :      13
+train_labelloss:0.139130	train_vaeloss:-0.055186	train_reconloss:0.001658	train_acc:1.000000
+test_loss:0.163756	test_acc:0.979554
+2021-12-08 19:46:20,294	
+Epoch :      13
+train_labelloss:0.140806	train_vaeloss:-0.062375	train_reconloss:0.001735	train_acc:1.000000
+test_loss:0.161562	test_acc:0.981169
+2021-12-08 19:46:39,472	
+Epoch :      13
+train_labelloss:0.140690	train_vaeloss:-0.066118	train_reconloss:0.001823	train_acc:1.000000
+test_loss:0.161239	test_acc:0.981371
+2021-12-08 19:46:57,483	
+Epoch :      13
+train_labelloss:0.141794	train_vaeloss:-0.067417	train_reconloss:0.001789	train_acc:1.000000
+test_loss:0.161185	test_acc:0.981422
+2021-12-08 19:47:15,528	
+Epoch :      13
+train_labelloss:0.139983	train_vaeloss:-0.062248	train_reconloss:0.001809	train_acc:0.968750
+test_loss:0.166419	test_acc:0.977686
+2021-12-08 19:47:34,421	
+Epoch :      13
+train_labelloss:0.142260	train_vaeloss:-0.061901	train_reconloss:0.001770	train_acc:0.937500
+test_loss:0.162015	test_acc:0.980614
+2021-12-08 19:47:52,678	
+Epoch :      13
+train_labelloss:0.146784	train_vaeloss:-0.057082	train_reconloss:0.001695	train_acc:1.000000
+test_loss:0.162166	test_acc:0.980311
+2021-12-08 19:48:11,236	
+Epoch :      13
+train_labelloss:0.140690	train_vaeloss:-0.061864	train_reconloss:0.001806	train_acc:1.000000
+test_loss:0.162742	test_acc:0.979958
+2021-12-08 19:48:29,128	
+Epoch :      13
+train_labelloss:0.135674	train_vaeloss:-0.065889	train_reconloss:0.001795	train_acc:0.968750
+test_loss:0.161354	test_acc:0.981321
+2021-12-08 19:48:47,967	
+Epoch :      13
+train_labelloss:0.141025	train_vaeloss:-0.053968	train_reconloss:0.001699	train_acc:1.000000
+test_loss:0.163025	test_acc:0.980462
+2021-12-08 19:49:06,211	
+Epoch :      13
+train_labelloss:0.137618	train_vaeloss:-0.058413	train_reconloss:0.001759	train_acc:1.000000
+test_loss:0.162496	test_acc:0.980563
+2021-12-08 19:49:24,701	
+Epoch :      13
+train_labelloss:0.145796	train_vaeloss:-0.056788	train_reconloss:0.001731	train_acc:1.000000
+test_loss:0.161860	test_acc:0.981119
+2021-12-08 19:49:42,453	
+Epoch :      13
+train_labelloss:0.138523	train_vaeloss:-0.061750	train_reconloss:0.001731	train_acc:1.000000
+test_loss:0.163847	test_acc:0.979857
+2021-12-08 19:50:01,588	
+Epoch :      13
+train_labelloss:0.139796	train_vaeloss:-0.060279	train_reconloss:0.001706	train_acc:1.000000
+test_loss:0.161065	test_acc:0.981422
+2021-12-08 19:50:18,928	
+Epoch :      13
+train_labelloss:0.143730	train_vaeloss:-0.053121	train_reconloss:0.001739	train_acc:1.000000
+test_loss:0.165771	test_acc:0.978695
+2021-12-08 19:50:37,886	
+Epoch :      13
+train_labelloss:0.140602	train_vaeloss:-0.063797	train_reconloss:0.001740	train_acc:0.937500
+test_loss:0.161296	test_acc:0.981422
+2021-12-08 19:50:56,657	
+Epoch :      13
+train_labelloss:0.137462	train_vaeloss:-0.054326	train_reconloss:0.001759	train_acc:1.000000
+test_loss:0.164538	test_acc:0.979402
+2021-12-08 19:50:58,997	Epoch 14
+2021-12-08 19:51:14,215	
+Epoch :      14
+train_labelloss:0.140826	train_vaeloss:-0.064028	train_reconloss:0.001740	train_acc:0.968750
+test_loss:0.162534	test_acc:0.980311
+2021-12-08 19:51:32,474	
+Epoch :      14
+train_labelloss:0.138534	train_vaeloss:-0.065472	train_reconloss:0.001710	train_acc:1.000000
+test_loss:0.162512	test_acc:0.980462
+2021-12-08 19:51:51,179	
+Epoch :      14
+train_labelloss:0.137629	train_vaeloss:-0.062076	train_reconloss:0.001725	train_acc:1.000000
+test_loss:0.161389	test_acc:0.981169
+2021-12-08 19:52:09,804	
+Epoch :      14
+train_labelloss:0.141137	train_vaeloss:-0.066488	train_reconloss:0.001801	train_acc:1.000000
+test_loss:0.161840	test_acc:0.980715
+2021-12-08 19:52:27,470	
+Epoch :      14
+train_labelloss:0.140763	train_vaeloss:-0.059676	train_reconloss:0.001785	train_acc:1.000000
+test_loss:0.161777	test_acc:0.980614
+2021-12-08 19:52:45,384	
+Epoch :      14
+train_labelloss:0.137259	train_vaeloss:-0.062862	train_reconloss:0.001821	train_acc:1.000000
+test_loss:0.162213	test_acc:0.980614
+2021-12-08 19:53:04,584	
+Epoch :      14
+train_labelloss:0.139068	train_vaeloss:-0.058288	train_reconloss:0.001714	train_acc:0.968750
+test_loss:0.161731	test_acc:0.980715
+2021-12-08 19:53:22,759	
+Epoch :      14
+train_labelloss:0.141505	train_vaeloss:-0.062955	train_reconloss:0.001742	train_acc:1.000000
+test_loss:0.161523	test_acc:0.980765
+2021-12-08 19:53:41,947	
+Epoch :      14
+train_labelloss:0.139577	train_vaeloss:-0.065600	train_reconloss:0.001698	train_acc:1.000000
+test_loss:0.162646	test_acc:0.980664
+2021-12-08 19:54:00,852	
+Epoch :      14
+train_labelloss:0.140132	train_vaeloss:-0.066260	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.161815	test_acc:0.980866
+2021-12-08 19:54:19,484	
+Epoch :      14
+train_labelloss:0.139049	train_vaeloss:-0.063717	train_reconloss:0.001709	train_acc:1.000000
+test_loss:0.162947	test_acc:0.980261
+2021-12-08 19:54:37,847	
+Epoch :      14
+train_labelloss:0.135795	train_vaeloss:-0.056548	train_reconloss:0.001770	train_acc:1.000000
+test_loss:0.163579	test_acc:0.980160
+2021-12-08 19:54:55,862	
+Epoch :      14
+train_labelloss:0.136237	train_vaeloss:-0.060746	train_reconloss:0.001714	train_acc:1.000000
+test_loss:0.165394	test_acc:0.978695
+2021-12-08 19:55:14,245	
+Epoch :      14
+train_labelloss:0.133521	train_vaeloss:-0.066594	train_reconloss:0.001817	train_acc:1.000000
+test_loss:0.162534	test_acc:0.980917
+2021-12-08 19:55:31,680	
+Epoch :      14
+train_labelloss:0.141990	train_vaeloss:-0.061794	train_reconloss:0.001777	train_acc:0.968750
+test_loss:0.163543	test_acc:0.980008
+2021-12-08 19:55:49,392	
+Epoch :      14
+train_labelloss:0.137245	train_vaeloss:-0.060302	train_reconloss:0.001733	train_acc:1.000000
+test_loss:0.166600	test_acc:0.978393
+2021-12-08 19:56:06,489	
+Epoch :      14
+train_labelloss:0.139192	train_vaeloss:-0.058054	train_reconloss:0.001742	train_acc:1.000000
+test_loss:0.162440	test_acc:0.980816
+2021-12-08 19:56:25,644	
+Epoch :      14
+train_labelloss:0.135461	train_vaeloss:-0.060490	train_reconloss:0.001715	train_acc:0.968750
+test_loss:0.164291	test_acc:0.979604
+2021-12-08 19:56:43,619	
+Epoch :      14
+train_labelloss:0.137837	train_vaeloss:-0.064847	train_reconloss:0.001796	train_acc:1.000000
+test_loss:0.162984	test_acc:0.980563
+2021-12-08 19:57:02,066	
+Epoch :      14
+train_labelloss:0.137792	train_vaeloss:-0.061189	train_reconloss:0.001798	train_acc:0.968750
+test_loss:0.163578	test_acc:0.980160
+2021-12-08 19:57:20,408	
+Epoch :      14
+train_labelloss:0.136571	train_vaeloss:-0.055656	train_reconloss:0.001683	train_acc:1.000000
+test_loss:0.164308	test_acc:0.979958
+2021-12-08 19:57:39,230	
+Epoch :      14
+train_labelloss:0.138467	train_vaeloss:-0.063254	train_reconloss:0.001763	train_acc:0.937500
+test_loss:0.162979	test_acc:0.980412
+2021-12-08 19:57:57,905	
+Epoch :      14
+train_labelloss:0.142112	train_vaeloss:-0.064883	train_reconloss:0.001781	train_acc:1.000000
+test_loss:0.163337	test_acc:0.980614
+2021-12-08 19:58:16,192	
+Epoch :      14
+train_labelloss:0.139068	train_vaeloss:-0.059841	train_reconloss:0.001701	train_acc:1.000000
+test_loss:0.162600	test_acc:0.980664
+2021-12-08 19:58:33,943	
+Epoch :      14
+train_labelloss:0.135599	train_vaeloss:-0.061389	train_reconloss:0.001696	train_acc:1.000000
+test_loss:0.164092	test_acc:0.979705
+2021-12-08 19:58:53,374	
+Epoch :      14
+train_labelloss:0.136412	train_vaeloss:-0.059061	train_reconloss:0.001671	train_acc:0.968750
+test_loss:0.165865	test_acc:0.978645
+2021-12-08 19:59:12,104	
+Epoch :      14
+train_labelloss:0.141682	train_vaeloss:-0.063337	train_reconloss:0.001794	train_acc:1.000000
+test_loss:0.163312	test_acc:0.979756
+2021-12-08 19:59:30,999	
+Epoch :      14
+train_labelloss:0.138692	train_vaeloss:-0.055033	train_reconloss:0.001594	train_acc:1.000000
+test_loss:0.163378	test_acc:0.979806
+2021-12-08 19:59:49,559	
+Epoch :      14
+train_labelloss:0.135944	train_vaeloss:-0.062911	train_reconloss:0.001785	train_acc:1.000000
+test_loss:0.163805	test_acc:0.979857
+2021-12-08 20:00:09,015	
+Epoch :      14
+train_labelloss:0.135270	train_vaeloss:-0.056230	train_reconloss:0.001615	train_acc:1.000000
+test_loss:0.164732	test_acc:0.979251
+2021-12-08 20:00:26,879	
+Epoch :      14
+train_labelloss:0.138806	train_vaeloss:-0.056760	train_reconloss:0.001712	train_acc:1.000000
+test_loss:0.163031	test_acc:0.980160
+2021-12-08 20:00:44,573	
+Epoch :      14
+train_labelloss:0.138272	train_vaeloss:-0.066303	train_reconloss:0.001796	train_acc:1.000000
+test_loss:0.163249	test_acc:0.979554
+2021-12-08 20:01:03,546	
+Epoch :      14
+train_labelloss:0.139984	train_vaeloss:-0.063206	train_reconloss:0.001796	train_acc:0.968750
+test_loss:0.165049	test_acc:0.978393
+2021-12-08 20:01:20,620	
+Epoch :      14
+train_labelloss:0.138617	train_vaeloss:-0.063169	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.162585	test_acc:0.980462
+2021-12-08 20:01:39,892	
+Epoch :      14
+train_labelloss:0.140328	train_vaeloss:-0.057277	train_reconloss:0.001726	train_acc:1.000000
+test_loss:0.162440	test_acc:0.980210
+2021-12-08 20:01:58,060	
+Epoch :      14
+train_labelloss:0.138957	train_vaeloss:-0.065352	train_reconloss:0.001758	train_acc:1.000000
+test_loss:0.162092	test_acc:0.980664
+2021-12-08 20:02:16,292	
+Epoch :      14
+train_labelloss:0.140790	train_vaeloss:-0.065954	train_reconloss:0.001738	train_acc:1.000000
+test_loss:0.162461	test_acc:0.980715
+2021-12-08 20:02:35,489	
+Epoch :      14
+train_labelloss:0.141747	train_vaeloss:-0.066204	train_reconloss:0.001695	train_acc:1.000000
+test_loss:0.169176	test_acc:0.975919
+2021-12-08 20:02:52,479	
+Epoch :      14
+train_labelloss:0.138639	train_vaeloss:-0.058541	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.166249	test_acc:0.978140
+2021-12-08 20:03:09,886	
+Epoch :      14
+train_labelloss:0.138252	train_vaeloss:-0.064861	train_reconloss:0.001853	train_acc:0.968750
+test_loss:0.163395	test_acc:0.979857
+2021-12-08 20:03:28,499	
+Epoch :      14
+train_labelloss:0.139034	train_vaeloss:-0.061091	train_reconloss:0.001676	train_acc:1.000000
+test_loss:0.162841	test_acc:0.980614
+2021-12-08 20:03:47,505	
+Epoch :      14
+train_labelloss:0.134192	train_vaeloss:-0.059811	train_reconloss:0.001761	train_acc:1.000000
+test_loss:0.162837	test_acc:0.980664
+2021-12-08 20:04:06,129	
+Epoch :      14
+train_labelloss:0.136257	train_vaeloss:-0.060246	train_reconloss:0.001725	train_acc:1.000000
+test_loss:0.163362	test_acc:0.980261
+2021-12-08 20:04:26,016	
+Epoch :      14
+train_labelloss:0.133981	train_vaeloss:-0.062786	train_reconloss:0.001706	train_acc:1.000000
+test_loss:0.163634	test_acc:0.980008
+2021-12-08 20:04:26,353	Epoch 15
+2021-12-08 20:04:43,944	
+Epoch :      15
+train_labelloss:0.138836	train_vaeloss:-0.059262	train_reconloss:0.001752	train_acc:1.000000
+test_loss:0.165551	test_acc:0.979251
+2021-12-08 20:05:02,989	
+Epoch :      15
+train_labelloss:0.134685	train_vaeloss:-0.061556	train_reconloss:0.001707	train_acc:1.000000
+test_loss:0.162680	test_acc:0.979806
+2021-12-08 20:05:21,804	
+Epoch :      15
+train_labelloss:0.139080	train_vaeloss:-0.059832	train_reconloss:0.001625	train_acc:1.000000
+test_loss:0.163893	test_acc:0.979352
+2021-12-08 20:05:40,124	
+Epoch :      15
+train_labelloss:0.136656	train_vaeloss:-0.060497	train_reconloss:0.001754	train_acc:1.000000
+test_loss:0.164243	test_acc:0.979655
+2021-12-08 20:05:58,914	
+Epoch :      15
+train_labelloss:0.140413	train_vaeloss:-0.061702	train_reconloss:0.001730	train_acc:1.000000
+test_loss:0.163037	test_acc:0.979806
+2021-12-08 20:06:16,654	
+Epoch :      15
+train_labelloss:0.136132	train_vaeloss:-0.068805	train_reconloss:0.001775	train_acc:1.000000
+test_loss:0.165021	test_acc:0.979402
+2021-12-08 20:06:35,653	
+Epoch :      15
+train_labelloss:0.137651	train_vaeloss:-0.054781	train_reconloss:0.001669	train_acc:1.000000
+test_loss:0.162003	test_acc:0.980563
+2021-12-08 20:06:54,365	
+Epoch :      15
+train_labelloss:0.137673	train_vaeloss:-0.061419	train_reconloss:0.001656	train_acc:0.968750
+test_loss:0.162264	test_acc:0.980462
+2021-12-08 20:07:13,254	
+Epoch :      15
+train_labelloss:0.138853	train_vaeloss:-0.065257	train_reconloss:0.001737	train_acc:1.000000
+test_loss:0.161781	test_acc:0.981068
+2021-12-08 20:07:32,305	
+Epoch :      15
+train_labelloss:0.138747	train_vaeloss:-0.067786	train_reconloss:0.001769	train_acc:0.968750
+test_loss:0.161943	test_acc:0.980412
+2021-12-08 20:07:49,956	
+Epoch :      15
+train_labelloss:0.138180	train_vaeloss:-0.064932	train_reconloss:0.001794	train_acc:1.000000
+test_loss:0.161637	test_acc:0.980513
+2021-12-08 20:08:08,487	
+Epoch :      15
+train_labelloss:0.139117	train_vaeloss:-0.060334	train_reconloss:0.001704	train_acc:1.000000
+test_loss:0.163323	test_acc:0.979503
+2021-12-08 20:08:26,263	
+Epoch :      15
+train_labelloss:0.135974	train_vaeloss:-0.063577	train_reconloss:0.001763	train_acc:0.968750
+test_loss:0.164512	test_acc:0.978998
+2021-12-08 20:08:45,683	
+Epoch :      15
+train_labelloss:0.137097	train_vaeloss:-0.062330	train_reconloss:0.001658	train_acc:0.968750
+test_loss:0.165182	test_acc:0.978847
+2021-12-08 20:09:02,933	
+Epoch :      15
+train_labelloss:0.135811	train_vaeloss:-0.058817	train_reconloss:0.001758	train_acc:1.000000
+test_loss:0.162296	test_acc:0.980361
+2021-12-08 20:09:20,922	
+Epoch :      15
+train_labelloss:0.140378	train_vaeloss:-0.057300	train_reconloss:0.001655	train_acc:1.000000
+test_loss:0.162213	test_acc:0.980109
+2021-12-08 20:09:39,058	
+Epoch :      15
+train_labelloss:0.136399	train_vaeloss:-0.063401	train_reconloss:0.001773	train_acc:1.000000
+test_loss:0.162229	test_acc:0.980816
+2021-12-08 20:09:56,409	
+Epoch :      15
+train_labelloss:0.140291	train_vaeloss:-0.066418	train_reconloss:0.001794	train_acc:0.968750
+test_loss:0.161936	test_acc:0.981422
+2021-12-08 20:10:14,607	
+Epoch :      15
+train_labelloss:0.137347	train_vaeloss:-0.068035	train_reconloss:0.001793	train_acc:1.000000
+test_loss:0.163028	test_acc:0.980261
+2021-12-08 20:10:32,050	
+Epoch :      15
+train_labelloss:0.137673	train_vaeloss:-0.063543	train_reconloss:0.001695	train_acc:1.000000
+test_loss:0.162209	test_acc:0.980664
+2021-12-08 20:10:51,453	
+Epoch :      15
+train_labelloss:0.139600	train_vaeloss:-0.056055	train_reconloss:0.001624	train_acc:1.000000
+test_loss:0.164187	test_acc:0.979604
+2021-12-08 20:11:09,204	
+Epoch :      15
+train_labelloss:0.138177	train_vaeloss:-0.058200	train_reconloss:0.001770	train_acc:1.000000
+test_loss:0.162316	test_acc:0.980614
+2021-12-08 20:11:28,568	
+Epoch :      15
+train_labelloss:0.132085	train_vaeloss:-0.061534	train_reconloss:0.001791	train_acc:1.000000
+test_loss:0.163185	test_acc:0.979907
+2021-12-08 20:11:47,433	
+Epoch :      15
+train_labelloss:0.136065	train_vaeloss:-0.055292	train_reconloss:0.001682	train_acc:1.000000
+test_loss:0.163539	test_acc:0.979655
+2021-12-08 20:12:05,221	
+Epoch :      15
+train_labelloss:0.138131	train_vaeloss:-0.065498	train_reconloss:0.001763	train_acc:1.000000
+test_loss:0.165095	test_acc:0.979200
+2021-12-08 20:12:23,104	
+Epoch :      15
+train_labelloss:0.135082	train_vaeloss:-0.065174	train_reconloss:0.001721	train_acc:1.000000
+test_loss:0.163613	test_acc:0.979352
+2021-12-08 20:12:41,277	
+Epoch :      15
+train_labelloss:0.143856	train_vaeloss:-0.062655	train_reconloss:0.001747	train_acc:1.000000
+test_loss:0.163906	test_acc:0.979604
+2021-12-08 20:12:59,672	
+Epoch :      15
+train_labelloss:0.137780	train_vaeloss:-0.065011	train_reconloss:0.001715	train_acc:1.000000
+test_loss:0.163199	test_acc:0.980059
+2021-12-08 20:13:18,889	
+Epoch :      15
+train_labelloss:0.137080	train_vaeloss:-0.067144	train_reconloss:0.001764	train_acc:1.000000
+test_loss:0.163213	test_acc:0.980109
+2021-12-08 20:13:38,037	
+Epoch :      15
+train_labelloss:0.140480	train_vaeloss:-0.060278	train_reconloss:0.001644	train_acc:1.000000
+test_loss:0.161905	test_acc:0.981119
+2021-12-08 20:13:56,623	
+Epoch :      15
+train_labelloss:0.139480	train_vaeloss:-0.069916	train_reconloss:0.001720	train_acc:1.000000
+test_loss:0.164013	test_acc:0.979200
+2021-12-08 20:14:16,133	
+Epoch :      15
+train_labelloss:0.132348	train_vaeloss:-0.055383	train_reconloss:0.001706	train_acc:1.000000
+test_loss:0.161995	test_acc:0.980715
+2021-12-08 20:14:35,127	
+Epoch :      15
+train_labelloss:0.136704	train_vaeloss:-0.063135	train_reconloss:0.001720	train_acc:1.000000
+test_loss:0.163009	test_acc:0.980160
+2021-12-08 20:14:53,880	
+Epoch :      15
+train_labelloss:0.139329	train_vaeloss:-0.063335	train_reconloss:0.001673	train_acc:1.000000
+test_loss:0.163361	test_acc:0.979958
+2021-12-08 20:15:11,869	
+Epoch :      15
+train_labelloss:0.137902	train_vaeloss:-0.061002	train_reconloss:0.001691	train_acc:1.000000
+test_loss:0.163692	test_acc:0.979554
+2021-12-08 20:15:30,737	
+Epoch :      15
+train_labelloss:0.134957	train_vaeloss:-0.056186	train_reconloss:0.001659	train_acc:1.000000
+test_loss:0.161943	test_acc:0.980715
+2021-12-08 20:15:49,899	
+Epoch :      15
+train_labelloss:0.137431	train_vaeloss:-0.055869	train_reconloss:0.001613	train_acc:1.000000
+test_loss:0.161825	test_acc:0.980563
+2021-12-08 20:16:08,862	
+Epoch :      15
+train_labelloss:0.135993	train_vaeloss:-0.054809	train_reconloss:0.001616	train_acc:1.000000
+test_loss:0.162457	test_acc:0.980664
+2021-12-08 20:16:27,347	
+Epoch :      15
+train_labelloss:0.135942	train_vaeloss:-0.065366	train_reconloss:0.001828	train_acc:1.000000
+test_loss:0.162142	test_acc:0.980614
+2021-12-08 20:16:45,473	
+Epoch :      15
+train_labelloss:0.132197	train_vaeloss:-0.063266	train_reconloss:0.001758	train_acc:1.000000
+test_loss:0.162107	test_acc:0.980866
+2021-12-08 20:17:04,622	
+Epoch :      15
+train_labelloss:0.135313	train_vaeloss:-0.064441	train_reconloss:0.001780	train_acc:0.968750
+test_loss:0.161674	test_acc:0.981220
+2021-12-08 20:17:23,399	
+Epoch :      15
+train_labelloss:0.146220	train_vaeloss:-0.055697	train_reconloss:0.001684	train_acc:1.000000
+test_loss:0.163221	test_acc:0.980008
+2021-12-08 20:17:41,624	
+Epoch :      15
+train_labelloss:0.138801	train_vaeloss:-0.061239	train_reconloss:0.001694	train_acc:0.968750
+test_loss:0.162565	test_acc:0.980816
+2021-12-08 20:17:46,893	Epoch 16
+2021-12-08 20:18:00,847	
+Epoch :      16
+train_labelloss:0.145061	train_vaeloss:-0.068479	train_reconloss:0.001795	train_acc:0.968750
+test_loss:0.163284	test_acc:0.979806
+2021-12-08 20:18:19,311	
+Epoch :      16
+train_labelloss:0.139697	train_vaeloss:-0.061292	train_reconloss:0.001635	train_acc:1.000000
+test_loss:0.162822	test_acc:0.980210
+2021-12-08 20:18:37,752	
+Epoch :      16
+train_labelloss:0.135048	train_vaeloss:-0.054769	train_reconloss:0.001661	train_acc:1.000000
+test_loss:0.162723	test_acc:0.980412
+2021-12-08 20:18:55,310	
+Epoch :      16
+train_labelloss:0.137106	train_vaeloss:-0.070635	train_reconloss:0.001801	train_acc:1.000000
+test_loss:0.161954	test_acc:0.980109
+2021-12-08 20:19:12,457	
+Epoch :      16
+train_labelloss:0.138378	train_vaeloss:-0.065628	train_reconloss:0.001730	train_acc:1.000000
+test_loss:0.163878	test_acc:0.979806
+2021-12-08 20:19:31,294	
+Epoch :      16
+train_labelloss:0.138010	train_vaeloss:-0.065313	train_reconloss:0.001621	train_acc:0.968750
+test_loss:0.162105	test_acc:0.980765
+2021-12-08 20:19:50,240	
+Epoch :      16
+train_labelloss:0.136164	train_vaeloss:-0.059389	train_reconloss:0.001690	train_acc:1.000000
+test_loss:0.163403	test_acc:0.980008
+2021-12-08 20:20:08,866	
+Epoch :      16
+train_labelloss:0.140061	train_vaeloss:-0.056995	train_reconloss:0.001724	train_acc:1.000000
+test_loss:0.162816	test_acc:0.980160
+2021-12-08 20:20:26,766	
+Epoch :      16
+train_labelloss:0.133512	train_vaeloss:-0.058839	train_reconloss:0.001727	train_acc:1.000000
+test_loss:0.163968	test_acc:0.979604
+2021-12-08 20:20:46,109	
+Epoch :      16
+train_labelloss:0.138197	train_vaeloss:-0.062968	train_reconloss:0.001722	train_acc:1.000000
+test_loss:0.161985	test_acc:0.980866
+2021-12-08 20:21:04,779	
+Epoch :      16
+train_labelloss:0.140331	train_vaeloss:-0.055665	train_reconloss:0.001661	train_acc:1.000000
+test_loss:0.162640	test_acc:0.980614
+2021-12-08 20:21:23,237	
+Epoch :      16
+train_labelloss:0.137584	train_vaeloss:-0.061016	train_reconloss:0.001712	train_acc:1.000000
+test_loss:0.162192	test_acc:0.980311
+2021-12-08 20:21:42,166	
+Epoch :      16
+train_labelloss:0.135190	train_vaeloss:-0.061086	train_reconloss:0.001641	train_acc:1.000000
+test_loss:0.164601	test_acc:0.979503
+2021-12-08 20:22:00,946	
+Epoch :      16
+train_labelloss:0.140833	train_vaeloss:-0.067193	train_reconloss:0.001712	train_acc:1.000000
+test_loss:0.162085	test_acc:0.980563
+2021-12-08 20:22:19,667	
+Epoch :      16
+train_labelloss:0.136280	train_vaeloss:-0.056275	train_reconloss:0.001724	train_acc:0.968750
+test_loss:0.162479	test_acc:0.980462
+2021-12-08 20:22:38,049	
+Epoch :      16
+train_labelloss:0.134743	train_vaeloss:-0.065240	train_reconloss:0.001671	train_acc:1.000000
+test_loss:0.163303	test_acc:0.980361
+2021-12-08 20:22:57,686	
+Epoch :      16
+train_labelloss:0.137053	train_vaeloss:-0.067296	train_reconloss:0.001746	train_acc:0.968750
+test_loss:0.163077	test_acc:0.980109
+2021-12-08 20:23:16,785	
+Epoch :      16
+train_labelloss:0.137305	train_vaeloss:-0.057113	train_reconloss:0.001797	train_acc:0.937500
+test_loss:0.162918	test_acc:0.980361
+2021-12-08 20:23:35,491	
+Epoch :      16
+train_labelloss:0.139119	train_vaeloss:-0.065948	train_reconloss:0.001689	train_acc:1.000000
+test_loss:0.163351	test_acc:0.980361
+2021-12-08 20:23:52,945	
+Epoch :      16
+train_labelloss:0.138873	train_vaeloss:-0.064076	train_reconloss:0.001708	train_acc:1.000000
+test_loss:0.165003	test_acc:0.979907
+2021-12-08 20:24:11,652	
+Epoch :      16
+train_labelloss:0.138735	train_vaeloss:-0.054007	train_reconloss:0.001694	train_acc:1.000000
+test_loss:0.162818	test_acc:0.979806
+2021-12-08 20:24:30,601	
+Epoch :      16
+train_labelloss:0.135532	train_vaeloss:-0.059931	train_reconloss:0.001703	train_acc:0.968750
+test_loss:0.162623	test_acc:0.980563
+2021-12-08 20:24:49,826	
+Epoch :      16
+train_labelloss:0.140244	train_vaeloss:-0.065570	train_reconloss:0.001766	train_acc:0.968750
+test_loss:0.164038	test_acc:0.979857
+2021-12-08 20:25:08,504	
+Epoch :      16
+train_labelloss:0.136556	train_vaeloss:-0.069407	train_reconloss:0.001712	train_acc:1.000000
+test_loss:0.162245	test_acc:0.980765
+2021-12-08 20:25:26,840	
+Epoch :      16
+train_labelloss:0.140070	train_vaeloss:-0.069289	train_reconloss:0.001777	train_acc:1.000000
+test_loss:0.162083	test_acc:0.980816
+2021-12-08 20:25:45,709	
+Epoch :      16
+train_labelloss:0.138742	train_vaeloss:-0.056373	train_reconloss:0.001805	train_acc:1.000000
+test_loss:0.164166	test_acc:0.979604
+2021-12-08 20:26:02,912	
+Epoch :      16
+train_labelloss:0.134628	train_vaeloss:-0.060836	train_reconloss:0.001705	train_acc:0.968750
+test_loss:0.164594	test_acc:0.979604
+2021-12-08 20:26:21,095	
+Epoch :      16
+train_labelloss:0.138821	train_vaeloss:-0.058693	train_reconloss:0.001646	train_acc:0.968750
+test_loss:0.164760	test_acc:0.978847
+2021-12-08 20:26:39,391	
+Epoch :      16
+train_labelloss:0.131059	train_vaeloss:-0.068403	train_reconloss:0.001747	train_acc:1.000000
+test_loss:0.162430	test_acc:0.980513
+2021-12-08 20:26:57,815	
+Epoch :      16
+train_labelloss:0.138239	train_vaeloss:-0.065199	train_reconloss:0.001656	train_acc:0.968750
+test_loss:0.162426	test_acc:0.980361
+2021-12-08 20:27:15,583	
+Epoch :      16
+train_labelloss:0.133567	train_vaeloss:-0.067474	train_reconloss:0.001777	train_acc:1.000000
+test_loss:0.162902	test_acc:0.980715
+2021-12-08 20:27:33,646	
+Epoch :      16
+train_labelloss:0.139061	train_vaeloss:-0.064553	train_reconloss:0.001784	train_acc:1.000000
+test_loss:0.163077	test_acc:0.980109
+2021-12-08 20:27:51,631	
+Epoch :      16
+train_labelloss:0.142239	train_vaeloss:-0.052739	train_reconloss:0.001544	train_acc:1.000000
+test_loss:0.165918	test_acc:0.978847
+2021-12-08 20:28:10,029	
+Epoch :      16
+train_labelloss:0.135660	train_vaeloss:-0.067619	train_reconloss:0.001669	train_acc:1.000000
+test_loss:0.162435	test_acc:0.980715
+2021-12-08 20:28:29,180	
+Epoch :      16
+train_labelloss:0.139278	train_vaeloss:-0.057099	train_reconloss:0.001649	train_acc:1.000000
+test_loss:0.162235	test_acc:0.981270
+2021-12-08 20:28:47,453	
+Epoch :      16
+train_labelloss:0.138588	train_vaeloss:-0.061464	train_reconloss:0.001707	train_acc:1.000000
+test_loss:0.165334	test_acc:0.979251
+2021-12-08 20:29:05,738	
+Epoch :      16
+train_labelloss:0.144682	train_vaeloss:-0.053785	train_reconloss:0.001600	train_acc:0.968750
+test_loss:0.163175	test_acc:0.980210
+2021-12-08 20:29:24,436	
+Epoch :      16
+train_labelloss:0.136558	train_vaeloss:-0.065109	train_reconloss:0.001726	train_acc:1.000000
+test_loss:0.162502	test_acc:0.980917
+2021-12-08 20:29:42,652	
+Epoch :      16
+train_labelloss:0.138536	train_vaeloss:-0.063800	train_reconloss:0.001673	train_acc:1.000000
+test_loss:0.164003	test_acc:0.979655
+2021-12-08 20:30:00,508	
+Epoch :      16
+train_labelloss:0.137078	train_vaeloss:-0.055602	train_reconloss:0.001693	train_acc:1.000000
+test_loss:0.162094	test_acc:0.980967
+2021-12-08 20:30:19,231	
+Epoch :      16
+train_labelloss:0.136282	train_vaeloss:-0.056241	train_reconloss:0.001705	train_acc:1.000000
+test_loss:0.166654	test_acc:0.978292
+2021-12-08 20:30:38,082	
+Epoch :      16
+train_labelloss:0.136944	train_vaeloss:-0.058154	train_reconloss:0.001701	train_acc:1.000000
+test_loss:0.162432	test_acc:0.980614
+2021-12-08 20:30:57,183	
+Epoch :      16
+train_labelloss:0.136383	train_vaeloss:-0.063911	train_reconloss:0.001731	train_acc:1.000000
+test_loss:0.164051	test_acc:0.979958
+2021-12-08 20:31:15,272	
+Epoch :      16
+train_labelloss:0.140234	train_vaeloss:-0.067103	train_reconloss:0.001765	train_acc:1.000000
+test_loss:0.165204	test_acc:0.979150
+2021-12-08 20:31:17,810	Epoch 17
+2021-12-08 20:31:34,158	
+Epoch :      17
+train_labelloss:0.140291	train_vaeloss:-0.062160	train_reconloss:0.001738	train_acc:1.000000
+test_loss:0.164916	test_acc:0.979099
+2021-12-08 20:31:52,705	
+Epoch :      17
+train_labelloss:0.135246	train_vaeloss:-0.066142	train_reconloss:0.001696	train_acc:0.968750
+test_loss:0.162690	test_acc:0.980462
+2021-12-08 20:32:05,470	
+Epoch :      17
+train_labelloss:0.133728	train_vaeloss:-0.064990	train_reconloss:0.001772	train_acc:1.000000
+test_loss:0.163096	test_acc:0.980513
+2021-12-08 20:32:19,806	
+Epoch :      17
+train_labelloss:0.134163	train_vaeloss:-0.060193	train_reconloss:0.001756	train_acc:1.000000
+test_loss:0.162470	test_acc:0.980816
+2021-12-08 20:32:34,591	
+Epoch :      17
+train_labelloss:0.135715	train_vaeloss:-0.071427	train_reconloss:0.001770	train_acc:1.000000
+test_loss:0.164243	test_acc:0.979251
+2021-12-08 20:32:47,045	
+Epoch :      17
+train_labelloss:0.132467	train_vaeloss:-0.057800	train_reconloss:0.001685	train_acc:1.000000
+test_loss:0.162969	test_acc:0.980816
+2021-12-08 20:32:59,743	
+Epoch :      17
+train_labelloss:0.134605	train_vaeloss:-0.058402	train_reconloss:0.001716	train_acc:1.000000
+test_loss:0.163105	test_acc:0.980765
+2021-12-08 20:33:14,298	
+Epoch :      17
+train_labelloss:0.134158	train_vaeloss:-0.065588	train_reconloss:0.001720	train_acc:0.937500
+test_loss:0.164154	test_acc:0.980059
+2021-12-08 20:33:27,636	
+Epoch :      17
+train_labelloss:0.134420	train_vaeloss:-0.063004	train_reconloss:0.001706	train_acc:1.000000
+test_loss:0.166561	test_acc:0.978494
+2021-12-08 20:33:42,316	
+Epoch :      17
+train_labelloss:0.131981	train_vaeloss:-0.063682	train_reconloss:0.001707	train_acc:1.000000
+test_loss:0.162853	test_acc:0.980765
+2021-12-08 20:33:55,026	
+Epoch :      17
+train_labelloss:0.135692	train_vaeloss:-0.061799	train_reconloss:0.001758	train_acc:1.000000
+test_loss:0.162787	test_acc:0.980866
+2021-12-08 20:34:07,768	
+Epoch :      17
+train_labelloss:0.140232	train_vaeloss:-0.056158	train_reconloss:0.001681	train_acc:1.000000
+test_loss:0.162514	test_acc:0.980816
+2021-12-08 20:34:21,788	
+Epoch :      17
+train_labelloss:0.135207	train_vaeloss:-0.054958	train_reconloss:0.001657	train_acc:1.000000
+test_loss:0.164962	test_acc:0.979453
+2021-12-08 20:34:34,375	
+Epoch :      17
+train_labelloss:0.136056	train_vaeloss:-0.066582	train_reconloss:0.001724	train_acc:1.000000
+test_loss:0.163823	test_acc:0.980160
+2021-12-08 20:34:49,148	
+Epoch :      17
+train_labelloss:0.138037	train_vaeloss:-0.063100	train_reconloss:0.001754	train_acc:0.968750
+test_loss:0.169270	test_acc:0.977231
+2021-12-08 20:35:02,980	
+Epoch :      17
+train_labelloss:0.137149	train_vaeloss:-0.057539	train_reconloss:0.001668	train_acc:1.000000
+test_loss:0.165411	test_acc:0.979150
+2021-12-08 20:35:16,832	
+Epoch :      17
+train_labelloss:0.137387	train_vaeloss:-0.065013	train_reconloss:0.001697	train_acc:1.000000
+test_loss:0.163618	test_acc:0.980261
+2021-12-08 20:35:30,563	
+Epoch :      17
+train_labelloss:0.137641	train_vaeloss:-0.069724	train_reconloss:0.001774	train_acc:1.000000
+test_loss:0.164573	test_acc:0.979200
+2021-12-08 20:35:44,109	
+Epoch :      17
+train_labelloss:0.136209	train_vaeloss:-0.065297	train_reconloss:0.001741	train_acc:1.000000
+test_loss:0.163376	test_acc:0.979958
+Terminated

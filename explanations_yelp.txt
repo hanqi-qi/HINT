@@ -1,0 +1,2 @@
+DOCUMENT:
+sen1: learned about plaza dentistry with our real estate and friend who had perfect teeth scheduled an appointment and had an service||Context: estate,learned,with/Topic: perfect,service,about/sen_label: 0

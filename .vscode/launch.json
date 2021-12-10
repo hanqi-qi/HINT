@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: sine_dec",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--sentenceEncoder",
+                "GAT",
+                "--context_att",
+                "1",
+                "--topic_learning",
+                "bayesian",
+                "--topic_weight",
+                "tfidf",
+                "--regularization",
+                "1",
+                "--cuda",
+                "0",
+                "--pretrain_emb",
+                "None",
+                "--num_word",
+                "15000",
+                "--dataset",
+                "yelp",
+                "--num_epoch",
+                "30",
+                "--vae_scale",
+                "0.001",
+                "--batch_size",
+                "32"
+            ]
+        }
+    ]
+}

@@ -72,7 +72,7 @@ class Vae(nn.Module):
         logvar_division = prior_logvar - posterior_logvar
 
         # put KLD together
-        KLD = 0.5 * ((var_division + diff_term + logvar_division).sum(1) - self.emb_size)
+        KLD = 0.5 * ((var_division + diff_term + logvar_division).sum(1) - self.d_t)
 
         return KLD.mean(1)
     
@@ -100,14 +100,15 @@ class Vae(nn.Module):
         theta = F.softmax(z_do, dim=1)#this is omega [bs,len,300]
         recon_rnn_input= F.relu(self.beta_layer(theta))
 
-        recon_loss = -(rnn_input.transpose(1,0) * (recon_rnn_input+1e-10).log()).sum(-1)#sum along the seq_len axis
+        # recon_loss = -(rnn_input.transpose(1,0) * (recon_rnn_input+1e-10).log()).sum(-1)#sum along the seq_len axis
+        recon_loss = F.mse_loss(rnn_input.transpose(1,0),recon_rnn_input)
 
         prior_mean   = self.prior_mean.expand_as(posterior_mean)
         prior_logvar = self.prior_logvar.expand_as(posterior_logvar)
 
         do_average = False
         KLD = self._loss(prior_mean, prior_logvar, posterior_mean_bn, posterior_logvar_bn, do_average)
-        kl_loss = nn.functional.relu(KLD)
+        # kl_loss = nn.functional.relu(KLD)
 
         word_aspect_weight = self.concat_att(torch.cat((rnn_input,z_do.transpose(1,0)),-1)) #[len,bs,1]
-        return word_aspect_weight,kl_loss,recon_loss
+        return word_aspect_weight,KLD.mean(),recon_loss.mean()

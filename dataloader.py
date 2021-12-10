@@ -18,7 +18,7 @@ class DataIter(object):
         for index,num_turn in enumerate(num_turn_list):
             if num_turn != previous_num_turn:
                 if index != 0:
-                    assert num_turn == previous_num_turn + 1
+                    assert num_turn > previous_num_turn 
                     num_batch = (index-previous_turn_index) // self.batch_size
                     for i in range(num_batch):
                         batch_starting_list.append(previous_turn_index + i*self.batch_size)
@@ -56,7 +56,7 @@ class DataIter(object):
             length_list = [len(sent) for sent in transeposed_doc]
             max_length = max(length_list)
             new_doc = [sent+[self.padded_value]*(max_length-len(sent)) for sent in transeposed_doc]
-            new_tfidf = [sent+[self.padded_value]*(max_length-len(sent)) for sent in transeposed_tfidf]
+            new_tfidf = [sent+[1e-5]*(max_length-len(sent)) for sent in transeposed_tfidf]
             padded_batch.append(np.asarray(new_doc, dtype=np.int32).transpose(1,0))
             padded_tfidf_batch.append(np.asarray(new_tfidf, dtype=np.float32).transpose(1,0))
             length_batch.append(length_list)
