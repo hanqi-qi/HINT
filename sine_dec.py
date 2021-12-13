@@ -198,8 +198,9 @@ def train_model(model,optimizer,loss_function,num_epoch,train_batch_generator,te
                 if test_acc>best_dev_acc:
                     best_dev_acc = test_acc
                     #save the best model with arguments
-                    with open(filename, 'wb') as f:
-                        torch.save(model, f)
+                    # with open(filename, 'wb') as f:
+                    torch.save(model.state_dict(), filename)
+                        # torch.save(model, f)
                     print("higher dev acc and best model saved: %.4f"%best_dev_acc)
                 ''''VISUALIZATION'''
                 # id2word = {vocab[key]:key for key in vocab.keys()}
@@ -272,6 +273,7 @@ def main():
     parser.add_argument("--vae_scale",type=float,default=0.01,help="using imdb/yelp/guardian news")
     parser.add_argument('--tsoftmax', type=str, default=1, help='the temperature of softmax in co_attention_weight')
     parser.add_argument('--data_processed', type=int, default=1, help='the temperature of softmax in co_attention_weight')
+    parser.add_argument('--load_pretrained', type=int, default=1, help='if loads the pretrained model weight')
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,format="%(asctime)s\t%(message)s")
@@ -338,7 +340,13 @@ def main():
         model = HierachicalClassifier(args,pretrained_embedding=pretrained_embedding)
         optimizer = torch.optim.Adam(model.parameters(),lr=args.lr)
         loss_function = nn.CrossEntropyLoss()
-        best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t,topic_learning=args.topic_learning)#ori_code
+        #load the pretrained model
+        if args.load_pretrained>0:
+            print("Loading the pretrained model weight")
+            weight_file = "bestmodel_{}_{}.pt".format(args.dataset,args.topic_learning)
+            loaded_dict = torch.load(weight_file)
+            model.load_state_dict(loaded_dict)
+        best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t,topic_learning=args.topic_learning,dataset=args.dataset)#ori_code
         grid_search[str(param)] = {"best_dev_acc": [round(best_dev_acc, 4)]}
     
     # print("hit rate: ", hit_rate)
