@@ -114,13 +114,14 @@ class HierachicalClassifier(nn.Module):
                 bwords_list.append(bwords)
         return doc_list,awords_list,bwords_list
 
-    def genEx(self,doc_words,doc_att,doc_btt,doc_label,output_file):
+    def genEx(self,doc_words,doc_att,doc_btt,doc_label,logit,output_file):
         """
         all the input are list of N elements for N sentences in a document
         doc_words:
         doc_att:
         doc_btt: """
         assert len(doc_att)==len(doc_words)==len(doc_btt)==len(doc_label)
+        pre_label = torch.argmax(logit,-1).detach().cpu().numpy()
         f = open(output_file,"a+")
         bsize = len(doc_words[0])
         for bs in range(bsize):
@@ -130,6 +131,7 @@ class HierachicalClassifier(nn.Module):
                 if len(doc_bs)>bs:
                     sen_id+=1
                     f.writelines("sen"+str(sen_id)+": "+" ".join(doc_bs[bs])+"("+"Context: "+",".join(att_bs[bs])+"/"+"Topic: "+",".join(btt_bs[bs])+"/"+"sen_label: "+str(label_bs[bs])+")"+"\n")
+            f.writelines("Predict Document  Label: %d\n"%pre_label[bs])
             f.writelines("\n") 
 
         
@@ -154,7 +156,7 @@ class HierachicalClassifier(nn.Module):
         aspect_loss = torch.zeros(batch_size).cuda(self.device)
         kld_loss = torch.zeros(batch_size).cuda(self.device)
         recon_loss = torch.zeros(batch_size).cuda(self.device)
-        doc_words, doc_att, doc_btt,doc_label = [],[],[],[]
+        doc_words, doc_att, doc_btt,sen_label = [],[],[],[]
         for utterance_index in range(num_utterance):
             """for the context-learning"""
             word_rnn_input = self.embedding(input_list[utterance_index])
@@ -212,10 +214,8 @@ class HierachicalClassifier(nn.Module):
                 doc_btt.append(bwords_list)
                 #get sentiment label for sentence
                 sen_label=self.classifier(word_rnn_last_output)#[bs,2]
-                doc_label.append(torch.argmax(sen_label,dim=-1).detach().cpu().numpy())
+                sen_label.append(torch.argmax(sen_label,dim=-1).detach().cpu().numpy())
         """organize the sentence in each batch size and write out"""
-        if flag == "gen_ex":
-            self.genEx(doc_words,doc_att,doc_btt,doc_label,output_file)
         context_rnn_hidden = self.init_rnn_hidden(batch_size, level="context")
         context_rnn_input = torch.stack(word_rnn_output_list, dim=0)
         context_rnn_input = self.context_dropout(context_rnn_input)
@@ -254,7 +254,9 @@ class HierachicalClassifier(nn.Module):
         # context_rnn_last_output = torch.mean(context_rnn_transform,1) #average the 
         # classifier_input = context_rnn_last_output
         classifier_input_array = np.array(classifier_input.cpu().data)
-        logit = self.classifier(classifier_input) 
+        logit = self.classifier(classifier_input)
+        if flag == "gen_ex":
+            self.genEx(doc_words,doc_att,doc_btt,sen_label,logit,output_file)
         #attention_weight_array = np.array(csontext_attention_weight.data.cpu().squeeze(-1)).transpose(1,0)
         attention_weight_array = 0
         return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*kld_loss.mean(), recon_loss.mean()
