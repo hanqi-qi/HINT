@@ -1,0 +1,23 @@
+2021-12-13 00:55:36,042	Start Tranining
+2021-12-13 00:55:36,152	Epoch 0
+Terminated
+2021-12-13 01:04:59,198	Start Tranining
+2021-12-13 01:04:59,359	Epoch 0
+Dataset is yelp
+Data Loaded
+*************params_search_1*************
+{'context_att': 1, 'dataset': 'yelp', 'num_word': 15000, 'pretrain_emb': 'None', 'regularization': 1, 'seed': 0, 'sentenceEncoder': 'GAT', 'topic_learning': 'bayesian', 'topic_weight': 'tfidf'}
+Traceback (most recent call last):
+  File "./sine_dec.py", line 360, in <module>
+    main()
+  File "./sine_dec.py", line 352, in main
+    best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t,topic_learning=args.topic_learning,dataset=args.dataset)#ori_code
+  File "./sine_dec.py", line 178, in train_model
+    optimizer.step()
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/optim/adam.py", line 115, in step
+    state['exp_avg'] = torch.zeros_like(p, memory_format=torch.preserve_format)
+RuntimeError: CUDA out of memory. Tried to allocate 18.00 MiB (GPU 2; 10.92 GiB total capacity; 44.84 MiB already allocated; 18.69 MiB free; 66.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

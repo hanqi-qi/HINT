@@ -23,7 +23,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction import text
 
 def load_process(dataset,type,data):
-    filename = filename = '/home/hanqiyan/latent_topic/SINE/input_data/{}/{}_{}_list.pkl'.format(dataset,type,data)
+    filename = filename = './input_data/{}/{}_{}_list.pkl'.format(dataset,type,data)
     with open(filename, 'rb') as f:
         result = pickle.load(f)
     return result

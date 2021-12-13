@@ -250,7 +250,7 @@ def main():
     parser.add_argument('--num_epoch', type=int, default=1, help='epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size')
     parser.add_argument('--d_t', type=int, default=50, help='number of topics in code')
-    parser.add_argument('--cuda', type=int, default=3, help='gpu id')
+    parser.add_argument('--cuda', type=int, default=2, help='gpu id')
     parser.add_argument('--emb_size', type=int, default=300, help='word embedding size')
     parser.add_argument('--mlp_size', type=int, default=200, help='word embedding size')
     parser.add_argument('--word_rnn_size', type=int, default=150, help='word_rnn_size')
@@ -274,6 +274,7 @@ def main():
     parser.add_argument("--vae_scale",type=float,default=0.01,help="using imdb/yelp/guardian news")
     parser.add_argument('--tsoftmax', type=str, default=1, help='the temperature of softmax in co_attention_weight')
     parser.add_argument('--data_processed', type=int, default=1, help='the temperature of softmax in co_attention_weight')
+
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,format="%(asctime)s\t%(message)s")
@@ -287,9 +288,9 @@ def main():
         train_data_file = "./input_data/imdb/train.jsonlist"
         test_data_file = "./input_data/imdb/test.jsonlist"
         args.num_label = 2
-    elif dataset =="news":
-        train_data_file = './input_data/guadian_news/train_news_data.txt'
-        test_data_file = './input_data/guadian_news/test_news_data.txt'
+    elif dataset =="guardian_news":
+        train_data_file = './input_data/guardian_news/train_news_data.txt'
+        test_data_file = './input_data/guardian_news/test_news_data.txt'
         args.num_label = 5
     vocab = get_vocabulary(train_data_file,vocabsize=args.num_word,dataset=dataset,use_stem=False)
     # train_tfidffile=json.loads(open("tfidf_weight/norm_yelp_tfidf_train.json").readlines()[0])
@@ -318,14 +319,16 @@ def main():
 
     grid_search = {}
     params = {
-        'dataset':["yelp"],
+        'dataset':["yelp","imdb","guardian_news"],
         'sentenceEncoder':[args.sentenceEncoder],
         "context_att":[1],
-        "topic_weight":[args.topic_weight,"average"],
+        "cuda":[3],
+        "topic_weight":[args.topic_weight],
         "regularization":[1],
         'num_word':[args.num_word], #time-consuming!
         'pretrain_emb':[args.pretrain_emb],
-        'topic_learning':["bayesian"]
+        'topic_learning':["bayesian"],
+        'seed':[0,1000,6666,23458,82347,37650,29,18,909,100]
         }
     params_search = list(ParameterGrid(params))
     acc_list =[]
@@ -338,6 +341,10 @@ def main():
         # train_batch = DataIter(train_data,train_label,train_tfidf,args.batch_size,args.cuda)#ori_code
         test_batch = DataIter(test_data,test_label,test_tfidf,args.batch_size,2)#ori_code
         model = HierachicalClassifier(args,pretrained_embedding=pretrained_embedding)
+        print("Loading the pretrained model weight")
+        weight_file = "bestmodel_{}_{}.pt".format(args.dataset,args.topic_learning)
+        loaded_dict = torch.load(weight_file)
+        model.load_state_dict(loaded_dict)
         optimizer = torch.optim.Adam(model.parameters(),lr=args.lr)
         loss_function = nn.CrossEntropyLoss()
         id2word = {vocab[key]:key for key in vocab.keys()}

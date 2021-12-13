@@ -1,0 +1,16 @@
+/home/hanq1yanwarwick/miniconda3/envs/torch/bin/python ./sine_dec.py \
+--sentenceEncoder GAT \
+--context_att $4 \
+--dataset $1 \
+--seed 2021 \
+--topic_learning $2 \
+--topic_weight $5 \
+--regularization $3 \
+--cuda 3 \
+--pretrain_emb None \
+--num_word 15000 \
+--num_epoch 30 \
+--vae_scale 0.001 \
+--batch_size 32 \
+--data_processed 1 \
+--load_pretrained 0 \

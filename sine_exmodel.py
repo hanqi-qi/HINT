@@ -213,8 +213,8 @@ class HierachicalClassifier(nn.Module):
                 doc_att.append(awords_list)
                 doc_btt.append(bwords_list)
                 #get sentiment label for sentence
-                sen_label=self.classifier(word_rnn_last_output)#[bs,2]
-                sen_label.append(torch.argmax(sen_label,dim=-1).detach().cpu().numpy())
+                label=self.classifier(word_rnn_last_output)#[bs,2]
+                sen_label.append(torch.argmax(label,dim=-1).detach().cpu().numpy())
         """organize the sentence in each batch size and write out"""
         context_rnn_hidden = self.init_rnn_hidden(batch_size, level="context")
         context_rnn_input = torch.stack(word_rnn_output_list, dim=0)

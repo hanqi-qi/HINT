@@ -7,6 +7,7 @@ from sine_bayesian import Vae
 
 class HierachicalClassifier(nn.Module):
     def __init__(self, args, pretrained_embedding=None):
+        super(HierachicalClassifier, self).__init__()
         self.args = args
         self.emb_size = args.emb_size
         self.d_t = args.d_t
@@ -17,7 +18,6 @@ class HierachicalClassifier(nn.Module):
         self.context_rnn_num_layer = args.context_rnn_num_layer
         self.context_rnn_bidirectional = args.context_rnn_bidirectional
         self.num_label = args.num_label
-        super(HierachicalClassifier, self).__init__()
         self.embedding = nn.Embedding(args.num_word, args.emb_size)
         self.word_dropout = nn.Dropout(args.dropout)
         self.word_rnn = nn.GRU(input_size = args.emb_size, hidden_size = args.word_rnn_size,

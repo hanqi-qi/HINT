@@ -1,0 +1,25 @@
+2021-12-13 00:55:00,414	Start Tranining
+2021-12-13 00:55:00,513	Epoch 0
+Terminated
+2021-12-13 01:05:26,759	Start Tranining
+2021-12-13 01:05:26,920	Epoch 0
+Dataset is guardian_news
+Data Loaded
+*************params_search_1*************
+{'context_att': 1, 'dataset': 'guardian_news', 'num_word': 15000, 'pretrain_emb': 'None', 'regularization': 1, 'seed': 10, 'sentenceEncoder': 'GAT', 'topic_learning': 'bayesian', 'topic_weight': 'tfidf'}
+Traceback (most recent call last):
+  File "./sine_dec.py", line 360, in <module>
+    main()
+  File "./sine_dec.py", line 352, in main
+    best_dev_acc = train_model(model,optimizer,loss_function,args.num_epoch,train_batch,test_batch,vocab,cuda=args.cuda,d_t=args.d_t,topic_learning=args.topic_learning,dataset=args.dataset)#ori_code
+  File "./sine_dec.py", line 162, in train_model
+    predicted_train_target,_,_,aspect_loss,senatt,kld_loss,recon_loss = model(train_data_var_list,train_tfidf_var_list,length_var)
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/hanq1yanwarwick/SINE/sine_model.py", line 105, in forward
+    word_rnn_output, word_rnn_hidden = self.word_rnn(word_rnn_input, word_rnn_hidden)
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/hanq1yanwarwick/miniconda3/envs/torch/lib/python3.6/site-packages/torch/nn/modules/rnn.py", line 850, in forward
+    self.dropout, self.training, self.bidirectional, self.batch_first)
+RuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 2; 10.92 GiB total capacity; 36.35 MiB already allocated; 10.69 MiB free; 42.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
