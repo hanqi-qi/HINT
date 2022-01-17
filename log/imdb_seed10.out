@@ -4,3 +4,66 @@ Terminated
 2021-12-13 01:04:47,870	Start Tranining
 2021-12-13 01:04:47,973	Epoch 0
 Terminated
+2021-12-13 04:02:15,904	Start Tranining
+2021-12-13 04:02:16,008	Epoch 0
+2021-12-13 04:06:13,707	
+Epoch :       0
+train_labelloss:3.295957	train_vaeloss:1.327239	train_reconloss:0.206600	train_acc:0.625000
+test_loss:0.598209	test_acc:0.677540
+2021-12-13 04:07:18,668	Epoch 1
+2021-12-13 04:10:07,007	
+Epoch :       1
+train_labelloss:2.550699	train_vaeloss:1.229208	train_reconloss:0.107002	train_acc:0.781250
+test_loss:0.439121	test_acc:0.804324
+2021-12-13 04:14:01,127	
+Epoch :       1
+train_labelloss:2.232324	train_vaeloss:1.181241	train_reconloss:0.089011	train_acc:0.875000
+test_loss:0.415778	test_acc:0.820053
+2021-12-13 04:14:01,445	Epoch 2
+2021-12-13 04:17:54,082	
+Epoch :       2
+train_labelloss:2.005504	train_vaeloss:1.093410	train_reconloss:0.085354	train_acc:0.812500
+test_loss:0.377085	test_acc:0.843293
+2021-12-13 04:19:00,154	Epoch 3
+2021-12-13 04:21:47,634	
+Epoch :       3
+train_labelloss:1.889934	train_vaeloss:0.981468	train_reconloss:0.087332	train_acc:0.875000
+test_loss:0.367789	test_acc:0.852797
+2021-12-13 04:25:42,411	
+Epoch :       3
+train_labelloss:1.852687	train_vaeloss:0.910002	train_reconloss:0.084992	train_acc:0.843750
+test_loss:0.353676	test_acc:0.861554
+2021-12-13 04:25:43,042	Epoch 4
+2021-12-13 04:29:35,420	
+Epoch :       4
+train_labelloss:1.737957	train_vaeloss:0.771264	train_reconloss:0.082067	train_acc:0.812500
+test_loss:0.344002	test_acc:0.867239
+2021-12-13 04:30:41,780	Epoch 5
+2021-12-13 04:33:26,311	
+Epoch :       5
+train_labelloss:1.652560	train_vaeloss:0.540373	train_reconloss:0.086789	train_acc:0.843750
+test_loss:0.347290	test_acc:0.867364
+2021-12-13 04:37:23,223	
+Epoch :       5
+train_labelloss:1.654573	train_vaeloss:0.562771	train_reconloss:0.085096	train_acc:0.968750
+test_loss:0.343154	test_acc:0.867737
+2021-12-13 04:37:24,517	Epoch 6
+2021-12-13 04:41:20,515	
+Epoch :       6
+train_labelloss:1.588181	train_vaeloss:0.492357	train_reconloss:0.086551	train_acc:0.843750
+test_loss:0.342767	test_acc:0.867986
+2021-12-13 04:42:23,239	Epoch 7
+2021-12-13 04:45:11,571	
+Epoch :       7
+train_labelloss:1.541055	train_vaeloss:0.392020	train_reconloss:0.082291	train_acc:0.875000
+test_loss:0.339928	test_acc:0.870476
+2021-12-13 04:49:04,050	
+Epoch :       7
+train_labelloss:1.522005	train_vaeloss:0.327954	train_reconloss:0.085069	train_acc:0.937500
+test_loss:0.332825	test_acc:0.877573
+2021-12-13 04:49:06,279	Epoch 8
+2021-12-13 04:52:57,105	
+Epoch :       8
+train_labelloss:1.476282	train_vaeloss:0.256284	train_reconloss:0.083640	train_acc:0.968750
+test_loss:0.326182	test_acc:0.880976
+2021-12-13 04:54:05,099	Epoch 9

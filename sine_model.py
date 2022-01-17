@@ -40,7 +40,7 @@ class HierachicalClassifier(nn.Module):
         self.classifier = nn.Sequential(nn.Linear(context_rnn_output_size, args.mlp_size),
                                         nn.LeakyReLU(),
                                         nn.Linear(args.mlp_size, args.num_label),
-                                        nn.Tanh())
+                                        nn.Softmax())
         self.device = args.cuda
         if pretrained_embedding is not None:
             self.embedding.weight.data = self.embedding.weight.data.new(pretrained_embedding)
@@ -63,6 +63,10 @@ class HierachicalClassifier(nn.Module):
             return context_rnn_init_hidden
         else:
             raise Exception("level must be 'word' or 'context'")
+
+    def gatlayer(self,in_feats,att):
+        update_context_rep = torch.bmm(att,in_feats)
+        return update_context_rep
 
     def _loss(self, prior_mean, prior_logvar, posterior_mean, posterior_logvar,do_average=True):
 
@@ -130,7 +134,9 @@ class HierachicalClassifier(nn.Module):
                 elif self.args.topic_weight == "average":
                     vae_input = word_rnn_input
 
-                word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input)
+                    sent_tfidf = torch.ones_like(input_tfidf[utterance_index]).cuda(self.device)
+
+                word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input,sent_tfidf.unsqueeze(2))
                 kld_loss += vae_kld_loss
                 recon_loss += vae_recon_loss
 
@@ -163,23 +169,20 @@ class HierachicalClassifier(nn.Module):
 
         context_topic_weight = context_topic_weight.permute(0,2,1) #[bs,doc_len,d_t]
         context_rnn_output = context_rnn_output.permute(1,0,2)#[bs,doc_len,dim]
-        strategy = 'raw' #
-        if strategy == 'raw':
-            topic_weight_matrix =  context_topic_weight
-        elif strategy == 'normlized_topic':
-            topic_norm = torch.norm(context_topic_weight, p=2, dim=-1, keepdim=True)
-            norm_topic_weight = context_topic_weight/topic_norm
-            topic_weight_matrix = norm_topic_weight
+        
+        #using normalized topic weight
+        topic_norm = torch.norm(context_topic_weight, p=2, dim=-1, keepdim=True)
+        norm_topic_weight = context_topic_weight/topic_norm
+        topic_weight_matrix = norm_topic_weight
 
-        # co_topic_weight = nn.functional.softmax(torch.bmm(self.key_linear(topic_weight_matrix),self.query_linear(topic_weight_matrix).transpose(2,1)/self.args.tsoftmax),2)
         co_topic_weight = nn.functional.softmax(torch.bmm(topic_weight_matrix,topic_weight_matrix.transpose(2,1)/self.args.tsoftmax),2)
-        update_context_rep = torch.bmm(co_topic_weight,context_rnn_output)
-        # update_context_rep = self.output_gate*torch.bmm(co_topic_weight,context_rnn_output)+(1-self.output_gate)*context_rnn_output #[bs,doc_len,dim]
-        use_nolinear = False #apply non-linear to the current graph layer to update the next layer
-        if use_nolinear:
-            update_context_rep = nn.functional.relu(update_context_rep)
-        mean_context_output = torch.mean(update_context_rep,dim=1)
+        in_feats = context_rnn_output
+        for layer in range(self.args.glayers):
+            in_feats=self.gatlayer(in_feats,co_topic_weight)
+        # update_context_rep = self.output_gate*torch.bmm(co_topic_weight,
+        mean_context_output = torch.mean(in_feats,dim=1)
         classifier_input = mean_context_output
+        # update_context_rep = self.output_gate*torch.bmm(co_topic_weight
         # context_rnn_last_output = torch.mean(context_rnn_transform,1) #average the 
         # classifier_input = context_rnn_last_output
         classifier_input_array = np.array(classifier_input.cpu().data)

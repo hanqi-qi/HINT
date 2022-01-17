@@ -39,3 +39,207 @@ Epoch :       3
 train_labelloss:1.827976	train_vaeloss:0.908711	train_reconloss:0.083171	train_acc:0.687500
 test_loss:0.379322	test_acc:0.845120
 2021-12-13 01:30:00,140	Epoch 4
+2021-12-13 01:33:52,248	
+Epoch :       4
+train_labelloss:1.732725	train_vaeloss:0.798572	train_reconloss:0.085990	train_acc:0.906250
+test_loss:0.353336	test_acc:0.861886
+2021-12-13 01:34:58,454	Epoch 5
+2021-12-13 01:37:48,749	
+Epoch :       5
+train_labelloss:1.668649	train_vaeloss:0.834066	train_reconloss:0.085055	train_acc:0.875000
+test_loss:0.350465	test_acc:0.864002
+2021-12-13 01:41:39,331	
+Epoch :       5
+train_labelloss:1.660204	train_vaeloss:0.698360	train_reconloss:0.084142	train_acc:0.875000
+test_loss:0.364420	test_acc:0.856491
+2021-12-13 01:41:41,500	Epoch 6
+2021-12-13 01:45:36,665	
+Epoch :       6
+train_labelloss:1.575690	train_vaeloss:0.748962	train_reconloss:0.084557	train_acc:0.937500
+test_loss:0.335958	test_acc:0.874419
+2021-12-13 01:46:40,512	Epoch 7
+2021-12-13 01:49:24,676	
+Epoch :       7
+train_labelloss:1.523669	train_vaeloss:0.558609	train_reconloss:0.082912	train_acc:0.875000
+test_loss:0.338751	test_acc:0.872717
+2021-12-13 01:53:20,926	
+Epoch :       7
+train_labelloss:1.512899	train_vaeloss:0.527834	train_reconloss:0.087213	train_acc:0.812500
+test_loss:0.335857	test_acc:0.874336
+2021-12-13 01:53:23,131	Epoch 8
+2021-12-13 01:57:12,745	
+Epoch :       8
+train_labelloss:1.453984	train_vaeloss:0.393707	train_reconloss:0.083986	train_acc:0.843750
+test_loss:0.340532	test_acc:0.872593
+2021-12-13 01:58:21,907	Epoch 9
+2021-12-13 02:01:07,489	
+Epoch :       9
+train_labelloss:1.441680	train_vaeloss:0.299249	train_reconloss:0.086189	train_acc:0.875000
+test_loss:0.324243	test_acc:0.880063
+2021-12-13 02:05:01,860	
+Epoch :       9
+train_labelloss:1.411158	train_vaeloss:0.239383	train_reconloss:0.084617	train_acc:0.906250
+test_loss:0.329900	test_acc:0.879773
+2021-12-13 02:05:04,901	Epoch 10
+2021-12-13 02:08:53,915	
+Epoch :      10
+train_labelloss:1.387128	train_vaeloss:0.139982	train_reconloss:0.084454	train_acc:0.812500
+test_loss:0.336545	test_acc:0.876536
+2021-12-13 02:10:03,565	Epoch 11
+2021-12-13 02:12:48,164	
+Epoch :      11
+train_labelloss:1.357897	train_vaeloss:0.069700	train_reconloss:0.084535	train_acc:0.937500
+test_loss:0.321698	test_acc:0.881350
+2021-12-13 02:16:43,921	
+Epoch :      11
+train_labelloss:1.343960	train_vaeloss:-0.043815	train_reconloss:0.085371	train_acc:0.812500
+test_loss:0.322780	test_acc:0.882304
+2021-12-13 02:16:46,490	Epoch 12
+2021-12-13 02:20:42,665	
+Epoch :      12
+train_labelloss:1.301618	train_vaeloss:-0.118835	train_reconloss:0.085974	train_acc:0.937500
+test_loss:0.317256	test_acc:0.887035
+2021-12-13 02:21:46,334	Epoch 13
+2021-12-13 02:24:34,903	
+Epoch :      13
+train_labelloss:1.260830	train_vaeloss:-0.177816	train_reconloss:0.085278	train_acc:0.968750
+test_loss:0.318803	test_acc:0.887699
+2021-12-13 02:28:25,898	
+Epoch :      13
+train_labelloss:1.277628	train_vaeloss:-0.187770	train_reconloss:0.082533	train_acc:0.843750
+test_loss:0.317905	test_acc:0.886164
+2021-12-13 02:28:29,233	Epoch 14
+2021-12-13 02:32:18,743	
+Epoch :      14
+train_labelloss:1.246138	train_vaeloss:-0.218495	train_reconloss:0.082893	train_acc:0.875000
+test_loss:0.325786	test_acc:0.885417
+2021-12-13 02:33:27,832	Epoch 15
+2021-12-13 02:36:12,024	
+Epoch :      15
+train_labelloss:1.222228	train_vaeloss:-0.266220	train_reconloss:0.086045	train_acc:0.937500
+test_loss:0.317009	test_acc:0.887284
+2021-12-13 02:40:06,944	
+Epoch :      15
+train_labelloss:1.192139	train_vaeloss:-0.257082	train_reconloss:0.084721	train_acc:0.937500
+test_loss:0.317170	test_acc:0.889857
+2021-12-13 02:40:10,790	Epoch 16
+2021-12-13 02:44:04,657	
+Epoch :      16
+train_labelloss:1.176810	train_vaeloss:-0.268733	train_reconloss:0.085048	train_acc:0.875000
+test_loss:0.315729	test_acc:0.890646
+2021-12-13 02:45:09,687	Epoch 17
+2021-12-13 02:47:51,829	
+Epoch :      17
+train_labelloss:1.148321	train_vaeloss:-0.302440	train_reconloss:0.084063	train_acc:0.968750
+test_loss:0.317117	test_acc:0.890065
+2021-12-13 02:51:48,631	
+Epoch :      17
+train_labelloss:1.177370	train_vaeloss:-0.286138	train_reconloss:0.084722	train_acc:0.875000
+test_loss:0.313844	test_acc:0.891891
+2021-12-13 02:51:52,530	Epoch 18
+2021-12-13 02:55:43,728	
+Epoch :      18
+train_labelloss:1.130145	train_vaeloss:-0.265228	train_reconloss:0.080678	train_acc:0.937500
+test_loss:0.316042	test_acc:0.890314
+2021-12-13 02:56:51,287	Epoch 19
+2021-12-13 02:59:36,202	
+Epoch :      19
+train_labelloss:1.134345	train_vaeloss:-0.334994	train_reconloss:0.088338	train_acc:0.937500
+test_loss:0.335523	test_acc:0.881308
+2021-12-13 03:03:27,555	
+Epoch :      19
+train_labelloss:1.117553	train_vaeloss:-0.290350	train_reconloss:0.083134	train_acc:0.968750
+test_loss:0.336446	test_acc:0.881557
+2021-12-13 03:03:33,859	Epoch 20
+2021-12-13 03:07:24,027	
+Epoch :      20
+train_labelloss:1.095952	train_vaeloss:-0.291227	train_reconloss:0.083387	train_acc:0.875000
+test_loss:0.326656	test_acc:0.886454
+2021-12-13 03:08:32,467	Epoch 21
+2021-12-13 03:11:14,409	
+Epoch :      21
+train_labelloss:1.070465	train_vaeloss:-0.311666	train_reconloss:0.085926	train_acc:0.937500
+test_loss:0.322684	test_acc:0.888737
+2021-12-13 03:15:09,467	
+Epoch :      21
+train_labelloss:1.095610	train_vaeloss:-0.304118	train_reconloss:0.084842	train_acc:0.906250
+test_loss:0.330437	test_acc:0.884836
+2021-12-13 03:15:15,164	Epoch 22
+2021-12-13 03:19:02,204	
+Epoch :      22
+train_labelloss:1.055358	train_vaeloss:-0.301204	train_reconloss:0.082494	train_acc:0.968750
+test_loss:0.318130	test_acc:0.891393
+2021-12-13 03:20:13,842	Epoch 23
+2021-12-13 03:22:56,652	
+Epoch :      23
+train_labelloss:1.062624	train_vaeloss:-0.300778	train_reconloss:0.085755	train_acc:1.000000
+test_loss:0.317049	test_acc:0.892140
+2021-12-13 03:26:50,256	
+Epoch :      23
+train_labelloss:1.017698	train_vaeloss:-0.301584	train_reconloss:0.084178	train_acc:1.000000
+test_loss:0.323338	test_acc:0.889691
+2021-12-13 03:26:56,591	Epoch 24
+2021-12-13 03:30:39,944	
+Epoch :      24
+train_labelloss:1.024106	train_vaeloss:-0.308178	train_reconloss:0.082546	train_acc:0.937500
+test_loss:0.320221	test_acc:0.890978
+2021-12-13 03:31:54,966	Epoch 25
+2021-12-13 03:34:39,493	
+Epoch :      25
+train_labelloss:0.999213	train_vaeloss:-0.287473	train_reconloss:0.086538	train_acc:0.968750
+test_loss:0.320846	test_acc:0.890604
+2021-12-13 03:38:31,390	
+Epoch :      25
+train_labelloss:1.000494	train_vaeloss:-0.314784	train_reconloss:0.084563	train_acc:0.875000
+test_loss:0.319384	test_acc:0.891102
+2021-12-13 03:38:37,738	Epoch 26
+2021-12-13 03:42:25,888	
+Epoch :      26
+train_labelloss:0.994101	train_vaeloss:-0.290286	train_reconloss:0.082193	train_acc:0.968750
+test_loss:0.319425	test_acc:0.891102
+2021-12-13 03:43:36,206	Epoch 27
+2021-12-13 03:46:14,874	
+Epoch :      27
+train_labelloss:0.985435	train_vaeloss:-0.297695	train_reconloss:0.081734	train_acc:1.000000
+test_loss:0.320452	test_acc:0.891185
+2021-12-13 03:50:11,744	
+Epoch :      27
+train_labelloss:0.996551	train_vaeloss:-0.317811	train_reconloss:0.087113	train_acc:0.937500
+test_loss:0.316348	test_acc:0.893094
+2021-12-13 03:50:19,256	Epoch 28
+2021-12-13 03:54:05,628	
+Epoch :      28
+train_labelloss:0.966419	train_vaeloss:-0.281078	train_reconloss:0.081512	train_acc:0.906250
+test_loss:0.320372	test_acc:0.889567
+2021-12-13 03:55:18,205	Epoch 29
+2021-12-13 03:57:56,535	
+Epoch :      29
+train_labelloss:0.975292	train_vaeloss:-0.307876	train_reconloss:0.084933	train_acc:0.875000
+test_loss:0.317237	test_acc:0.893011
+2021-12-13 04:01:52,825	
+Epoch :      29
+train_labelloss:0.942975	train_vaeloss:-0.302021	train_reconloss:0.084562	train_acc:0.968750
+test_loss:0.322281	test_acc:0.891434
+2021-12-13 04:02:01,075	best_dev_acc:0.8931
+Dataset is imdb
+Data Loaded
+*************params_search_1*************
+{'context_att': 1, 'dataset': 'imdb', 'num_word': 15000, 'pretrain_emb': 'None', 'regularization': 1, 'seed': 0, 'sentenceEncoder': 'GAT', 'topic_learning': 'bayesian', 'topic_weight': 'tfidf'}
+higher dev acc and best model saved: 0.7462
+higher dev acc and best model saved: 0.7706
+higher dev acc and best model saved: 0.8291
+higher dev acc and best model saved: 0.8483
+higher dev acc and best model saved: 0.8619
+higher dev acc and best model saved: 0.8640
+higher dev acc and best model saved: 0.8744
+higher dev acc and best model saved: 0.8801
+higher dev acc and best model saved: 0.8813
+higher dev acc and best model saved: 0.8823
+higher dev acc and best model saved: 0.8870
+higher dev acc and best model saved: 0.8877
+higher dev acc and best model saved: 0.8899
+higher dev acc and best model saved: 0.8906
+higher dev acc and best model saved: 0.8919
+higher dev acc and best model saved: 0.8921
+higher dev acc and best model saved: 0.8931
+Main:  {'context_att': 1, 'dataset': 'imdb', 'num_word': 15000, 'pretrain_emb': 'None', 'regularization': 1, 'seed': 0, 'sentenceEncoder': 'GAT', 'topic_learning': 'bayesian', 'topic_weight': 'tfidf'} {'best_dev_acc': [0.8931]}

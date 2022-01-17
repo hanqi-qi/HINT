@@ -136,7 +136,17 @@ dmypy.json
 .jsonlist
 .pkl
 .pt
+.out
 
 #dir
+model_weight/
+bash_command/
 input_data/
+explain_metric/
+intro_pic/
+baselises/
+eraser_metric/
+latex_files/
+log/
+topic_wc/
 tfidf_weight/

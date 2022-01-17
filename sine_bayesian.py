@@ -39,8 +39,10 @@ class Vae(nn.Module):
         self.logvar_bn_layer.weight.requires_grad = False
 
         self.z_dropout_layer = nn.Dropout(p=0.2)
-        # create the decoder
+        # create the decoder for mse(decode(z),rnn_input)
         self.beta_layer = nn.Linear(self.d_t, self.emb_size)
+        # create the decoder for mse(decode(z),tfidf)
+        # self.beta_layer = nn.Linear(self.d_t, 1)
         # create a final batchnorm layer
         self.eta_bn_layer = nn.BatchNorm1d(self.emb_size, eps=0.001, momentum=0.001, affine=True).to(self.device)
         self.eta_bn_layer.weight.data.copy_(torch.from_numpy(np.ones(self.emb_size)).to(self.device))
@@ -58,7 +60,7 @@ class Vae(nn.Module):
         self.prior_logvar.requires_grad = False
 
         self.concat_att = nn.Linear(self.emb_size+self.d_t,1)
-    
+        # self.att_network = nn.Linear(self.d_t,1)
 
     def _loss(self, prior_mean, prior_logvar, posterior_mean, posterior_logvar,do_average=True):
         #reconstruct_loss
@@ -76,7 +78,7 @@ class Vae(nn.Module):
 
         return KLD.mean(1)
     
-    def forward(self,rnn_input):
+    def forward(self,rnn_input,tfidf_weight):
     # aggregate the sentence represntation by sent_tfidf [bs,seq_len] [bs,seq_len,dim]
         encoder_output = F.softplus(rnn_input) #[len,bs,dim]
         encoder_output_do = self.encoder_dropout_layer(encoder_output)#[seq_len,bs,emb_size]
@@ -111,4 +113,5 @@ class Vae(nn.Module):
         # kl_loss = nn.functional.relu(KLD)
 
         word_aspect_weight = self.concat_att(torch.cat((rnn_input,z_do.transpose(1,0)),-1)) #[len,bs,1]
+        # word_aspect_weight = self.att_network(z_do) #[len,bs,1]
         return word_aspect_weight,KLD.mean(),recon_loss.mean()

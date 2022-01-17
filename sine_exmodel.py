@@ -4,6 +4,12 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from sine_bayesian import Vae
+import seaborn as sns
+from matplotlib import pyplot as plt
+from wordcloud import STOPWORDS
+# from docx import Document
+# from docx.shared import RGBColor
+# from matplotlib.cbook import get_sample_data
 
 class HierachicalClassifier(nn.Module):
     def __init__(self, args, pretrained_embedding=None):
@@ -48,6 +54,7 @@ class HierachicalClassifier(nn.Module):
             self.embedding.weight.data.uniform_(-1.0, 1.0)
         
         self.Vae = Vae(self.emb_size,self.d_t,self.device)
+        self.stopwords = set(STOPWORDS)
 
     def init_rnn_hidden(self, batch_size, level):
         param_data = next(self.parameters()).data
@@ -90,31 +97,43 @@ class HierachicalClassifier(nn.Module):
         for bs in range(text.shape[1]):
             if len((text[:,bs]==2).nonzero()[0]) > 0 :
                 doc_len = (text[:,bs]==2).nonzero()[0][0]
-                doc = [id2word[wid] for wid in text[:,bs] if wid >2 ]
-                doc_list.append(doc)
-                # outfile.writelines("DOCUMENT:\n%s\n"%(" ".join(doc)))
-                k = 3
-                a_wordidx = alpha[:doc_len,bs].argsort()[-k:][::-1]
-                b_wordidx = omega[:doc_len,bs].argsort()[-k:][::-1]
-                # outfile.writelines("Context WORDS:\n")
-                awords,bwords = [],[]
-                for wpos in a_wordidx:
-                    if text[wpos,bs] > 2:
-                        awords.append(id2word[text[wpos,bs]])
-                    # outfile.writelines(",".join(awords))
-                    # outfile.writelines("\n")
-                # outfile.writelines("Aspect WORDS:\n")
-                awords_list.append(awords)
-                for wpos in b_wordidx:
-                    if text[wpos,bs] > 2:
-                        bwords.append(id2word[text[wpos,bs]])
-                    # outfile.writelines(",".join(bwords))
-                    # outfile.writelines("\n")
-                # outfile.writelines("\n\n")
-                bwords_list.append(bwords)
+            else:
+                doc_len = len(text[:,bs])
+            doc =  []
+            for wid in text[:,bs]:
+                if wid>2:
+                    doc.append(id2word[wid])
+            doc_list.append(doc)
+            # outfile.writelines("DOCUMENT:\n%s\n"%(" ".join(doc)))
+            k = 5
+            a_wordidx = alpha[:doc_len,bs].argsort()[-k:][::-1]
+            b_wordidx = omega[:doc_len,bs].argsort()[-k:][::-1]
+            # outfile.writelines("Context WORDS:\n")
+            awords,bwords = [],[]
+            for wpos in a_wordidx:
+                if text[wpos,bs] > 2 and id2word[text[wpos,bs]] not in self.stopwords:
+                    awords.append(id2word[text[wpos,bs]])
+                # outfile.writelines(",".join(awords))
+                # outfile.writelines("\n")
+            # outfile.writelines("Aspect WORDS:\n")
+            awords_list.append(awords)
+            for wpos in b_wordidx:
+                if text[wpos,bs] > 2 and id2word[text[wpos,bs]] not in self.stopwords:
+                    bwords.append(id2word[text[wpos,bs]])
+                # outfile.writelines(",".join(bwords))
+                # outfile.writelines("\n")
+            # outfile.writelines("\n\n")
+            bwords_list.append(bwords)
         return doc_list,awords_list,bwords_list
+    
+    def symbol(self,input):
+        if input>0:
+            symbol = r"$\bigstar$"
+        else:
+            symbol = r"$\blacksquare$"
+        return symbol
 
-    def genEx(self,doc_words,doc_att,doc_btt,doc_label,logit,output_file):
+    def genEx(self,doc_words,doc_att,doc_btt,doc_label,logit,co_topic_weight,output_file,doc_id,target):
         """
         all the input are list of N elements for N sentences in a document
         doc_words:
@@ -124,20 +143,75 @@ class HierachicalClassifier(nn.Module):
         pre_label = torch.argmax(logit,-1).detach().cpu().numpy()
         f = open(output_file,"a+")
         bsize = len(doc_words[0])
+        co_topic_weight = co_topic_weight.detach().cpu().numpy()
+        #save a sentence attention heatmaps
+        #select the most important/representative sentences from data
+        target = target.detach().cpu().numpy()
         for bs in range(bsize):
-            f.writelines("DOCUMENT:\n")
+            doc_str = ""
+            ptopic_str = " T1: {"
+            stopic_str = ""
+            doc_id += 1
+            data = co_topic_weight[bs,:,:]
+            mask = np.triu(np.ones_like(data, dtype=bool))
+            new_mask = (mask==False)
+            new_data = new_mask*data
+            ptopic_senids = np.unravel_index(np.argmax(new_data), new_data.shape)
+            stopic_senid = np.argmin(data[ptopic_senids[0],:])
+            senids = range(data.shape[1])#all the sentence labels
+            f.writelines("DocID{}:\n".format(doc_id))
+            print(doc_id)
             sen_id = 0
             for doc_bs, att_bs, btt_bs, label_bs in zip(doc_words,doc_att,doc_btt,doc_label):
                 if len(doc_bs)>bs:
+                    f.writelines("SID"+str(sen_id)+": "+" ".join(doc_bs[bs])+"("+"Context: "+",".join(att_bs[bs])+"/"+"Topic: "+",".join(btt_bs[bs])+"/"+"sen_label: "+str(label_bs[bs])+")"+"\n")
+                    if sen_id in ptopic_senids:
+                        # sen_label = label_bs[bs]
+                        symbol = self.symbol(label_bs[bs])
+                        doc_text = " ".join(doc_bs[bs])
+                        doc_str += symbol+" S{}: ".format(sen_id)+doc_text+" ("+" ".join(att_bs[bs])+") "+"\n"
+                        ptopic_str += "S{}: ".format(sen_id)+" ".join(att_bs[bs])+ "/ "
+                    elif sen_id == stopic_senid:
+                        sen_label = label_bs[bs]
+                        symbol = self.symbol(label_bs[bs])
+                        doc_text = " ".join(doc_bs[bs])
+                        doc_str += symbol+" S{}: ".format(sen_id)+doc_text+" ("+" ".join(att_bs[bs])+") "+"\n"
+                        stopic_str += " T2: { "+"S{}: ".format(sen_id)+" ".join(att_bs[bs])+"} "+"\n"
+                    else:
+                        symbol = self.symbol(label_bs[bs])
+                        # symbol =  r"$\odot$"
+                        doc_str += symbol+" S{}: ".format(sen_id)+" ".join(doc_bs[bs])+" ("+" ".join(att_bs[bs])+") "+"\n"
                     sen_id+=1
-                    f.writelines("sen"+str(sen_id)+": "+" ".join(doc_bs[bs])+"("+"Context: "+",".join(att_bs[bs])+"/"+"Topic: "+",".join(btt_bs[bs])+"/"+"sen_label: "+str(label_bs[bs])+")"+"\n")
-            f.writelines("Predict Document  Label: %d\n"%pre_label[bs])
-            f.writelines("\n") 
 
+            f.writelines("Predict Document Label: %d\n"%pre_label[bs])
+            f.writelines("GT Document Label: %d\n"%target[bs])
+            f.writelines("\n")
+            symbol = self.symbol(pre_label[bs])
+            ptopic_str += "}"+"\n"
+            doc_str += ptopic_str + stopic_str
+            doc_str += "Predict Document Label: "+symbol+"\n"
+            symbol = self.symbol(target[bs])
+            doc_str += "GT Document Label: "+symbol+"\n"
+            # if (sen_label == pre_label[bs]) and (pre_label[bs]==target[bs]):
+            fig, axs = plt.subplots(2, 1,gridspec_kw={
+                        'height_ratios': [1,2]})
+            plt.subplots_adjust(top = 0.99, bottom=0.01, hspace=0.5, wspace=0.4)
+            # sns.heatmap(data, linewidth=0.3,annot=True,cmap="YlGn",ax=axs[0],mask=mask)
+            axs[0].axis('off')
+            axs[1].text(0.01,0,doc_str,multialignment="left",wrap=True)
+            axs[1].axis('off')
+            #insert the wordcloud pic, should be the most predominent one. 
+            # im = plt.imread(get_sample_data("/mnt/sda/media/Data2/hanqi/sine/sen_att/107.png"))
+            plt.savefig("/mnt/sda/media/Data2/hanqi/sine/sine_ex/human_evaluation/fullLabelAspect_yelp_woMean_{}".format(doc_id))
+            # plt.clf()
+            plt.close()
+            # document.add_picture("/mnt/sda/media/Data2/hanqi/sine/sen_att/{}.png".format(doc_id))
+            # document.save('/mnt/sda/media/Data2/hanqi/sine/sen_att/orientation_test{}.docx'.format(doc_id))
+        return doc_id
         
 
     
-    def forward(self, input_list, input_tfidf,length_list,flag=None,id2word=None,output_file=None):
+    def forward(self, input_list, input_tfidf,length_list,flag=None,id2word=None,output_file=None,doc_id=0,target=None):
         """ 
         Arguments: 
         input_list (list) : list of quote utterances, the item is Variable of FloatTensor (word_length * batch_size)
@@ -189,7 +263,7 @@ class HierachicalClassifier(nn.Module):
                 elif self.args.topic_weight == "average":
                     vae_input = word_rnn_input
 
-                word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input)
+                word_aspect_weight,vae_kld_loss,vae_recon_loss = self.Vae(vae_input,sent_tfidf.unsqueeze(2))
                 kld_loss += vae_kld_loss
                 recon_loss += vae_recon_loss
 
@@ -234,31 +308,37 @@ class HierachicalClassifier(nn.Module):
 
         context_topic_weight = context_topic_weight.permute(0,2,1) #[bs,doc_len,d_t]
         context_rnn_output = context_rnn_output.permute(1,0,2)#[bs,doc_len,dim]
-        strategy = 'raw' #
+        strategy = 'normalized_topic' #
         if strategy == 'raw':
             topic_weight_matrix =  context_topic_weight
-        elif strategy == 'normlized_topic':
+        elif strategy == 'normalized_topic':
             topic_norm = torch.norm(context_topic_weight, p=2, dim=-1, keepdim=True)
             norm_topic_weight = context_topic_weight/topic_norm
             topic_weight_matrix = norm_topic_weight
 
         # co_topic_weight = nn.functional.softmax(torch.bmm(self.key_linear(topic_weight_matrix),self.query_linear(topic_weight_matrix).transpose(2,1)/self.args.tsoftmax),2)
-        co_topic_weight = nn.functional.softmax(torch.bmm(topic_weight_matrix,topic_weight_matrix.transpose(2,1)/self.args.tsoftmax),2)
+        co_topic_weight = nn.functional.softmax(torch.bmm(topic_weight_matrix,topic_weight_matrix.transpose(2,1)),2)#sum is 1 for each row
         update_context_rep = torch.bmm(co_topic_weight,context_rnn_output)
         # update_context_rep = self.output_gate*torch.bmm(co_topic_weight,context_rnn_output)+(1-self.output_gate)*context_rnn_output #[bs,doc_len,dim]
         use_nolinear = False #apply non-linear to the current graph layer to update the next layer
         if use_nolinear:
             update_context_rep = nn.functional.relu(update_context_rep)
-        mean_context_output = torch.mean(update_context_rep,dim=1)
+        #yhq: Replace with mean as the summation
+        # mean_context_output = torch.mean(update_context_rep,dim=1)
+        #yhq using the 
+        mean_context_output = torch.sum(update_context_rep,dim=1)
         classifier_input = mean_context_output
         # context_rnn_last_output = torch.mean(context_rnn_transform,1) #average the 
         # classifier_input = context_rnn_last_output
         classifier_input_array = np.array(classifier_input.cpu().data)
         logit = self.classifier(classifier_input)
+        #calculate the sentence importance according to the co_topic_weight
+        # dd = [torch.diagonal(co_topic_weight[i]) for i in range(co_topic_weight.shape[0])]
+        # sen_weight = torch.softmax(torch.sum(co_topic_weight,dim=1)) #[bs,doc_len]
         if flag == "gen_ex":
-            self.genEx(doc_words,doc_att,doc_btt,sen_label,logit,output_file)
+            doc_id=self.genEx(doc_words,doc_att,doc_btt,sen_label,logit,co_topic_weight,output_file,doc_id,target)
         #attention_weight_array = np.array(csontext_attention_weight.data.cpu().squeeze(-1)).transpose(1,0)
         attention_weight_array = 0
-        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*kld_loss.mean(), recon_loss.mean()
+        return logit,attention_weight_array,classifier_input_array,aspect_loss,co_topic_weight,self.args.vae_scale*kld_loss.mean(), recon_loss.mean(),doc_id
 
     
