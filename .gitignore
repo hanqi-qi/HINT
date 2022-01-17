@@ -144,7 +144,10 @@ bash_command/
 input_data/
 explain_metric/
 intro_pic/
-baselises/
+baselises/*.pt
+baselises/*.txt
+baselises/*.jsonlist
+baselises/*.out
 eraser_metric/
 latex_files/
 log/
